@@ -1,9 +1,11 @@
 <nav id="nav">
     <ul>
-        <li><a href="#one" class="active">About</a></li>
-        <li><a href="#two">Things I Can Do</a></li>
-        <li><a href="#three">A Few Accomplishments</a></li>
-        <li><a href="#four">Contact</a></li>
+        <!--<li><a href="#seven">Contact</a></li>-->
+        {%- for navigation in site.navigation -%}
+        <li class="element">
+            <a href="#{{ navigation.url }}" {% if navigation.title == "About" %} class="action" {% endif %}>{{ navigation.title }}</a>
+        </li> 
+        {% endfor %}
     </ul>
 </nav>
 <footer>

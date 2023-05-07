@@ -2,7 +2,15 @@
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 	{%- include head.html -%}
 	<body id = "blog-body">
+
+		{% if layout == "home" %}		
+		반가워?
+		{% elsif layout == "study_language" %}
+		안녕?
+		{% else %}
 		{% include header.html %}
+		{% endif %}
+
 		<main class="page-content" aria-label="Content">
 			{{ content }}
 		</main>

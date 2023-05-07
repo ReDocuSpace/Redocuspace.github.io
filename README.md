@@ -2,6 +2,9 @@
 
 홈페이지 제작 시작
 
+md 여러개 제작 및 nav 꾸미기 시작
+베이스 제작
+
 - Jekyll 적용
 
 - HTML5 ReadOnly 테마 사용
