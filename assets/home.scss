@@ -1,0 +1,191 @@
+---
+---
+
+.home_section{
+	background-size: cover;
+	height: 500px;
+}
+
+#first_section{
+	padding-top: 100px;
+	text-align: center;
+    	background: url('https://40.media.tumblr.com/1b916597d3e174399cb7adadddb66ede/tumblr_nt5uk4psl31ud7rr3o1_1280.jpg') no-repeat center center fixed;
+
+	#overlay{
+		height: 300px;
+		background: rgba(0,0,0,0.3);
+	}
+}
+
+.intro-message{
+	padding: 50px;
+	position: relative;
+
+	h1{
+		text-shadow: 2px 1px 2px #000;
+		font-size: 5em;
+		color: rgba(255,255,255,0.7);
+	}
+
+	h3{
+		text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+	}
+}
+
+@media(max-width:767px) {
+	.intro-message{
+		padding: 75px;
+		h1{ font-size: 3em;}
+	}
+}
+
+#second_section{
+
+}
+
+#third_section{
+	color: black;
+	overflow-x: auto;
+	overflow-y: hidden;
+	white-space: nowrap;
+	background: url('https://68.media.tumblr.com/d3fd545cd977a174beef12c1106880bf/tumblr_nt505iKkul1ud7rr3o1_1280.jpg') center center fixed;
+
+	section{
+		height: 100%;
+		width: 330px;
+		overflow: auto;
+		margin-left: 10px;
+		margin-right: 10px;
+		white-space: normal;
+		display: inline-block;
+		background-color: rgba(4,14,22,0.83);
+	}
+
+	h2 {
+		color: #F0F0F0;
+		margin-bottom: 140px;
+	}
+	
+	h2:after {
+		border-bottom: 2px dashed #b4b4b4;
+	}
+
+	h6{ color: #f0f0f0;}
+
+	.row {
+		margin: 0px;
+		box-sizing: border-box;
+		padding: 0 60px;
+	}
+
+	.heading {
+		color: #F0F0F0;
+		padding: 15px;
+		text-align: center;
+		position: absolute;
+		font-size: 18px;
+	       	letter-spacing: 2px;
+       	}
+
+	.heading span {
+	       	color: #635757;
+	       	display: block;
+	       	margin: 40px 0px;
+	       	font-size: 200%;
+       	} 
+	
+	.description {
+	       	position: absolute;
+	       	top: 0px;
+	       	left: 0px;
+	       	padding: 15px;
+       	} 
+
+	.description > * {
+	       	display: none;
+	       	font-size: 72%;
+       	} 
+	
+	p {
+	       	color: #F0F0F0;
+	       	margin-bottom: 30px;
+	       	line-height: 230%;
+       	} 
+	
+	p, .tools {
+	       	width: 100%;
+       	} 
+
+	.description span {
+	       	margin-left: 10px;
+       	} 
+	
+	.description .tools {
+	       	margin-top: 20px;
+	       	overflow: hidden;
+       	} 
+	
+	.description .tools li {
+	       	margin-top: 5px;
+	       	background-color: #114190;
+	       	margin-right: 10px;
+	       	padding: 10px;
+	       	color: #F0F0F0;
+		list-style: none;
+       	} 
+	
+	div section {
+	       	cursor: pointer;
+       	} 
+
+	img {
+	       	width: 100%;
+       	}
+       
+	.overlay {
+	       	position: relative;
+	       	padding-bottom: 0px;
+		height: 100%;
+	       	overflow: auto;
+       	} 
+	
+	.description h4 {
+	       	color: white;
+       	}
+       
+	.heading {
+	       	position: relative;
+	       	margin: 0 auto;
+       	} 
+
+	.vertical-list li {
+		float: left;
+	}
+	section:hover .overlay img {
+	       	opacity: 0;
+	       	transition: opacity .32s;
+       	} 
+
+	section:hover .description {
+	       	top: 100px;
+	       	transition: top .5s;
+       	} 
+	
+	section:hover .overlay .heading span {
+	       	-webkit-transform: rotate(180deg);
+	       	position: relative;
+	       	top: 0px;
+	       	left: -30px;
+	       	color: rgba(4,14,22,.83);;
+       	} 
+	
+	section:hover .overlay .description > * {
+	       	display: block;
+       	} 
+	
+	section:hover .overlay .heading {
+	       	position: absolute;
+	       	top: 0px;
+	       	transition: top .9s;
+       	}
+}
