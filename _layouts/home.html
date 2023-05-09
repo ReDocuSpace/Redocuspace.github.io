@@ -15,28 +15,56 @@ layout: default
 					<div class="container">
 						<header class="major">
 							<h2>About</h2>
+							<!-- Content -->
+							<h3> Re_Docu </h3>
+							<h4> 게임 클라이언트 프로그래머 [ Game Client Programmer ]</h4>
+							<h4> 『최고보다는 최선이 되고자 하는 마음으로』</h4>
+							<h3> 경력 </h3>
+							<h4> [ 2012.03 - 2017.02 ] SM(System Management) - BSc </h4>
+							<h4> [ 2017.03 - 2019.08 ] ICT Convergence - MS </h4>
+							<h4> [ 2019.09 - 2020.03 ] Game Programming School - Course of Study</h4>
+							<h4> [ 2020.07 - 2021.12 ] AR Programming - Client</h4>
+							<h4> [ 2022.06 - 2023.05 ] Autonomous Driving Simulation Programming - UI</h4>
+						
+							<h2>Post</h2>
+							<div class="table-wrapper">
+								<table>
+									<thead>
+										<tr>
+											<th>Date</th>
+											<th>Title</th>
+										</tr>
+									</thead>
+									<tbody>
+										{%- for post in site.posts -%}
+										<tr>
+											<td>{{ post.date | date : '%B %d, %Y' }}</td>
+											<td><a class="post-link" href="{{ post.url }}">{{ post.title }}</a></td>
+										</tr>
+										{%- endfor -%}
+									<!--
+										<tfoot>
+										<tr>
+											<td colspan="2"></td>
+											<td>100.00</td>
+										</tr>
+									</tfoot>
+									-->
+								</table>
+							</div>
+						
 						</header>
 					</div>
+
+					
+
 				</section>
 
 			<!-- Two -->
 				<section id="two">
 					<div class="container">
-						<h3>Portfolio</h3>
-					</div>
-				</section>
-
-			<!-- Three -->
-				<section id="three">
-					<div class="container">
-						<h3>Project</h3>
-					</div>
-				</section>
-
-			<!-- Four -->
-				<section id="four">
-					<div class="container">
-						<h3>Study</h3>
+						<h2>Study</h2>
+						<!-- Content -->
 						{%- for study in site.studylist -%}
 						<div class="features">
 							<article>
@@ -52,14 +80,70 @@ layout: default
 					</div>
 				</section>
 
+			<!-- Three -->
+				<section id="three">
+					<div class="container">
+						<h2>Portfolio</h2>
+						<!-- Content -->
+						{%- for portfolio in site.portfoliolist -%}
+						<div class="features">
+							<article>
+								{%- assign current = nil -%}
+								<a href="{{ portfolio.url }}" class="image"><img src="{{ portfolio.img }}" alt="" /></a>
+								<div class="inner">
+									<h4>{{ portfolio.title }}</h4>
+									<p>{{ portfolio.description }}</p>
+								</div>
+							</article>
+						</div>
+						{% endfor %}
+					</div>
+				</section>
+
+			<!-- Four -->
+				<section id="four">
+					<div class="container">
+						<h2>Project</h2>
+						<!-- Content -->
+						{%- for project in site.projectlist -%}
+						<div class="features">
+							<article>
+								{%- assign current = nil -%}
+								<a href="{{ project.url }}" class="image"><img src="{{ project.img }}" alt="" /></a>
+								<div class="inner">
+									<h4>{{ project.title }}</h4>
+									<p>{{ project.description }}</p>
+								</div>
+							</article>
+						</div>
+						{% endfor %}
+					</div>
+				</section>
+
 				<!-- Five -->
 				<section id="five">
 					<div class="container">
-						<h3>Post</h3>
+						<h2>Contact Me</h2>
+						<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer. Integer eu ante ornare amet commetus.</p>
+						<form method="post" action="#">
+							<div class="row gtr-uniform">
+								<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
+								<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
+								<div class="col-12"><input type="text" name="subject" id="subject" placeholder="Subject" /></div>
+								<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="6"></textarea></div>
+								<div class="col-12">
+									<ul class="actions">
+										<li><input type="submit" class="primary" value="Send Message" /></li>
+										<li><input type="reset" value="Reset Form" /></li>
+									</ul>
+								</div>
+							</div>
+						</form>
 					</div>
 				</section>
 
 				<!-- Six -->
+				<!--
 				<section id="six">
 					<div class="container">
 						<h3>Contact Me</h3>
@@ -80,7 +164,7 @@ layout: default
 						</form>
 					</div>
 				</section>
-
+				-->
 			<!-- Seven -->
 			<!--
 				<section id="seven">

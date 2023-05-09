@@ -17,16 +17,16 @@ plugins:
 navigation:
     - title : About
       url : one
-    - title : Portfolio
+    - title : Study
       url : two
     - title : Project
       url : three
-    - title : Study
+    - title : Portfolio
       url : four
-    - title : Post
-      url : five
     - title : Contact
-      url : six
+      url : five
+
+# About
 
 # Study
 studylist:
@@ -34,3 +34,23 @@ studylist:
       url : /study_language
       img : /assets/images/pic01.jpg
       description : Hello World
+    - title : Hello World
+      url : /study_language
+      img : /assets/images/pic01.jpg
+      description : Hello World
+
+# Portfolio
+portfoliolist:
+    - title : portfolio
+      url : /study_language
+      img : /assets/images/pic01.jpg
+      description : Hello World
+
+# Project
+projectlist:
+    - title : project
+      url : /study_language
+      img : /assets/images/pic01.jpg
+      description : Hello World
+
+# Contact
