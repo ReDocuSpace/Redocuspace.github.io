@@ -1,29 +1,56 @@
 ---
 layout: default
 ---
-<div class = "wrapper">
-	<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
-	
-	  <header class="post-header">
-	    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
-	    <p class="post-meta">
-	      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-	        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-	        {{ page.date | date: date_format }}
-	      </time>
-	      {%- if page.author -%}
-	        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
-	      {%- endif -%}</p>
-	  </header>
-	
-	  <div class="post-content e-content" itemprop="articleBody">
-	    {{ content }}
-	  </div>
-	
-	  {%- if site.disqus.shortname -%}
-	    {%- include disqus_comments.html -%}
-	  {%- endif -%}
-	
-	  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
-	</article>
+
+<section id="header">
+	<header>
+		<span class="image avatar"><a href="{{site.url}}"><img src="/assets/images/avatar.jpg" alt="" /></a></span>
+		<h1 id="logo"><a href="{{site.url}}">{{ site.title }}</a></h1>
+		<p>{{ site.description }}</p>
+	</header>
+
+	<nav id="nav">
+		<ul class="icons">
+			<li><a href="https://github.com/ReDocuSpace/" class="icon brands fa-github"><span class="label">Github</span>
+			ReDocuSpace
+			</a></li>
+			<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span>
+			dlehrb103@gmail.com
+			</a></li>
+		</ul>
+
+	</nav>
+
+	<footer>
+		
+	</footer>
+
+	{{page.date}}
+</section>
+
+<div id="wrapper">
+	<div id="main">
+		<section id={{ page.categories }}>
+			<div class="container">
+				<h3>{{ page.title | escape }}</h3>
+				<h6>{{page.date}}</h6>
+				<hr />
+
+				<div class="post-content e-content" itemprop="articleBody">
+					{{ content }}
+				</div>
+				<hr/>
+				<ul class="actions fit">
+
+					<!-- 추후 필터링 필요-->
+
+					<li><a href="#" class="button alt fit">Prev</a></li>
+					<li><a href="/category" class="button primary fit">리스트</a></li>
+					<li><a href="#" class="button alt fit">Next</a></li>
+				</ul>
+
+			</div>
+		</section>
+	</div>
 </div>
+

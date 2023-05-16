@@ -25,8 +25,21 @@ navigation:
       url : four
     - title : Contact
       url : five
-
 # About
+
+# Post
+post_layout_list:
+    - title : Default
+      url : one
+    - title : two
+      url : two
+    - title : three
+      url : three
+    - title : four
+      url : four
+    - title : five
+      url : five
+
 
 # Study
 studylist:

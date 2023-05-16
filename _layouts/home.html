@@ -2,62 +2,70 @@
 layout: default
 ---
 
-<div id="wrapper">
+<section id="header">
+	<header>
+		<span class="image avatar"><a href="{{site.url}}"><img src="/assets/images/avatar.jpg" alt="" /></a></span>
+		<h1 id="logo"><a href="{{site.url}}">{{ site.title }}</a></h1>
+		<p>{{ site.description }}</p>
+	</header>
+	{% include nav.html %}
+</section>
 
+<div id="wrapper">
 	<!-- Main -->
 		<div id="main">
-
 			<!-- One -->
 				<section id="one">
-					<div class="image main" data-position="center">
-						<img src="/assets/images/banner.jpg" alt="" />
-					</div>
 					<div class="container">
-						<header class="major">
-							<h2>About</h2>
-							<!-- Content -->
-							<h3> Re_Docu </h3>
-							<h4> 게임 클라이언트 프로그래머 [ Game Client Programmer ]</h4>
-							<h4> 『최고보다는 최선이 되고자 하는 마음으로』</h4>
-							<h3> 경력 </h3>
-							<h4> [ 2012.03 - 2017.02 ] SM(System Management) - BSc </h4>
-							<h4> [ 2017.03 - 2019.08 ] ICT Convergence - MS </h4>
-							<h4> [ 2019.09 - 2020.03 ] Game Programming School - Course of Study</h4>
-							<h4> [ 2020.07 - 2021.12 ] AR Programming - Client</h4>
-							<h4> [ 2022.06 - 2023.05 ] Autonomous Driving Simulation Programming - UI</h4>
-						
-							<h2>Post</h2>
-							<div class="table-wrapper">
-								<table>
-									<thead>
-										<tr>
-											<th>Date</th>
-											<th>Title</th>
-										</tr>
-									</thead>
-									<tbody>
-										{%- for post in site.posts -%}
-										<tr>
-											<td>{{ post.date | date : '%B %d, %Y' }}</td>
-											<td><a class="post-link" href="{{ post.url }}">{{ post.title }}</a></td>
-										</tr>
-										{%- endfor -%}
-									<!--
-										<tfoot>
-										<tr>
-											<td colspan="2"></td>
-											<td>100.00</td>
-										</tr>
-									</tfoot>
-									-->
-								</table>
-							</div>
-						
-						</header>
+						<!-- Content -->
+						<!-- -->
+						<h4> Re_Docu </h4>
+						<p> 
+						게임 클라이언트 프로그래머 [ Game Client Programmer ]<br>
+						『최고보다는 최선이 되고자 하는 마음으로』
+						</p>
+						<!-- -->
+						<hr />
+						<h4> 경력 </h4>
+						<p> 
+						[ 2012.03 - 2017.02 ] SM(System Management) - BSc <br>
+						[ 2017.03 - 2019.08 ] ICT Convergence - MS <br>
+						[ 2019.09 - 2020.03 ] Game Programming School - Course of Study <br>
+						[ 2020.07 - 2021.12 ] AR Programming - Client <br>
+						[ 2022.06 - 2023.05 ] Autonomous Driving Simulation Programming - UI <br>
+						</p>
+						<hr />
+						<!-- -->
+						<h4>Post</h4>
+						<div class="table-wrapper">
+							<table>
+								<thead>
+									<tr>
+										
+										<th>Title</th>
+										<th>Category</th>
+										<th>Date</th>
+									</tr>
+								</thead>
+								<tbody>
+									{%- for post in site.posts -%}
+									<tr>
+										<td><a class="post-link" href="{{ post.url }}">{{ post.title }}</a></td>
+										<td>{{post.categories}} </td>
+										<td>{{ post.date | date : '%B %d, %Y' }}</td>
+									</tr>
+									{%- endfor -%}
+								<!--
+									<tfoot>
+									<tr>
+										<td colspan="2"></td>
+										<td>100.00</td>
+									</tr>
+								</tfoot>
+								-->
+							</table>
+						</div>
 					</div>
-
-					
-
 				</section>
 
 			<!-- Two -->
@@ -166,7 +174,7 @@ layout: default
 				</section>
 				-->
 			<!-- Seven -->
-			<!--
+
 				<section id="seven">
 					<div class="container">
 						<h3>Elements</h3>
@@ -494,7 +502,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 					</div>
 				</section>
-			-->
+	<!-- -->
 		</div>
 		    <!-- Scripts -->
 			<script src="/assets/js/jquery.min.js"></script>
