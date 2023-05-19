@@ -1,30 +1,35 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2023-05-07 19:33:54 +0900
+title:  "Re_Docu History"
+date:   2023-05-17 21:33:54 +0900
 categories: Default
 ---
 
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+ 전문 학교 정보보안과 졸업
+ 컴퓨터와 사람간의 상호작용에 관한 연구
+ 인문학적 관점으로 가득한 철학 가득한 이야기
 
-Jekyll requires blog post files to be named according to the following format:
+ 『 나는 어떠한 개발자가 되고 싶은가 』 에 대한 고뇌에 대하여
 
-`YEAR-MONTH-DAY-title.MARKUP`
+ 추구해야할 것이 수없이 많았습니다.
 
-Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit numbers, and `MARKUP` is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+ 저는 아쉽게도 거대한 꿈을 이루고자 하는 사람은 아닙니다.
+ 그럼에도 목표가 없는것만은 아닙니다.
 
-Jekyll also offers powerful support for code snippets:
+『 어떠한 삶을 살고 싶은가 』 라는 "과정으로 가득찬 삶"을 꿈꾸며
+하나하나 해야할 것을 해 나가는 사람이 되고 싶을 뿐입니다.
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+『 문제를 쓴다. 깊이 생각한다. 답을 생각한다. 』
+『 듣고, 이해하고, 행하라 』
+『 내가 당연하다 생각하는 것이, 누군가에게는 당연하지 않을 수 있다는 것을 명심해라.』
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+이러한 저에 대한 주박을 가슴에 안고
 
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+아... 아... 안녕하세요...
+
+저는 인생이란 과목을 공부하고 있는 ...
+
+생각이 많은 그저 그런 개발자입니다.
+
+
+

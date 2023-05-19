@@ -3,8 +3,6 @@
         <!--<li><a href="#seven">Contact</a></li>-->
         {%- for navigation in site.navigation -%}
         <li class="element">
-
-            
             <a href="#{{ navigation.url }}" {% if navigation.title == "About" %} class="action" {% endif %}>{{ navigation.title }}</a>
         </li> 
         {% endfor %}
