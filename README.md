@@ -1,3 +1,5 @@
+[![Solved.ac Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=eqmentstudio)](https://solved.ac/eqmentstudio/)
+
 # 2023년 5월 7일
 
 홈페이지 제작 시작
