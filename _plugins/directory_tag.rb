@@ -155,4 +155,4 @@ module JekyllConfigDirs
   end
 end
 
-#Liquid::Template.register_tag('directory', Jekyll::DirectoryTag)
+Liquid::Template.register_tag('directory', Jekyll::DirectoryTag)
