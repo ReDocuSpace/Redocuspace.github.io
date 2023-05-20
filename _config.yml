@@ -12,6 +12,7 @@ github_username:  jekyll
 theme: minima
 plugins:
   - jekyll-feed
+  - directory_tag
 
 # Navigation
 navigation:
