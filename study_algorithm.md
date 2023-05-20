@@ -21,7 +21,6 @@ title : backjoon
 <hr/>
 -->
 
-이거 좀 되었으면 좋겠는데 왜 안될까
 
 <h4>알고리즘 문제</h4>
 <div class="table-wrapper">
@@ -36,15 +35,7 @@ title : backjoon
 			</tr>
 		</thead>
 		<tbody>
-			{% directory path: /백준 exclude: .md %}
-			<tr>
-				<td>{{ file.directory01}}</td>
-                <td>{{ file.number}}</td>
-				<td>{{ file.slug }}</td>
-				<td>{{ file.directory02 }}</td>
-                <td></td>
-			</tr>
-			{% enddirectory %}
+
 		</tbody>
 	</table>
 </div>
