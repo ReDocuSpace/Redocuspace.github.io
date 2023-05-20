@@ -44,11 +44,15 @@ studylist:
     - title : lauguage
       url : /study_language
       img : /assets/images/pic01.jpg
-      description : Hello World
+      description : 기본학습
     - title : algorithm
       url : /study_algorithm
       img : /assets/images/pic01.jpg
-      description : Hello World
+      description : 알고리즘
+    - title : gamelist
+      url : /study_gamelist
+      img : /assets/images/pic01.jpg
+      description : 모작게임
 
 # Portfolio
 portfoliolist:
@@ -65,3 +69,12 @@ projectlist:
       description : Hello World
 
 # Contact
+
+
+# imitation GameList
+imitationlist:
+    - title : tetris
+      url : Hello World
+      img : /assets/images/pic01.jpg
+      description : Hello World
+    

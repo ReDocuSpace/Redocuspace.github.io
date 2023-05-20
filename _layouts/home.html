@@ -78,9 +78,9 @@ layout: default
 					<!---->
 					<div class="box alt">
 						<div class="row gtr-50 gtr-uniform">
-							<div class="col-4"><span class="image fit"><a href="/study_algorithm"><img src="/assets/images/pic01.jpg" alt="" /></a><h5>알고리즘</h5></span></div>
-							<div class="col-4"><span class="image fit"><img src="/assets/images/pic02.jpg" alt="" /><h5>모작게임</h5></span></div>
-							<div class="col-4"><span class="image fit"><img src="/assets/images/pic03.jpg" alt="" /><h5>개인학습</h5></span></div>
+							{%- for list in site.studylist -%}
+							<div class="col-4"><span class="image fit"><a href="{{ list.url }}"><img src="{{ list.img }}" alt="" /></a><h5>{{ list.description }}</h5></span></div>
+							{% endfor %}
 						</div>
 					</div>
 					<!---->
