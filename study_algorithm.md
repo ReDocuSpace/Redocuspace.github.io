@@ -33,6 +33,7 @@ title : backjoon
 			</tr>
 		</thead>
 		<tbody>
+		<!--
 			{% directory path: /백준 exclude: .md %}
 			<tr>
 				<td>{{ file.directory01}}</td>
@@ -42,6 +43,6 @@ title : backjoon
                 <td></td>
 			</tr>
 			{% enddirectory %}
-		</tbody>
+		</tbody>-->
 	</table>
 </div>
