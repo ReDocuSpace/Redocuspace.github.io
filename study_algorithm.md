@@ -22,5 +22,15 @@ title : backjoon
 			</tr>
 		</thead>
 		<tbody>
+			{% directory path: /백준 exclude: .md %}
+			<tr>
+				<td>{{ file.directory01}}</td>
+                		<td>{{ file.number}}</td>
+				<td>{{ file.slug }}</td>
+				<td>{{ file.directory02 }}</td>
+                		<td></td>
+			</tr>
+			{% enddirectory %}
+		</tbody>
 	</table>
 </div>
