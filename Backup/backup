@@ -55,3 +55,16 @@ List `svg`-files from `assets` folder (recursive)
 List `subfolders` from `assets` folder (recursive)
 
 {{ "assets/" | list_folders }}
+
+
+<tbody>
+			{% directory path: /백준 exclude: .md %}
+			<tr>
+				<td>{{ file.directory01}}</td>
+                <td>{{ file.number}}</td>
+				<td>{{ file.slug }}</td>
+				<td>{{ file.directory02 }}</td>
+                <td></td>
+			</tr>
+			{% enddirectory %}
+		</tbody>

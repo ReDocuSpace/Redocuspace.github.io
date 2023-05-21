@@ -13,7 +13,6 @@ theme: minima
 plugins:
   - jekyll-feed
 
-
 # Navigation
 navigation:
     - title : About
@@ -69,6 +68,14 @@ projectlist:
       img : /assets/images/pic01.jpg
       description : Hello World
 
+
+# Hobby
+hobbylist:
+    - title : novel
+      url : /hobby_novel
+      img : /assets/images/pic01.jpg
+      description : Novel
+
 # Contact
 
 
@@ -79,3 +86,6 @@ imitationlist:
       img : /assets/images/pic01.jpg
       description : Hello World
     
+
+
+# Study_language List Manager

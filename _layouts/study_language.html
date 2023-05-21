@@ -4,33 +4,79 @@ title : backjoon
 ---
 
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
-	{%- include head.html -%}
-	<body>
+<html lang="en">
+	{%- include study_launguage_head.html -%}
+    <body class="sb-nav-fixed">
+		{%- include study_launguage_nav.html -%}
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-light" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+							<!-- 내용 시작-->
+							<div class="sb-sidenav-menu-heading">정보처리기사</div>
 
-        {%- include nav_sub.html -%}
+							<!-- 1. -->
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#Info_01_01" aria-expanded="false" aria-controls="collapseLayouts">
+								<div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+								소프트웨어 설계
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="Info_01_01" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="/post_study_language/Info_01_01_01">SW 개발 방법론</a>
+                                    <a class="nav-link" href="/post_study_language/Info_01_01_02">요구사항 확인</a>
+									<a class="nav-link" href="/post_study_language/Info_01_01_03">화면 설계</a>
+									<a class="nav-link" href="/post_study_language/Info_01_01_04">애플리케이션 설계</a>
+									<a class="nav-link" href="/post_study_language/Info_01_01_05">인터페이스 설계</a>
+                                </nav>
+                            </div>
 
-		<main class="page-content" aria-label="Content">
-            <div id="wrapper">
-                <!-- Main -->
-                <div id="main">
-                    <section>
-                        <div class="container">
-			            {{ content }}
+							<!-- 2. -->
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#Info_01_02" aria-expanded="false" aria-controls="collapseLayouts">
+								<div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+								소프트웨어 개발
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="Info_01_02" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="/post_study_language/Info_01_02_01">자료 구조</a>
+                                    <a class="nav-link" href="/post_study_language/Info_01_02_02">통합 구현</a>
+									<a class="nav-link" href="/post_study_language/Info_01_02_03">제품 SW 패키징</a>
+									<a class="nav-link" href="/post_study_language/Info_01_02_04">애플리케이션 테스트</a>
+                                </nav>
+                            </div>
+
                         </div>
-                    </section>
-                </div>
+                    </div>
+                </nav>
             </div>
-		</main>
+			<div id="layoutSidenav_content">
+				<br>
+                <main>
+					<div class="container-fluid px-4">
+						<h1>{{page.title}}</h1>
+						<hr/>
+                        {{content}}
+                    </div>
+                </main>
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; Your Website 2023</div>
+                            <div>
+                                <a href="#">Privacy Policy</a>
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
 
-		<div id="wrapper">
-			{%- include footer.html -%}
-		</div>
-
-		</div>
-		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	</body>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="/assets/study_lauguage/js/scripts.js"></script>
+		
+    </body>
 </html>
-
