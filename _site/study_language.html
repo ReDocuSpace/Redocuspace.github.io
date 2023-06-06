@@ -6,21 +6,34 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
 
+	<link rel="stylesheet" href="/assets/custom.css">
+    <link rel="stylesheet" href="/assets/contentlist.css">
     <title>ReDocu_StudySpace</title>
 
     <link href="/assets/study_lauguage/css/styles.css" rel="stylesheet" />
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
 </head><body class="sb-nav-fixed"><nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
     <!-- Navbar Brand-->
-    <a class="navbar-brand ps-3" href="http://localhost:4000">Re_Docu Space</a>
+   
+    <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+    <a>&nbsp</a>
+    
+    <a class="navbar-brand ps-3" href="../study_language">study_language</a>
     <!-- Sidebar Toggle-->
+
+    <a class="navbar-brand d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0" href="http://localhost:4000">Home</a>
+    <!-- Sidebar Toggle-->
+
+
     <!-- Navbar Search-->
+    <!--
     <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
         <div class="input-group">
             <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
             <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
         </div>
     </form>
+    -->
     <!-- Navbar-->
     
 </nav><div id="layoutSidenav">
@@ -29,28 +42,26 @@
                     <div class="sb-sidenav-menu">
                         <div class="nav">
 							<!-- 내용 시작-->
-							<div class="sb-sidenav-menu-heading">정보처리기사</div>
+							<div class="sb-sidenav-menu-heading">프로그래밍 언어</div>
 
 							<!-- 1. -->
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#Info_01_01" aria-expanded="false" aria-controls="collapseLayouts">
 								<div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-								소프트웨어 설계
+								혼자 공부하는 파이썬
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
                             <div class="collapse" id="Info_01_01" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="/post_study_language/Info_01_01_01">SW 개발 방법론</a>
-                                    <a class="nav-link" href="/post_study_language/Info_01_01_02">요구사항 확인</a>
-									<a class="nav-link" href="/post_study_language/Info_01_01_03">화면 설계</a>
-									<a class="nav-link" href="/post_study_language/Info_01_01_04">애플리케이션 설계</a>
-									<a class="nav-link" href="/post_study_language/Info_01_01_05">인터페이스 설계</a>
+                                    <a class="nav-link" href="/post_study_language/python_01_01_01">파이썬의 개요</a>
+                                    <a class="nav-link" href="/post_study_language/python_01_01_02">조건문과 반복문</a>
+									<a class="nav-link" href="/post_study_language/python_01_01_03">함수와 예외처리</a>
+									<a class="nav-link" href="/post_study_language/python_01_01_04">모듈과 클래스</a>
                                 </nav>
                             </div>
-
 							<!-- 2. -->
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#Info_01_02" aria-expanded="false" aria-controls="collapseLayouts">
 								<div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-								소프트웨어 개발
+								윤성우의 열혈 C언어 프로그래밍
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
                             <div class="collapse" id="Info_01_02" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
@@ -72,7 +83,14 @@
 					<div class="container-fluid px-4">
 						<h1>Your New Jekyll Site</h1>
 						<hr/>
-                        <p>학습 공간</p>
+                        <div class="features">
+	<article>
+		<a href="/post_study_processing/processing_01_01_01" class="image"><img src="/assets/study_booklist/Book01_Processing.jpg" alt="" /></a>
+		<div class="inner">
+			<h4>혼자 공부하는 파이썬</h4>
+		</div>
+	</article>
+</div>
 
                     </div>
                 </main>

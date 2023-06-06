@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+	<link rel="stylesheet" href="/assets/custom.css">
+    <link rel="stylesheet" href="/assets/contentlist.css">
+    <title>ReDocu_StudySpace</title>
+
+    <link href="/assets/study_lauguage/css/styles.css" rel="stylesheet" />
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+</head><body class="sb-nav-fixed"><nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+    <!-- Navbar Brand-->
+   
+    <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+    <a>&nbsp</a>
+    
+    <a class="navbar-brand ps-3" href="../study_booklist">study_booklist</a>
+    <!-- Sidebar Toggle-->
+
+    <a class="navbar-brand d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0" href="http://localhost:4000">Home</a>
+    <!-- Sidebar Toggle-->
+
+
+    <!-- Navbar Search-->
+    <!--
+    <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+        <div class="input-group">
+            <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+            <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+        </div>
+    </form>
+    -->
+    <!-- Navbar-->
+    
+</nav><div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-light" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+							<!-- 내용 시작-->
+							<div class="sb-sidenav-menu-heading">다양한 IDE</div>
+
+							<!-- 1. -->
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#Info_01_01" aria-expanded="false" aria-controls="collapseLayouts">
+								<div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+								손에 잡히는 프로세싱
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="Info_01_01" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="/post_study_processing/processing_01_01_01">개요</a>
+                                    <a class="nav-link" href="/post_study_processing/processing_01_01_02">그리기</a>
+                                    <a class="nav-link" href="/post_study_processing/processing_01_01_03">변수</a>
+                                    <a class="nav-link" href="/post_study_processing/processing_01_01_04">반응</a>
+                                    <a class="nav-link" href="/post_study_processing/processing_01_01_05">미디어</a>
+                                    <a class="nav-link" href="/post_study_processing/processing_01_01_06">움직임</a>
+                                    <a class="nav-link" href="/post_study_processing/processing_01_01_07">함수</a>
+                                    <a class="nav-link" href="/post_study_processing/processing_01_01_08">객체와 배열</a>
+                                    <a class="nav-link" href="/post_study_processing/processing_01_01_09">부록</a>
+                                </nav>
+                            </div>
+
+                            <!-- -->
+                        </div>
+                    </div>
+                </nav>
+            </div>
+			<div id="layoutSidenav_content">
+				<br>
+                <main>
+					<div class="container-fluid px-4">
+						<h1>반응</h1>
+						<hr/>
+                        <p>마우스나 키보드, 혹은 다른 장치에 반응해야 하는 코드는 프로그램이 종료되기 전까지 지속적으로 실행되어야 한다. 
+이렇게 하기 위해서는, 업데이트되는 행들을 프로세싱의 draw() 함수 블록 안에 넣어 줘야 한다.</p>
+
+<p><br /></p>
+
+<h3 id="setup-함수">setup() 함수</h3>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">draw</span><span class="p">(){</span>
+    <span class="n">println</span><span class="p">(</span><span class="s">"I'm starting"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h3 id="darw-함수">darw() 함수</h3>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">draw</span><span class="p">(){</span>
+    <span class="n">println</span><span class="p">(</span><span class="s">"I'm drawing"</span><span class="p">);</span>
+    <span class="n">println</span><span class="p">(</span><span class="n">frameCount</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h3 id="마우스-추적하기">마우스 추적하기</h3>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">setup</span><span class="p">(){</span>
+    <span class="n">size</span><span class="p">(</span><span class="mi">480</span><span class="p">,</span><span class="mi">120</span><span class="p">);</span>
+    <span class="n">fill</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">102</span><span class="p">);</span>
+    <span class="n">smooth</span><span class="p">();</span>
+    <span class="n">noStroke</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">draw</span><span class="p">(){</span>
+    <span class="n">ellipse</span><span class="p">(</span><span class="n">mouseX</span><span class="p">,</span> <span class="n">mouseY</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span><span class="mi">9</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h3 id="자신을-따라다니는-점">자신을 따라다니는 점</h3>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">setup</span><span class="p">(){</span>
+    <span class="n">size</span><span class="p">(</span><span class="mi">480</span><span class="p">,</span><span class="mi">120</span><span class="p">);</span>
+    <span class="n">fill</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">102</span><span class="p">);</span>
+    <span class="n">smooth</span><span class="p">();</span>
+    <span class="n">noStroke</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">draw</span><span class="p">(){</span>
+    <span class="n">backgorund</span><span class="p">(</span><span class="mi">204</span><span class="p">);</span>
+    <span class="n">ellipse</span><span class="p">(</span><span class="n">mouseX</span><span class="p">,</span> <span class="n">mouseY</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span><span class="mi">9</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h3 id="마우스-추적하기-1">마우스 추적하기</h3>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">setup</span><span class="p">(){</span>
+    <span class="n">size</span><span class="p">(</span><span class="mi">480</span><span class="p">,</span><span class="mi">120</span><span class="p">);</span>
+    <span class="n">strokeWeight</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+    <span class="n">smooth</span><span class="p">();</span>
+    <span class="n">stroke</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">102</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">draw</span><span class="p">(){</span>
+    <span class="n">line</span><span class="p">(</span><span class="n">mouseX</span><span class="p">,</span> <span class="n">mouseY</span><span class="p">,</span> <span class="n">pmouseX</span><span class="p">,</span><span class="n">pmouseY</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h3 id="마우스의-속도로-선의-두께-설정하기">마우스의 속도로 선의 두께 설정하기</h3>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">setup</span><span class="p">(){</span>
+    <span class="n">size</span><span class="p">(</span><span class="mi">480</span><span class="p">,</span><span class="mi">120</span><span class="p">);</span>
+
+    <span class="n">smooth</span><span class="p">();</span>
+    <span class="n">stroke</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">102</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">draw</span><span class="p">(){</span>
+    <span class="kt">float</span> <span class="n">weight</span> <span class="o">=</span> <span class="n">dist</span><span class="p">(</span><span class="n">mouseX</span><span class="p">,</span> <span class="n">mouseY</span><span class="p">,</span> <span class="n">pmouseX</span><span class="p">,</span><span class="n">pmouseY</span><span class="p">);</span>
+    <span class="n">strokeWeight</span><span class="p">(</span><span class="n">weight</span><span class="p">);</span>
+    <span class="n">line</span><span class="p">(</span><span class="n">mouseX</span><span class="p">,</span> <span class="n">mouseY</span><span class="p">,</span> <span class="n">pmouseX</span><span class="p">,</span><span class="n">pmouseY</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h3 id="이징---점진적인-변화">이징 - 점진적인 변화</h3>
+
+<p>마우스의 값들이 조금씩 지연되어 느슨하게 반영되는 기법을 점진적인 변화 (easing)이라고 한다.</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="kt">float</span> <span class="n">x</span><span class="p">;</span>
+<span class="kt">float</span> <span class="n">easing</span> <span class="o">=</span> <span class="mi">0</span><span class="p">.</span><span class="mo">01</span><span class="n">f</span><span class="p">;</span>
+<span class="kt">float</span> <span class="n">diameter</span> <span class="o">=</span> <span class="mi">12</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">setup</span><span class="p">(){</span>
+    <span class="n">size</span><span class="p">(</span><span class="mi">220</span><span class="p">,</span><span class="mi">120</span><span class="p">);</span>
+    <span class="n">smooth</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">draw</span><span class="p">(){</span>
+    <span class="kt">float</span> <span class="n">targetX</span> <span class="o">=</span> <span class="n">mouseX</span><span class="p">;</span>
+    <span class="n">x</span> <span class="o">+=</span> <span class="p">(</span><span class="n">targetX</span> <span class="o">-</span> <span class="n">x</span><span class="p">)</span> <span class="o">*</span> <span class="n">easing</span><span class="p">;</span>
+    <span class="n">ellipse</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">12</span><span class="p">);</span>
+    <span class="n">println</span><span class="p">(</span><span class="n">targetX</span> <span class="o">+</span> <span class="s">" : "</span> <span class="o">+</span> <span class="n">x</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h3 id="이징을-이용해서-그린-부드러운-선들">이징을 이용해서 그린 부드러운 선들</h3>
+
+<p>마우스의 값들이 조금씩 지연되어 느슨하게 반영되는 기법을 점진적인 변화 (easing)이라고 한다.</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="kt">float</span> <span class="n">x</span><span class="p">;</span>
+<span class="kt">float</span> <span class="n">y</span><span class="p">;</span>
+<span class="kt">float</span> <span class="n">px</span><span class="p">;</span>
+<span class="kt">float</span> <span class="n">py</span><span class="p">;</span>
+<span class="kt">float</span> <span class="n">easing</span> <span class="o">=</span> <span class="mi">0</span><span class="p">.</span><span class="mo">05</span><span class="n">f</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">setup</span><span class="p">(){</span>
+    <span class="n">size</span><span class="p">(</span><span class="mi">480</span><span class="p">,</span><span class="mi">120</span><span class="p">);</span>
+    <span class="n">smooth</span><span class="p">();</span>
+    <span class="n">stroke</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">102</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">draw</span><span class="p">(){</span>
+    <span class="kt">float</span> <span class="n">targetX</span> <span class="o">=</span> <span class="n">mouseX</span><span class="p">;</span>
+    <span class="n">x</span> <span class="o">+=</span> <span class="p">(</span><span class="n">targetX</span> <span class="o">-</span> <span class="n">x</span><span class="p">)</span> <span class="o">*</span> <span class="n">easing</span><span class="p">;</span>
+
+    <span class="kt">float</span> <span class="n">targetY</span> <span class="o">=</span> <span class="n">mouseY</span><span class="p">;</span>
+    <span class="n">y</span> <span class="o">+=</span> <span class="p">(</span><span class="n">targetY</span> <span class="o">-</span> <span class="n">y</span><span class="p">)</span> <span class="o">*</span> <span class="n">easing</span><span class="p">;</span>
+
+    <span class="kt">float</span> <span class="n">weight</span> <span class="o">=</span> <span class="n">dist</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">px</span><span class="p">,</span><span class="n">py</span><span class="p">);</span>
+    <span class="n">strokeWeight</span><span class="p">(</span><span class="n">weight</span><span class="p">);</span>
+    <span class="n">line</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">px</span><span class="p">,</span><span class="n">py</span><span class="p">);</span>
+    <span class="n">py</span> <span class="o">=</span> <span class="n">y</span><span class="p">;</span>
+    <span class="n">px</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h3 id="특정한-범위로-수치를-연결시키기">특정한 범위로 수치를 연결시키기</h3>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">setup</span><span class="p">(){</span>
+    <span class="n">size</span><span class="p">(</span><span class="mi">240</span><span class="p">,</span><span class="mi">120</span><span class="p">);</span>
+    <span class="n">strokeWeight</span><span class="p">(</span><span class="mi">12</span><span class="p">);</span>
+    <span class="n">smooth</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">draw</span><span class="p">(){</span>
+    <span class="n">background</span><span class="p">(</span><span class="mi">204</span><span class="p">);</span>
+    <span class="n">stroke</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
+    <span class="n">line</span><span class="p">(</span><span class="mi">120</span> <span class="p">,</span><span class="mi">60</span> <span class="p">,</span><span class="n">mouseX</span><span class="p">,</span> <span class="n">mouseY</span><span class="p">);</span>  <span class="c1">// 흰 선</span>
+    <span class="n">stroke</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+    <span class="kt">float</span> <span class="n">mx</span> <span class="o">=</span> <span class="n">mouseX</span><span class="o">/</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">60</span><span class="p">;</span>
+    <span class="n">line</span><span class="p">(</span><span class="mi">120</span> <span class="p">,</span><span class="mi">60</span> <span class="p">,</span><span class="n">mx</span> <span class="p">,</span><span class="n">mouseY</span><span class="p">);</span>      <span class="c1">// 검은선</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h3 id="map-함수로-수치들-연결시키기">map() 함수로 수치들 연결시키기</h3>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">setup</span><span class="p">(){</span>
+    <span class="n">size</span><span class="p">(</span><span class="mi">240</span><span class="p">,</span><span class="mi">120</span><span class="p">);</span>
+    <span class="n">strokeWeight</span><span class="p">(</span><span class="mi">12</span><span class="p">);</span>
+    <span class="n">smooth</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">draw</span><span class="p">(){</span>
+    <span class="n">background</span><span class="p">(</span><span class="mi">204</span><span class="p">);</span>
+    <span class="n">stroke</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
+    <span class="n">line</span><span class="p">(</span><span class="mi">120</span> <span class="p">,</span><span class="mi">60</span> <span class="p">,</span><span class="n">mouseX</span><span class="p">,</span> <span class="n">mouseY</span><span class="p">);</span>  <span class="c1">// 흰 선</span>
+    <span class="n">stroke</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+    <span class="kt">float</span> <span class="n">mx</span> <span class="o">=</span> <span class="n">map</span><span class="p">(</span><span class="n">mouseX</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">180</span><span class="p">);</span>
+    <span class="n">line</span><span class="p">(</span><span class="mi">120</span> <span class="p">,</span><span class="mi">60</span> <span class="p">,</span><span class="n">mx</span> <span class="p">,</span><span class="n">mouseY</span><span class="p">);</span>      <span class="c1">// 검은선</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h3 id="마우스-클릭하기">마우스 클릭하기</h3>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">setup</span><span class="p">(){</span>
+    <span class="n">size</span><span class="p">(</span><span class="mi">240</span><span class="p">,</span><span class="mi">120</span><span class="p">);</span>
+    <span class="n">strokeWeight</span><span class="p">(</span><span class="mi">12</span><span class="p">);</span>
+    <span class="n">smooth</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">draw</span><span class="p">(){</span>
+    <span class="n">background</span><span class="p">(</span><span class="mi">204</span><span class="p">);</span>
+    <span class="n">stroke</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
+    <span class="n">line</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">70</span><span class="p">,</span><span class="n">height</span><span class="p">);</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">mousePressed</span> <span class="o">==</span> <span class="nb">true</span><span class="p">){</span>
+        <span class="n">stroke</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">line</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="mi">50</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h3 id="클릭하지-않았을-때를-검출하기">클릭하지 않았을 때를 검출하기</h3>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">setup</span><span class="p">(){</span>
+    <span class="n">size</span><span class="p">(</span><span class="mi">240</span><span class="p">,</span><span class="mi">120</span><span class="p">);</span>
+    <span class="n">strokeWeight</span><span class="p">(</span><span class="mi">12</span><span class="p">);</span>
+    <span class="n">smooth</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">draw</span><span class="p">(){</span>
+    <span class="n">background</span><span class="p">(</span><span class="mi">204</span><span class="p">);</span>
+    <span class="n">stroke</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
+    <span class="n">line</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">70</span><span class="p">,</span><span class="n">height</span><span class="p">);</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">mousePressed</span> <span class="o">==</span> <span class="nb">true</span><span class="p">){</span>
+        <span class="n">stroke</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+    <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+        <span class="n">stroke</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">line</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="mi">50</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h3 id="마우스의-여러-버튼--left--center-right">마우스의 여러 버튼 [ LEFT , CENTER, RIGHT]</h3>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">setup</span><span class="p">(){</span>
+    <span class="n">size</span><span class="p">(</span><span class="mi">240</span><span class="p">,</span><span class="mi">120</span><span class="p">);</span>
+    <span class="n">strokeWeight</span><span class="p">(</span><span class="mi">12</span><span class="p">);</span>
+    <span class="n">smooth</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">draw</span><span class="p">(){</span>
+    <span class="n">background</span><span class="p">(</span><span class="mi">204</span><span class="p">);</span>
+    <span class="n">stroke</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
+    <span class="n">line</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">70</span><span class="p">,</span><span class="n">height</span><span class="p">);</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">mouseButton</span> <span class="o">==</span> <span class="n">LEFT</span><span class="p">){</span>
+        <span class="n">stroke</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+    <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+        <span class="n">stroke</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">line</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="mi">50</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h3 id="원의-범위">원의 범위</h3>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">120</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">60</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">radius</span> <span class="o">=</span> <span class="mi">12</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">setup</span><span class="p">(){</span>
+    <span class="n">size</span><span class="p">(</span><span class="mi">240</span><span class="p">,</span><span class="mi">120</span><span class="p">);</span>
+    <span class="n">smooth</span><span class="p">();</span>
+    <span class="n">ellipseMode</span><span class="p">(</span><span class="n">RADIUS</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">draw</span><span class="p">(){</span>
+    <span class="n">background</span><span class="p">(</span><span class="mi">204</span><span class="p">);</span>
+    <span class="kt">float</span> <span class="n">d</span> <span class="o">=</span> <span class="n">dist</span><span class="p">(</span><span class="n">mouseX</span><span class="p">,</span> <span class="n">mouseY</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">);</span>
+    <span class="k">if</span><span class="p">(</span> <span class="n">d</span> <span class="o">&lt;</span> <span class="n">radius</span><span class="p">){</span>
+        <span class="n">radius</span><span class="o">++</span><span class="p">;</span>
+        <span class="n">fill</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+    <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+        <span class="n">fill</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">ellipse</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">radius</span><span class="p">,</span><span class="n">radius</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h3 id="직사각형의-범위">직사각형의 범위</h3>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">80</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">w</span> <span class="o">=</span> <span class="mi">80</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">h</span> <span class="o">=</span> <span class="mi">60</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">draw</span><span class="p">(){</span>
+    <span class="n">background</span><span class="p">(</span><span class="mi">204</span><span class="p">);</span>
+    <span class="k">if</span><span class="p">((</span><span class="n">mouseX</span> <span class="o">&gt;</span> <span class="n">x</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">mouseX</span> <span class="o">&lt;</span> <span class="n">x</span> <span class="o">+</span> <span class="n">w</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">mouseY</span> <span class="o">&gt;</span> <span class="n">y</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">mouseY</span> <span class="o">&lt;</span> <span class="p">(</span><span class="n">y</span> <span class="o">+</span> <span class="n">h</span><span class="p">)){</span>
+        <span class="n">fill</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+    <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+        <span class="n">fill</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">rect</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="n">h</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h3 id="키보드-입력">키보드 입력</h3>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">setup</span><span class="p">(){</span>
+    <span class="n">size</span><span class="p">(</span><span class="mi">240</span><span class="p">,</span><span class="mi">120</span><span class="p">);</span>
+    <span class="n">smooth</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">draw</span><span class="p">(){</span>
+    <span class="n">background</span><span class="p">(</span><span class="mi">204</span><span class="p">);</span>
+    <span class="n">line</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">220</span><span class="p">,</span><span class="mi">100</span><span class="p">);</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="n">keyPressed</span><span class="p">){</span>
+        <span class="n">line</span><span class="p">(</span><span class="mi">220</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h3 id="글자-그리기">글자 그리기</h3>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">setup</span><span class="p">(){</span>
+    <span class="n">size</span><span class="p">(</span><span class="mi">120</span><span class="p">,</span><span class="mi">120</span><span class="p">);</span>
+    <span class="n">textSize</span><span class="p">(</span><span class="mi">64</span><span class="p">);</span>
+    <span class="n">textAlign</span><span class="p">(</span><span class="n">CENTER</span><span class="p">);</span>      <span class="c1">// 중앙에 위치</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">draw</span><span class="p">(){</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">keyPressed</span><span class="p">){</span>
+        <span class="n">background</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+        <span class="n">text</span><span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="mi">60</span><span class="p">,</span><span class="mi">80</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h3 id="특정한-키를-검사하기">특정한 키를 검사하기</h3>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">setup</span><span class="p">(){</span>
+    <span class="n">size</span><span class="p">(</span><span class="mi">120</span><span class="p">,</span><span class="mi">120</span><span class="p">);</span>
+    <span class="n">textSize</span><span class="p">(</span><span class="mi">64</span><span class="p">);</span>
+    <span class="n">textAlign</span><span class="p">(</span><span class="n">CENTER</span><span class="p">);</span>      <span class="c1">// 중앙에 위치</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">draw</span><span class="p">(){</span>
+    <span class="n">background</span><span class="p">(</span><span class="mi">204</span><span class="p">);</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">keyPressed</span><span class="p">){</span>
+        <span class="k">if</span><span class="p">((</span><span class="n">key</span> <span class="o">==</span> <span class="sc">'h'</span> <span class="o">||</span> <span class="p">(</span><span class="n">key</span> <span class="o">==</span> <span class="sc">'H'</span><span class="p">))){</span>
+            <span class="n">line</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span><span class="mi">60</span><span class="p">,</span><span class="mi">90</span><span class="p">,</span><span class="mi">60</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">if</span><span class="p">((</span><span class="n">key</span> <span class="o">==</span> <span class="sc">'n'</span><span class="p">)</span> <span class="o">||</span> <span class="p">(</span><span class="n">key</span> <span class="o">==</span> <span class="sc">'N'</span><span class="p">)){</span>
+            <span class="n">line</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">90</span><span class="p">,</span><span class="mi">100</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="n">line</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">100</span><span class="p">);</span>
+    <span class="n">line</span><span class="p">(</span><span class="mi">90</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">90</span><span class="p">,</span><span class="mi">100</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h3 id="화살표-키로-움직이기">화살표 키로 움직이기</h3>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">215</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">setup</span><span class="p">(){</span>
+    <span class="n">size</span><span class="p">(</span><span class="mi">480</span><span class="p">,</span><span class="mi">120</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">draw</span><span class="p">(){</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">keyPressed</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">key</span> <span class="o">==</span> <span class="n">CODED</span><span class="p">)){</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">keyCode</span> <span class="o">==</span> <span class="n">LEFT</span><span class="p">){</span>
+            <span class="n">x</span><span class="o">--</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">keyCode</span> <span class="o">==</span> <span class="n">RIGHT</span><span class="p">){</span>
+            <span class="n">x</span><span class="o">++</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span> 
+    <span class="n">rect</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">45</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">50</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p><br /></p>
+
+
+                    </div>
+                </main>
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; Your Website 2023</div>
+                            <div>
+                                <a href="#">Privacy Policy</a>
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="/assets/study_lauguage/js/scripts.js"></script>
+		
+    </body>
+</html>

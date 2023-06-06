@@ -44,29 +44,30 @@ studylist:
     - title : lauguage
       url : /study_language
       img : /assets/images/pic01.jpg
-      description : 기본학습
+      description : 문법학습
+    - title : study_license
+      url : /study_license
+      img : /assets/images/pic01.jpg
+      description : 자격증 공부
     - title : algorithm
       url : /study_algorithm
       img : /assets/images/pic01.jpg
       description : 알고리즘
+    - title : booklist
+      url : /study_booklist
+      img : /assets/images/pic01.jpg
+      description : 책
     - title : gamelist
       url : /study_gamelist
       img : /assets/images/pic01.jpg
       description : 모작게임
 
-# Portfolio
-portfoliolist:
-    - title : portfolio
-      url : /study_language
-      img : /assets/images/pic01.jpg
-      description : Hello World
-
 # Project
 projectlist:
-    - title : project
-      url : /study_language
+    - title : single
+      url : /project_single
       img : /assets/images/pic01.jpg
-      description : Hello World
+      description : 싱글 프로젝트
 
 
 # Hobby
