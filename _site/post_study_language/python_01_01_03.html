@@ -45,26 +45,28 @@
 							<div class="sb-sidenav-menu-heading">프로그래밍 언어</div>
 
 							<!-- 1. -->
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#Info_01_01" aria-expanded="false" aria-controls="collapseLayouts">
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#python_01_01" aria-expanded="false" aria-controls="collapseLayouts">
 								<div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
 								혼자 공부하는 파이썬
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
-                            <div class="collapse" id="Info_01_01" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <div class="collapse" id="python_01_01" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="/post_study_language/python_01_01_01">파이썬의 개요</a>
-                                    <a class="nav-link" href="/post_study_language/python_01_01_02">조건문과 반복문</a>
+                                    <a class="nav-link" href="/post_study_language/python_01_01_02">자료형,조건문,반복문</a>
 									<a class="nav-link" href="/post_study_language/python_01_01_03">함수와 예외처리</a>
 									<a class="nav-link" href="/post_study_language/python_01_01_04">모듈과 클래스</a>
+                                    <a class="nav-link" href="/post_study_language/python_01_01_05">부록</a>
                                 </nav>
                             </div>
+                            
 							<!-- 2. -->
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#Info_01_02" aria-expanded="false" aria-controls="collapseLayouts">
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#cprogramming_01_01" aria-expanded="false" aria-controls="collapseLayouts">
 								<div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
 								윤성우의 열혈 C언어 프로그래밍
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
-                            <div class="collapse" id="Info_01_02" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <div class="collapse" id="cprogramming_01_01" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="/post_study_language/Info_01_02_01">자료 구조</a>
                                     <a class="nav-link" href="/post_study_language/Info_01_02_02">통합 구현</a>
@@ -72,7 +74,22 @@
 									<a class="nav-link" href="/post_study_language/Info_01_02_04">애플리케이션 테스트</a>
                                 </nav>
                             </div>
-
+                            <!-- 3. -->
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#processing_01_01" aria-expanded="false" aria-controls="collapseLayouts">
+								<div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+								손에 잡히는 프로세싱
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="processing_01_01" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="/post_study_language/processing_01_01_01">프로세싱 개요</a>
+                                    <a class="nav-link" href="/post_study_language/processing_01_01_02">프로세싱 그리기</a>
+                                    <a class="nav-link" href="/post_study_language/processing_01_01_03">프로세싱 프로그래밍</a>
+                                    <a class="nav-link" href="/post_study_language/processing_01_01_04">프로세싱 상호작용</a>
+                                    <a class="nav-link" href="/post_study_language/processing_01_01_05">프로세싱 미디어</a>
+                                    <a class="nav-link" href="/post_study_language/processing_01_01_06">프로세싱 움직임</a>
+                                </nav>
+                            </div>
                         </div>
                     </div>
                 </nav>
@@ -83,23 +100,598 @@
 					<div class="container-fluid px-4">
 						<h1>함수와 예외처리</h1>
 						<hr/>
-                        <h1 id="1-소프트웨어-개발-방법론">1. 소프트웨어 개발 방법론</h1>
+                        <h3 id="함수"><strong>함수</strong></h3>
+<hr />
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">함수</span> <span class="n">이름</span><span class="p">():</span>
+    <span class="n">문장</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h4 id="1-함수-만들기"><strong>1. 함수 만들기</strong></h4>
+<p><br /></p>
+
+<h5 id="-함수-예시-">** 함수 예시 **</h5>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">print_times_1</span><span class="p">():</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"안녕하세요"</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">print_times_2</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="nf">print</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">print_times_sub</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="o">*</span><span class="n">values</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">values</span><span class="p">:</span>
+            <span class="nf">print</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        
+        <span class="nf">print</span><span class="p">()</span>
+
+<span class="nf">print_times_1</span><span class="p">()</span>   <span class="c1"># 안녕하세요 출력
+</span><span class="nf">print_times_2</span><span class="p">(</span><span class="s">"안녕하세요"</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>   <span class="c1"># 안녕하세요 매개변수로 출력
+</span><span class="nf">print_times_sub</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s">"안녕하세요"</span><span class="p">,</span> <span class="s">"즐거운"</span> <span class="s">"파이썬 프로그래밍"</span><span class="p">)</span>  <span class="c1"># 가변 매개변수
+</span>
+<span class="c1"># 기본 매개변수 예시
+# print(value, ... , sep=' ', end ='\n', file=sys.stdout, flush = False)
+</span>
+<span class="k">def</span> <span class="nf">sub_print</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="nf">print</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">sub_print</span><span class="p">(</span><span class="o">*</span><span class="n">values</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">values</span><span class="p">:</span>
+            <span class="nf">print</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        
+        <span class="nf">print</span><span class="p">()</span>
+
+<span class="nf">sub_print</span><span class="p">(</span><span class="s">"안녕하세요"</span><span class="p">)</span>
+<span class="nf">sub_print</span><span class="p">(</span><span class="s">"안녕하세요"</span><span class="p">,</span> <span class="s">"즐거운"</span><span class="p">,</span> <span class="s">"파이썬 프로그래밍"</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</code></pre></div></div>
+<h5 id="-retrun-함수-">** retrun 함수 **</h5>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">test</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">100</span><span class="p">):</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="n">c</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">return_test</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s">"안녕하세요"</span>
+
+<span class="c1"># 1) 기본 형태
+</span><span class="nf">test</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">)</span>
+
+<span class="c1"># 2) 키워드 매개변수로 모든 매개변수를 지정한 형태
+</span><span class="nf">test</span><span class="p">(</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">200</span><span class="p">)</span>
+
+<span class="c1"># 3) 키워드 매개변수로 모든 매개변수를 마구잡이로 지정한 형태
+</span><span class="nf">test</span><span class="p">(</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">200</span><span class="p">)</span>
+
+<span class="c1"># 4) 키워드 매개변수로 일부 매개변수만 지정한 형태
+</span><span class="nf">test</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">200</span><span class="p">)</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="nf">return_test</span><span class="p">())</span>
+
+<span class="k">def</span> <span class="nf">함수</span><span class="p">(</span><span class="n">매개변수</span><span class="p">):</span>
+    <span class="n">변수</span> <span class="o">=</span> <span class="n">초깃값</span>
+    <span class="c1"># 가격 처리
+</span>    <span class="k">return</span> <span class="n">변수</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h4 id="2-함수의-활용"><strong>2. 함수의 활용</strong></h4>
+<p><br /></p>
+
+<h5 id="-재귀-함수-">** 재귀 함수 **</h5>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="s">"1! : "</span> <span class="p">,</span> <span class="nf">factorial</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"2! : "</span> <span class="p">,</span> <span class="nf">factorial</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h5 id="-피보나치와-메모화-">** 피보나치와 메모화 **</h5>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 메모화
+</span><span class="n">dictionary</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="mi">1</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="mi">2</span><span class="p">:</span> <span class="mi">1</span>
+<span class="p">}</span>
+
+<span class="k">def</span> <span class="nf">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">dictionary</span><span class="p">[</span><span class="n">n</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="nf">fibonacci</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="nf">fibonacci</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+        <span class="n">dictionary</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">output</span>
+        <span class="k">return</span> <span class="n">output</span>
+    
+<span class="nf">print</span><span class="p">(</span><span class="s">"fibonacci(10) : "</span><span class="p">,</span><span class="nf">fibonacci</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h5 id="-리스트-평탄화-">** 리스트 평탄화 **</h5>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">flatten</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nf">type</span><span class="p">(</span><span class="n">item</span><span class="p">)</span> <span class="o">==</span> <span class="nb">list</span><span class="p">:</span>
+            <span class="n">output</span> <span class="o">+=</span> <span class="n">item</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">output</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">output</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">4</span><span class="p">,[</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]],</span><span class="mi">7</span><span class="p">,[</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]]</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="s">"원본 : "</span><span class="p">,</span> <span class="n">example</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"변환 : "</span><span class="p">,</span> <span class="nf">flatten</span><span class="p">(</span><span class="n">example</span><span class="p">))</span>
+</code></pre></div></div>
+
+<h4 id="3-함수-고급"><strong>3. 함수 고급</strong></h4>
+<p><br /></p>
+
+<p><a href="https://www.tutorialspoint.com/python/python_data_types.htm"><strong>Python 함수 참고 사이트</strong></a></p>
+
+<p>튜플 : 함수와 함께 많이 사용되는 리스트와 비슷한 자료형으로, 한번 결정된 요소는 바꿀 수 없다.
+람다 : 매개변수로 함수를 전달하기 위해 함수 구문을 작성하는 것이 번거롭고, 코드 공간 낭비라는 생각이 들 때 함수를 간단하게 선언하는 방법</p>
+
+<h5 id="튜플"><strong>튜플</strong></h5>
+<p><br /></p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 튜플 함수형태
+</span><span class="k">def</span> <span class="nf">tuple_test</span><span class="p">():</span>
+    <span class="nf">return </span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">)</span>
+
+
+<span class="c1"># 튜플
+</span><span class="n">tuple_test</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">)</span>
+<span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="n">tuple_test</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">tuple_test</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">tuple_test</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="s">"a:"</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"b:"</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"c:"</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+
+<span class="c1"># 함수로 튜플 넣기
+</span><span class="n">d</span><span class="p">,</span><span class="n">e</span> <span class="o">=</span> <span class="nf">tuple_test</span><span class="p">()</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="s">"d:"</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"e:"</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h5 id="람다"><strong>람다</strong></h5>
+<p><br />
+함수를 매개변수로 사용하는 표준함수
+map(함수, 리스트)
+filter(함수, 리스트)</p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">power</span><span class="p">(</span><span class="n">item</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">item</span> <span class="o">*</span> <span class="n">item</span>
+<span class="k">def</span> <span class="nf">under_3</span><span class="p">(</span><span class="n">item</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">item</span> <span class="o">&lt;</span> <span class="mi">3</span>
+
+<span class="c1"># 람다형태
+#power = lambda x : x * x
+#under_3 = lambda x : x &lt; 3
+</span>
+<span class="n">list_input_a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+
+<span class="n">output_a</span> <span class="o">=</span> <span class="nf">map</span><span class="p">(</span><span class="n">power</span><span class="p">,</span> <span class="n">list_input_a</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"map(power, list_input_a) : "</span><span class="p">,</span> <span class="nf">list</span><span class="p">(</span><span class="n">output_a</span><span class="p">))</span>
+
+<span class="n">output_b</span> <span class="o">=</span> <span class="nf">filter</span><span class="p">(</span><span class="n">under_3</span><span class="p">,</span> <span class="n">list_input_a</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"filter(under_3, list_input_a) : "</span><span class="p">,</span> <span class="nf">list</span><span class="p">(</span><span class="n">output_b</span><span class="p">))</span>
+</code></pre></div></div>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">list_input_a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+
+<span class="n">output_a</span> <span class="o">=</span> <span class="nf">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span><span class="p">,</span> <span class="n">list_input_a</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"map(power, list_input_a) : "</span><span class="p">,</span> <span class="nf">list</span><span class="p">(</span><span class="n">output_a</span><span class="p">))</span>
+
+<span class="n">output_b</span> <span class="o">=</span> <span class="nf">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">,</span> <span class="n">list_input_a</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"filter(under_3, list_input_a) : "</span><span class="p">,</span><span class="nf">list</span><span class="p">(</span><span class="n">output_b</span><span class="p">))</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h5 id="파일-처리"><strong>파일 처리</strong></h5>
+<p><br /></p>
+
+<p>파일 객체 = open(문자열: 파일 경로, 문자열: 읽기 모드)</p>
+<ul>
+  <li>write 모드 (새로 쓰기 모드)</li>
+  <li>append 모드 (뒤에 이어서 쓰기 모드)</li>
+  <li>read 모드 (읽기 모드)</li>
+</ul>
+
+<p>파일 객체.read() : 텍스트 읽기</p>
+
+<p>파일 객체.close()</p>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">file</span> <span class="o">=</span> <span class="nf">open</span><span class="p">(</span><span class="s">"basic.txt"</span><span class="p">,</span> <span class="s">"w"</span><span class="p">)</span>
+
+<span class="nb">file</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="s">"Hello Python Programming"</span><span class="p">)</span>
+<span class="n">content</span> <span class="o">=</span> <span class="nb">file</span><span class="p">.</span><span class="nf">read</span><span class="p">()</span>
+<span class="nb">file</span><span class="p">.</span><span class="nf">close</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h5 id="파일-저장-및-한줄씩-읽기"><strong>파일 저장 및 한줄씩 읽기</strong></h5>
+<p><br /></p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">random</span>
+
+<span class="n">hanguls</span> <span class="o">=</span> <span class="nf">list</span><span class="p">(</span><span class="s">"가나다라마바사아자차카타파하"</span><span class="p">)</span>
+
+<span class="k">with</span> <span class="nf">open</span><span class="p">(</span><span class="s">"info.txt"</span><span class="p">,</span><span class="s">"w"</span><span class="p">)</span> <span class="k">as</span> <span class="nb">file</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">):</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="n">random</span><span class="p">.</span><span class="nf">choice</span><span class="p">(</span><span class="n">hanguls</span><span class="p">)</span> <span class="o">+</span> <span class="n">random</span><span class="p">.</span><span class="nf">choice</span><span class="p">(</span><span class="n">hanguls</span><span class="p">)</span>
+        <span class="n">weight</span> <span class="o">=</span> <span class="n">random</span><span class="p">.</span><span class="nf">randrange</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+        <span class="n">height</span> <span class="o">=</span> <span class="n">random</span><span class="p">.</span><span class="nf">randrange</span><span class="p">(</span><span class="mi">140</span><span class="p">,</span><span class="mi">200</span><span class="p">)</span>
+
+        <span class="nb">file</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="s">"{},{},{}</span><span class="se">\n</span><span class="s">"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="n">weight</span><span class="p">,</span><span class="n">height</span><span class="p">))</span>
+
+<span class="k">with</span> <span class="nf">open</span><span class="p">(</span><span class="s">"info.txt"</span><span class="p">,</span><span class="s">"r"</span><span class="p">)</span> <span class="k">as</span> <span class="nb">file</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">file</span><span class="p">:</span>
+        <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">weight</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span> <span class="o">=</span> <span class="n">line</span><span class="p">.</span><span class="nf">strip</span><span class="p">().</span><span class="nf">split</span><span class="p">(</span><span class="s">","</span><span class="p">)</span>
+
+        <span class="c1"># 문제 확인
+</span>        <span class="nf">if</span><span class="p">(</span><span class="ow">not</span> <span class="n">name</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="ow">not</span> <span class="n">weight</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="ow">not</span> <span class="n">height</span><span class="p">):</span>
+            <span class="k">continue</span>
+
+        <span class="n">bmi</span> <span class="o">=</span> <span class="nf">int</span><span class="p">(</span><span class="n">weight</span><span class="p">)</span> <span class="o">/</span> <span class="p">((</span><span class="nf">int</span><span class="p">(</span><span class="n">height</span><span class="p">)</span><span class="o">/</span><span class="mi">100</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="s">""</span>
+
+        <span class="k">if</span> <span class="mi">25</span> <span class="o">&lt;=</span> <span class="n">bmi</span><span class="p">:</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="s">"과체중"</span>
+        <span class="k">elif</span> <span class="mf">18.5</span> <span class="o">&lt;=</span> <span class="n">bmi</span><span class="p">:</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="s">"정상 체중"</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="s">"저체중"</span>
+
+        <span class="nf">print</span><span class="p">(</span><span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">.</span><span class="nf">join</span><span class="p">([</span>
+           <span class="s">"이름 : {}"</span><span class="p">,</span>
+           <span class="s">"몸무게 : {}"</span><span class="p">,</span>
+           <span class="s">"키 : {}"</span><span class="p">,</span>
+           <span class="s">"BMI : {}"</span><span class="p">,</span>
+           <span class="s">"결과 : {}"</span><span class="p">,</span> 
+        <span class="p">]).</span><span class="nf">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">weight</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">bmi</span><span class="p">,</span> <span class="n">result</span><span class="p">))</span>
+
+        <span class="nf">print</span><span class="p">()</span>
+
+</code></pre></div></div>
+
+<h5 id="제너레이터"><strong>제너레이터</strong></h5>
+<p><br /></p>
+
+<p>제너레이터 : 이터레이터를 직접 만들 때 사용하는 코드, 함수 내부에 yield 키워드를 사용하여 사용</p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">test</span><span class="p">():</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"A 지점 통과"</span><span class="p">)</span>
+    <span class="k">yield</span> <span class="mi">1</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"B 지점 통과"</span><span class="p">)</span>
+    <span class="k">yield</span> <span class="mi">2</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"C 지점 통과"</span><span class="p">)</span>
+
+<span class="n">output</span> <span class="o">=</span> <span class="nf">test</span><span class="p">()</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="s">"D 지점 통과"</span><span class="p">)</span>
+<span class="n">a</span> <span class="o">=</span> <span class="nf">next</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"E 지점 통과"</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="nf">next</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h5 id="-함수-기타-">** 함수 기타 **</h5>
+<p><br /></p>
+
+<h6 id="키워드-매개변수에-함수-전달하기"><strong>키워드 매개변수에 함수 전달하기</strong></h6>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">books</span> <span class="o">=</span> <span class="p">[{</span>
+    <span class="s">"제목"</span> <span class="p">:</span> <span class="s">"혼자 공부하는 파이썬"</span><span class="p">,</span>
+    <span class="s">"가격"</span> <span class="p">:</span> <span class="mi">18000</span>
+<span class="p">},</span> <span class="p">{</span>
+    <span class="s">"제목"</span> <span class="p">:</span> <span class="s">"혼자 공부하는 머신러닝 딥러닝"</span><span class="p">,</span>
+    <span class="s">"가격"</span> <span class="p">:</span> <span class="mi">26000</span>
+<span class="p">},</span> <span class="p">{</span>
+    <span class="s">"제목"</span> <span class="p">:</span> <span class="s">"혼자 공부하는 자바스크립트"</span><span class="p">,</span>
+    <span class="s">"가격"</span> <span class="p">:</span> <span class="mi">24000</span>
+<span class="p">}]</span>
+
+<span class="k">def</span> <span class="nf">가격추출함수</span><span class="p">(</span><span class="n">book</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">book</span><span class="p">[</span><span class="s">"가격"</span><span class="p">]</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="s">"# 가장 저렴한 책"</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="nf">min</span><span class="p">(</span><span class="n">books</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">가격추출함수</span><span class="p">))</span>
+<span class="nf">print</span><span class="p">(</span><span class="nf">min</span><span class="p">(</span><span class="n">books</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">book</span><span class="p">:</span><span class="n">book</span><span class="p">[</span><span class="s">"가격"</span><span class="p">]))</span>
+<span class="nf">print</span><span class="p">(</span><span class="nf">max</span><span class="p">(</span><span class="n">books</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">가격추출함수</span><span class="p">))</span>
+<span class="nf">print</span><span class="p">(</span><span class="nf">max</span><span class="p">(</span><span class="n">books</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">book</span><span class="p">:</span><span class="n">book</span><span class="p">[</span><span class="s">"가격"</span><span class="p">]))</span>
+<span class="nf">print</span><span class="p">()</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h3 id="예외처리"><strong>예외처리</strong></h3>
+<hr />
+
+<p>구문 오류 : 실행 전에 발생하는 오류                     - SyntaxError <br />
+런타임 오류 : 프로그램 실행 중에 발생하는 오류 [예외]    - ExceptionError 
+<br /></p>
+
+<h4 id="1-구문-오류와-예외"><strong>1. 구문 오류와 예외</strong></h4>
+
+<p>예외 처리방법</p>
+<ul>
+  <li>기본 예외 처리 : 조건문을 사용하는 방법</li>
+</ul>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">user_input</span> <span class="o">=</span> <span class="nf">input</span><span class="p">(</span><span class="s">"정수 입력 &gt; "</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">user_input</span><span class="p">.</span><span class="nf">isdigit</span><span class="p">():</span>
+    <span class="n">number_input</span> <span class="o">=</span> <span class="nf">int</span><span class="p">(</span><span class="n">user_input</span><span class="p">)</span>
+
+    <span class="nf">print</span><span class="p">(</span><span class="s">"원의 반지름 : "</span><span class="p">,</span> <span class="n">number_input</span><span class="p">)</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"원의 둘레 : "</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="mf">3.14</span> <span class="o">*</span> <span class="n">number_input</span><span class="p">)</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"원의 넓이 : "</span><span class="p">,</span> <span class="mf">3.14</span> <span class="o">*</span> <span class="n">number_input</span> <span class="o">*</span> <span class="n">number_input</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"정수를 입력하지 않았습니다"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<ul>
+  <li>try구문을 사용하는 방법</li>
+</ul>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">try</span><span class="p">:</span>
+    <span class="n">number_input</span> <span class="o">=</span> <span class="nf">int</span><span class="p">(</span><span class="nf">input</span><span class="p">(</span><span class="s">"정수 입력 &gt; "</span> <span class="p">))</span>
+
+    <span class="nf">print</span><span class="p">(</span><span class="s">"원의 반지름 : "</span><span class="p">,</span> <span class="n">number_input</span><span class="p">)</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"원의 둘레 : "</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="mf">3.14</span> <span class="o">*</span> <span class="n">number_input</span><span class="p">)</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"원의 넓이 : "</span><span class="p">,</span> <span class="mf">3.14</span> <span class="o">*</span> <span class="n">number_input</span> <span class="o">*</span> <span class="n">number_input</span><span class="p">)</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"무언가 잘못되었습니다"</span><span class="p">)</span>
+</code></pre></div></div>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 기본 구조
+</span><span class="k">try</span><span class="p">:</span>
+    <span class="n">예외가</span> <span class="n">발생할</span> <span class="n">가능성이</span> <span class="n">있는</span> <span class="n">코드</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="k">pass</span>
+</code></pre></div></div>
+
+<h5 id="예외-처리-다양한-예시"><strong>예외 처리 다양한 예시</strong></h5>
+<p><br /></p>
+
+<h6 id="숫자로-변환되는-것들만-리스트에-넣기"><strong>숫자로 변환되는 것들만 리스트에 넣기</strong></h6>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">list_input</span> <span class="o">=</span> <span class="p">[</span><span class="s">"52"</span><span class="p">,</span><span class="s">"273"</span><span class="p">,</span><span class="s">"32"</span><span class="p">,</span><span class="s">"스파이"</span><span class="p">,</span><span class="s">"103"</span><span class="p">]</span>
+
+<span class="n">list_number</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">list_input</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="nf">float</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+        <span class="n">list_number</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">pass</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="s">"{} 내부에 있는 숫자는"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="n">list_input</span><span class="p">))</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"{} 입니다."</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="n">list_number</span><span class="p">))</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h6 id="try-except-else구문-">**try except else구문 **</h6>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">try</span><span class="p">:</span>
+    <span class="n">number_input</span> <span class="o">=</span> <span class="nf">int</span><span class="p">(</span><span class="nf">input</span><span class="p">(</span><span class="s">"정수 입력&gt; "</span><span class="p">))</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"정수를 입력하지 않았습니다"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"원의 반지름 : "</span><span class="p">,</span> <span class="n">number_input</span><span class="p">)</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"원의 둘레 : "</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="mf">3.14</span> <span class="o">*</span> <span class="n">number_input</span><span class="p">)</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"원의 넓이 : "</span><span class="p">,</span> <span class="mf">3.14</span> <span class="o">*</span> <span class="n">number_input</span> <span class="o">*</span> <span class="n">number_input</span><span class="p">)</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h6 id="finally-구문"><strong>finally 구문</strong></h6>
+
+<p>try : 예외가 발생할 가능성이 있는 코드 <br />
+except : 예외가 발생했을 때 실행할 코드 <br />
+else : 예외가 발생하지 않았을 때 실행할 코드 <br />
+finally : 무조건 실행할 코드</p>
+
+<p>try + except 구문 조합 <br />
+try + except + else 구문 조합 <br />
+try + except + finally 구문 조합 <br />
+try + except + else + finally 구문 조합 <br />
+try + finally 구문조합</p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">try</span><span class="p">:</span>
+    <span class="n">number_input</span> <span class="o">=</span> <span class="nf">int</span><span class="p">(</span><span class="nf">input</span><span class="p">(</span><span class="s">"정수 입력&gt; "</span><span class="p">))</span>
+
+    <span class="nf">print</span><span class="p">(</span><span class="s">"원의 반지름 : "</span><span class="p">,</span> <span class="n">number_input</span><span class="p">)</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"원의 둘레 : "</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="mf">3.14</span> <span class="o">*</span> <span class="n">number_input</span><span class="p">)</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"원의 넓이 : "</span><span class="p">,</span> <span class="mf">3.14</span> <span class="o">*</span> <span class="n">number_input</span> <span class="o">*</span> <span class="n">number_input</span><span class="p">)</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"정수를 입력하지 않았습니다"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"예외가 발생하지 않았습니다"</span><span class="p">)</span>
+<span class="k">finally</span><span class="p">:</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"일단 프로그램이 어떻게든 끝났습니다"</span><span class="p">)</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h5 id="파일이-제대로-닫혔는지-확인하기"><strong>파일이 제대로 닫혔는지 확인하기</strong></h5>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">try</span><span class="p">:</span>
+    <span class="nb">file</span> <span class="o">=</span> <span class="nf">open</span><span class="p">(</span><span class="s">"info.txt"</span><span class="p">,</span><span class="s">"w"</span><span class="p">)</span>
+    <span class="nb">file</span><span class="p">.</span><span class="nf">close</span><span class="p">()</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"오류가 발생했습니다."</span><span class="p">)</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="s">"# 파일이 제대로 닫혔는지 확인해보시오"</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"file.closed : "</span><span class="p">,</span> <span class="nb">file</span><span class="p">.</span><span class="n">closed</span><span class="p">)</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h6 id="try-except-구문-끝난-후-파일-닫기"><strong>try except 구문 끝난 후 파일 닫기</strong></h6>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">try</span><span class="p">:</span>
+    <span class="nb">file</span> <span class="o">=</span> <span class="nf">open</span><span class="p">(</span><span class="s">"info.txt"</span><span class="p">,</span><span class="s">"w"</span><span class="p">)</span>
+
+<span class="k">except</span><span class="p">:</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"오류가 발생했습니다."</span><span class="p">)</span>
+
+<span class="nb">file</span><span class="p">.</span><span class="nf">close</span><span class="p">()</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"# 파일이 제대로 닫혔는지 확인해보시오"</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"file.closed : "</span><span class="p">,</span> <span class="nb">file</span><span class="p">.</span><span class="n">closed</span><span class="p">)</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h6 id="try-구문-내부에서-return-키워드를-사용하는-경우"><strong>try 구문 내부에서 return 키워드를 사용하는 경우</strong></h6>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">test</span><span class="p">():</span> 
+    <span class="nf">print</span><span class="p">(</span><span class="s">"test() 함수의 첫 줄입니다"</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"try 구문이 실행되었습니다."</span><span class="p">)</span>
+        <span class="k">return</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"try 구문의 return 키워드 뒤입니다."</span><span class="p">)</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"except 구문이 실행되었습니다"</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"else 구문이 실행되었습니다"</span><span class="p">)</span>
+    <span class="k">finally</span><span class="p">:</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"finally 구문이 실행되었습니다."</span><span class="p">)</span>
+
+    <span class="nf">print</span><span class="p">(</span><span class="s">"test() 함수의 마지막 줄입니다"</span><span class="p">)</span>
+
+<span class="nf">test</span><span class="p">()</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h6 id="finally-키워드-사용"><strong>finally 키워드 사용</strong></h6>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">write_text_file</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">text</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="nb">file</span> <span class="o">=</span> <span class="nf">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span><span class="s">"w"</span><span class="p">)</span>
+        <span class="n">returnfile</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"오류가 발생하였습니다"</span><span class="p">)</span>
+    <span class="k">finally</span><span class="p">:</span>
+        <span class="nb">file</span><span class="p">.</span><span class="nf">close</span><span class="p">()</span>
+
+<span class="nf">write_text</span><span class="p">(</span><span class="nf">file</span><span class="p">(</span><span class="s">"test.txt"</span><span class="p">,</span> <span class="s">"안녕하세요!"</span><span class="p">))</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h6 id="반복문과-함께-사용하는-경우"><strong>반복문과 함께 사용하는 경우</strong></h6>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">print</span><span class="p">(</span><span class="s">"프로그램이 시작되었습니다."</span><span class="p">)</span>
+
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"try 구문이 실행되었습니다"</span><span class="p">)</span>
+        <span class="k">break</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"try 구문의 break 키워드 뒤입니다."</span><span class="p">)</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"except 구문이 실행되었습니다."</span><span class="p">)</span>
+    <span class="k">finally</span><span class="p">:</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"finally 구문이 실행되었습니다."</span><span class="p">)</span>
+
+    <span class="nf">print</span><span class="p">(</span><span class="s">"while 반복문의 마지막 줄입니다"</span><span class="p">)</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="s">"프로그램이 종료되었습니다"</span><span class="p">)</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h4 id="2-예외-고급"><strong>2. 예외 고급</strong></h4>
+<p><br /></p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">try</span><span class="p">:</span>
+    <span class="c1"># 예외가 발생할 가능성이 있는 구문
+</span><span class="k">except</span> <span class="n">예외의</span> <span class="n">종류</span> <span class="k">as</span> <span class="n">예외</span> <span class="n">객체를</span> <span class="n">활용할</span> <span class="n">변수</span> <span class="n">이름</span><span class="p">:</span>
+    <span class="c1"># 예외가 발생했을 때 실행할 구문
+</span></code></pre></div></div>
+<p><br /></p>
+
+<h5 id="예외-객체"><strong>예외 객체</strong></h5>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">try</span><span class="p">:</span>
+    <span class="n">number_input</span> <span class="o">=</span> <span class="nf">int</span><span class="p">(</span><span class="nf">input</span><span class="p">(</span><span class="s">"정수 입력&gt; "</span><span class="p">))</span>
+
+    <span class="nf">print</span><span class="p">(</span><span class="s">"원의 반지름 : "</span><span class="p">,</span> <span class="n">number_input</span><span class="p">)</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"원의 둘레 : "</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="mf">3.14</span> <span class="o">*</span> <span class="n">number_input</span><span class="p">)</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"원의 넓이 : "</span><span class="p">,</span> <span class="mf">3.14</span> <span class="o">*</span> <span class="n">number_input</span> <span class="o">*</span> <span class="n">number_input</span><span class="p">)</span>
+<span class="k">except</span> <span class="nb">Exception</span> <span class="k">as</span> <span class="n">exception</span><span class="p">:</span>
+    <span class="c1"># 예외 객체를 출력해봅니다.
+</span>    <span class="nf">print</span><span class="p">(</span><span class="s">"type(exception) : "</span> <span class="p">,</span> <span class="nf">type</span><span class="p">(</span><span class="n">exception</span><span class="p">))</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"exception : "</span><span class="p">,</span> <span class="n">exception</span><span class="p">)</span>
+
+</code></pre></div></div>
+<p><br /></p>
+
+<h5 id="예외-구분하기"><strong>예외 구분하기</strong></h5>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">try</span><span class="p">:</span>
+    <span class="c1"># 예외가 발생할 가능성이 있는 구문
+</span><span class="k">except</span> <span class="n">예외의</span> <span class="n">종류</span> <span class="n">A</span><span class="p">:</span>
+    <span class="c1"># 예외A가 발생했을 때 실행할 구문
+</span><span class="k">except</span> <span class="n">예외의</span> <span class="n">종류</span> <span class="n">B</span><span class="p">:</span>
+    <span class="c1"># 예외B가 발생했을 때 실행할 구문
+</span><span class="k">except</span> <span class="n">예외의</span> <span class="n">종류</span> <span class="n">C</span><span class="p">:</span>
+    <span class="c1"># 예외C가 발생했을 때 실행할 구문
+</span></code></pre></div></div>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">list_number</span> <span class="o">=</span> <span class="p">[</span><span class="mi">52</span><span class="p">,</span><span class="mi">273</span><span class="p">,</span><span class="mi">32</span><span class="p">,</span><span class="mi">72</span><span class="p">,</span><span class="mi">100</span><span class="p">]</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">number_input</span> <span class="o">=</span> <span class="nf">int</span><span class="p">(</span><span class="nf">input</span><span class="p">(</span><span class="s">"정수 입력&gt; "</span><span class="p">))</span>
+
+    <span class="nf">print</span><span class="p">(</span><span class="s">"{}번째 요소: {}"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="n">number_input</span><span class="p">,</span> <span class="n">list_number</span><span class="p">[</span><span class="n">number_input</span><span class="p">]))</span>
+<span class="k">except</span> <span class="nb">ValueError</span><span class="p">:</span> 
+    <span class="nf">print</span><span class="p">(</span><span class="s">"정수를 입력해 주세요!"</span><span class="p">)</span>
+<span class="k">except</span> <span class="nb">IndexError</span><span class="p">:</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"리스트의 인덱스를 벗어났어요!"</span><span class="p">)</span>
+
+</code></pre></div></div>
+<p><br /></p>
+
+<h5 id="모든-예외-잡기"><strong>모든 예외 잡기</strong></h5>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">list_number</span> <span class="o">=</span> <span class="p">[</span><span class="mi">52</span><span class="p">,</span><span class="mi">273</span><span class="p">,</span><span class="mi">32</span><span class="p">,</span><span class="mi">72</span><span class="p">,</span><span class="mi">100</span><span class="p">]</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">number_input</span> <span class="o">=</span> <span class="nf">int</span><span class="p">(</span><span class="nf">input</span><span class="p">(</span><span class="s">"정수 입력&gt; "</span><span class="p">))</span>
+
+    <span class="nf">print</span><span class="p">(</span><span class="s">"{}번째 요소: {}"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="n">number_input</span><span class="p">,</span> <span class="n">list_number</span><span class="p">[</span><span class="n">number_input</span><span class="p">]))</span>
+<span class="k">except</span> <span class="nb">ValueError</span> <span class="k">as</span> <span class="n">exception</span><span class="p">:</span> 
+    <span class="nf">print</span><span class="p">(</span><span class="s">"정수를 입력해 주세요!"</span><span class="p">)</span>
+    <span class="nf">print</span><span class="p">(</span><span class="nf">type</span><span class="p">(</span><span class="n">exception</span><span class="p">),</span> <span class="n">exception</span><span class="p">)</span>
+<span class="k">except</span> <span class="nb">IndexError</span> <span class="k">as</span> <span class="n">exception</span><span class="p">:</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"리스트의 인덱스를 벗어났어요!"</span><span class="p">)</span>
+    <span class="nf">print</span><span class="p">(</span><span class="nf">type</span><span class="p">(</span><span class="n">exception</span><span class="p">),</span> <span class="n">exception</span><span class="p">)</span>
+<span class="k">except</span> <span class="nb">Exception</span> <span class="k">as</span> <span class="n">exception</span><span class="p">:</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"파악하지 못한 애러가 발생했습니다."</span><span class="p">)</span>
+    <span class="nf">print</span><span class="p">(</span><span class="nf">type</span><span class="p">(</span><span class="n">exception</span><span class="p">),</span> <span class="n">exception</span><span class="p">)</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h5 id="raise-구문"><strong>raise 구문</strong></h5>
+<p>raise 예외 객체</p>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 아직 구현되지 않은 부분에서 강제로 예외 발생시키기
+</span><span class="n">number</span> <span class="o">=</span> <span class="nf">input</span><span class="p">(</span><span class="s">"정수 입력&gt;"</span><span class="p">)</span>
+<span class="n">number</span> <span class="o">=</span> <span class="nf">int</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">number</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="k">raise</span> <span class="nb">NotImplementedError</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">raise</span> <span class="nb">NotImplementedError</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<p>심화 과정</p>
+
+<p><a href="https://dojang.io/mod/page/view.php?id=2425"><strong>코딩도장 사이트</strong></a></p>
 
                     </div>
-                </main>
-                <footer class="py-4 bg-light mt-auto">
-                    <div class="container-fluid px-4">
-                        <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; Your Website 2023</div>
-                            <div>
-                                <a href="#">Privacy Policy</a>
-                                &middot;
-                                <a href="#">Terms &amp; Conditions</a>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
+                </main><footer class="py-4 bg-light mt-auto">
+    <div class="container-fluid px-4">
+        <div class="d-flex align-items-center justify-content-between small">
+            <div class="text-muted">Copyright &copy; Your Website 2023</div>
+            <div>
+                <a href="#">Privacy Policy</a>
+                &middot;
+                <a href="#">Terms &amp; Conditions</a>
             </div>
+        </div>
+    </div>
+</footer></div>
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>

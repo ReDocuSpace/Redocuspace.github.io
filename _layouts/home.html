@@ -91,14 +91,15 @@ layout: default
 					</div>
 					<!---->
 					<h4>Project Part</h4>
-
+					<!---->
 					<div class="box alt">
 						<div class="row gtr-50 gtr-uniform">
-							<div class="col-4"><span class="image fit"><img src="/assets/images/pic01.jpg" alt="" /><h5>미정</h5></span></div>
-							<div class="col-4"><span class="image fit"><img src="/assets/images/pic02.jpg" alt="" /><h5>미정</h5></span></div>
-							<div class="col-4"><span class="image fit"><img src="/assets/images/pic03.jpg" alt="" /><h5>미정</h5></span></div>
+							{%- for list in site.projectlist -%}
+							<div class="col-4"><span class="image fit"><a href="{{ list.url }}"><img src="{{ list.img }}" alt="" /></a><h5>{{ list.description }}</h5></span></div>
+							{% endfor %}
 						</div>
 					</div>
+					<!---->
 				</div>
 			</section>
 			
@@ -118,7 +119,6 @@ layout: default
 							{% endfor %}
 						</div>
 					</div>
-
 				</div>
 			</section>
 

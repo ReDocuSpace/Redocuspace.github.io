@@ -44,19 +44,19 @@ studylist:
     - title : lauguage
       url : /study_language
       img : /assets/images/pic01.jpg
-      description : 문법학습
+      description : 프로그래밍 언어
+    - title : algorithm
+      url : /study_algorithm
+      img : /assets/images/pic01.jpg
+      description : 자료구조 및 알고리즘
+    - title : booklist
+      url : /study_booklist
+      img : /assets/images/pic01.jpg
+      description : 기획 및 기타
     - title : study_license
       url : /study_license
       img : /assets/images/pic01.jpg
       description : 자격증 공부
-    - title : algorithm
-      url : /study_algorithm
-      img : /assets/images/pic01.jpg
-      description : 알고리즘
-    - title : booklist
-      url : /study_booklist
-      img : /assets/images/pic01.jpg
-      description : 책
     - title : gamelist
       url : /study_gamelist
       img : /assets/images/pic01.jpg
@@ -87,6 +87,12 @@ imitationlist:
       img : /assets/images/pic01.jpg
       description : Hello World
     
-
-
 # Study_language List Manager
+
+python_01_01:
+    - title : 혼자 공부하는 파이썬
+    - number : python_01_01
+    - path : /post_study_language/
+    - lecture:
+      - number : python_01_01_01
+      - name : 파이썬의 개요

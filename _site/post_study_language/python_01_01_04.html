@@ -45,26 +45,28 @@
 							<div class="sb-sidenav-menu-heading">프로그래밍 언어</div>
 
 							<!-- 1. -->
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#Info_01_01" aria-expanded="false" aria-controls="collapseLayouts">
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#python_01_01" aria-expanded="false" aria-controls="collapseLayouts">
 								<div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
 								혼자 공부하는 파이썬
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
-                            <div class="collapse" id="Info_01_01" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <div class="collapse" id="python_01_01" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="/post_study_language/python_01_01_01">파이썬의 개요</a>
-                                    <a class="nav-link" href="/post_study_language/python_01_01_02">조건문과 반복문</a>
+                                    <a class="nav-link" href="/post_study_language/python_01_01_02">자료형,조건문,반복문</a>
 									<a class="nav-link" href="/post_study_language/python_01_01_03">함수와 예외처리</a>
 									<a class="nav-link" href="/post_study_language/python_01_01_04">모듈과 클래스</a>
+                                    <a class="nav-link" href="/post_study_language/python_01_01_05">부록</a>
                                 </nav>
                             </div>
+                            
 							<!-- 2. -->
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#Info_01_02" aria-expanded="false" aria-controls="collapseLayouts">
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#cprogramming_01_01" aria-expanded="false" aria-controls="collapseLayouts">
 								<div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
 								윤성우의 열혈 C언어 프로그래밍
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
-                            <div class="collapse" id="Info_01_02" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <div class="collapse" id="cprogramming_01_01" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="/post_study_language/Info_01_02_01">자료 구조</a>
                                     <a class="nav-link" href="/post_study_language/Info_01_02_02">통합 구현</a>
@@ -72,7 +74,22 @@
 									<a class="nav-link" href="/post_study_language/Info_01_02_04">애플리케이션 테스트</a>
                                 </nav>
                             </div>
-
+                            <!-- 3. -->
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#processing_01_01" aria-expanded="false" aria-controls="collapseLayouts">
+								<div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+								손에 잡히는 프로세싱
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="processing_01_01" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="/post_study_language/processing_01_01_01">프로세싱 개요</a>
+                                    <a class="nav-link" href="/post_study_language/processing_01_01_02">프로세싱 그리기</a>
+                                    <a class="nav-link" href="/post_study_language/processing_01_01_03">프로세싱 프로그래밍</a>
+                                    <a class="nav-link" href="/post_study_language/processing_01_01_04">프로세싱 상호작용</a>
+                                    <a class="nav-link" href="/post_study_language/processing_01_01_05">프로세싱 미디어</a>
+                                    <a class="nav-link" href="/post_study_language/processing_01_01_06">프로세싱 움직임</a>
+                                </nav>
+                            </div>
                         </div>
                     </div>
                 </nav>
@@ -83,23 +100,793 @@
 					<div class="container-fluid px-4">
 						<h1>모듈과 클래스</h1>
 						<hr/>
-                        
+                        <h3 id="모듈"><strong>모듈</strong></h3>
+<hr />
+
+<p>파이썬은 모듈을 통해 코드를 분리하고 공유한다</p>
+
+<p>표준 모듈 : 파이썬에 기본적으로 내장되어 있는 모듈 <br />
+외부 모듈 : 다른 사람들이 만들어서 공개한 모듈</p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">모듈</span> <span class="n">이름</span>
+</code></pre></div></div>
+
+<h4 id="1-표준-모듈"><strong>1. 표준 모듈</strong></h4>
+<p><br /></p>
+
+<h5 id="math-모듈"><strong>Math 모듈</strong></h5>
+
+<p>sin(x) : 사인값을 구한다. <br />
+cos(x) : 코사인값을 구한다. <br />
+tan(x) : 탄젠트값을 구한다. <br />
+log(x[. base]) : 로그값을 구한다. <br />
+ceil(x) : 올림 <br />
+floor(x) : 내림</p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">math</span>
+<span class="c1"># from math import sin, cos, tan, floor, ceil
+# import math as m
+# from 모듈 이름 import 가져오고 싶은 변수 또는 함수
+# import 모듈 as 사용하고 싶은 식별자 : m.sin()
+</span>
+<span class="n">math</span><span class="p">.</span><span class="nf">sin</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>     <span class="c1">#사인
+</span><span class="n">math</span><span class="p">.</span><span class="nf">cos</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>     <span class="c1">#코사인
+</span><span class="n">math</span><span class="p">.</span><span class="nf">tan</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>     <span class="c1">#탄젠트
+</span><span class="n">math</span><span class="p">.</span><span class="nf">floor</span><span class="p">(</span><span class="mf">2.5</span><span class="p">)</span> <span class="c1">#내림
+</span><span class="n">math</span><span class="p">.</span><span class="nf">ceil</span><span class="p">(</span><span class="mf">2.5</span><span class="p">)</span>  <span class="c1">#올림
+</span><span class="n">math</span><span class="p">.</span><span class="nf">round</span><span class="p">(</span><span class="mf">3.5</span><span class="p">)</span> <span class="c1">#반올림
+</span></code></pre></div></div>
+<p><br /></p>
+
+<h5 id="random-모듈"><strong>Random 모듈</strong></h5>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">random</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"# random 모듈"</span><span class="p">)</span>
+
+<span class="c1"># random() : 0.0 &lt;= x &lt; 1.0 사이의 float를 리턴한다.
+</span><span class="nf">print</span><span class="p">(</span><span class="s">"- random() : "</span><span class="p">,</span> <span class="n">random</span><span class="p">.</span><span class="nf">random</span><span class="p">())</span>
+
+<span class="c1"># uniform(min,max) : 지정한 범위 사이의 float를 리턴한다,
+</span><span class="nf">print</span><span class="p">(</span><span class="s">"- uniform(10,20) : "</span><span class="p">,</span> <span class="n">random</span><span class="p">.</span><span class="nf">uniform</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">))</span> 
+
+<span class="c1"># randrange() : 지정한 범위의 int를 리턴한다.
+# - randrange(max) : 0 부터 max 사이의 값을 리턴한다.
+# - randrange(min,max) : min.부터 max 사이의 값을 리턴한다
+</span><span class="nf">print</span><span class="p">(</span><span class="s">"- randrange(10) : "</span><span class="p">,</span> <span class="n">random</span><span class="p">.</span><span class="nf">randrange</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>   
+
+<span class="c1"># choice(list) : 리스트 내부에 있는 요소를 랜덤하게 선택한다.
+</span><span class="nf">print</span><span class="p">(</span><span class="s">"- choice([1, 2, 3, 4, 5])"</span><span class="p">,</span> <span class="n">random</span><span class="p">.</span><span class="nf">choice</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]))</span>
+
+<span class="c1"># shuffle(list) : 리스트의 요소들을 랜덤하게 섞는다.
+</span><span class="nf">print</span><span class="p">(</span><span class="s">"- shuffle([1, 2, 3, 4, 5]) : "</span><span class="p">,</span> <span class="n">random</span><span class="p">.</span><span class="nf">shuffle</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]))</span>
+
+<span class="c1"># sample(list, k=&lt;숫자&gt;) : 리스트의 요소 중에 k개를 뽑는다.
+</span><span class="nf">print</span><span class="p">(</span><span class="s">"- sample([1, 2, 3, 4, 5], k = 2) : "</span><span class="p">,</span> <span class="n">random</span><span class="p">.</span><span class="nf">sample</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">2</span><span class="p">))</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h5 id="sys-모듈"><strong>sys 모듈</strong></h5>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">sys</span>
+
+<span class="c1"># 속성
+</span><span class="nf">print</span><span class="p">(</span><span class="n">sys</span><span class="p">.</span><span class="n">argv</span><span class="p">)</span>
+<span class="c1">#내용
+</span><span class="nf">print</span><span class="p">(</span><span class="s">"getwindowsversion : "</span> <span class="p">,</span> <span class="n">sys</span><span class="p">.</span><span class="nf">getwindowsversion</span><span class="p">())</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"copyright : "</span><span class="p">,</span> <span class="n">sys</span><span class="p">.</span><span class="n">copyright</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"version : "</span><span class="p">,</span> <span class="n">sys</span><span class="p">.</span><span class="n">version</span><span class="p">)</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h5 id="os-모듈"><strong>os 모듈</strong></h5>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">os</span>
+
+<span class="c1"># 기본 정보
+</span><span class="nf">print</span><span class="p">(</span><span class="s">"현재 운영체제 : "</span> <span class="p">,</span> <span class="n">os</span><span class="p">.</span><span class="n">name</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"현재 폴더 : "</span><span class="p">,</span> <span class="n">os</span><span class="p">.</span><span class="nf">getcwd</span><span class="p">())</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"현재 폴더 내부의 요소 : "</span><span class="p">,</span> <span class="n">os</span><span class="p">.</span><span class="nf">listdir</span><span class="p">())</span>
+
+<span class="n">os</span><span class="p">.</span><span class="nf">mkdir</span><span class="p">(</span><span class="s">"Hello"</span><span class="p">)</span>   <span class="c1"># 폴더 생성
+</span><span class="n">os</span><span class="p">.</span><span class="nf">rmdir</span><span class="p">(</span><span class="s">"Hello"</span><span class="p">)</span>   <span class="c1"># 폴더 삭제
+</span>
+<span class="k">with</span> <span class="nf">open</span><span class="p">(</span><span class="s">"original.txt"</span><span class="p">,</span> <span class="s">"w"</span><span class="p">)</span> <span class="k">as</span> <span class="nb">file</span><span class="p">:</span>
+    <span class="nb">file</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="s">"hello"</span><span class="p">)</span>
+
+<span class="c1"># 파일 명 바꾸기
+</span><span class="n">os</span><span class="p">.</span><span class="nf">rename</span><span class="p">(</span><span class="s">"original.txt"</span><span class="p">,</span> <span class="s">"new.txt"</span><span class="p">)</span>
+<span class="c1"># 파일 삭제하기
+</span><span class="n">os</span><span class="p">.</span><span class="nf">remove</span><span class="p">(</span><span class="s">"new.txt"</span><span class="p">)</span>
+<span class="c1"># os.unlink("new.txt")
+</span>
+<span class="c1"># 시스템 명령어 실행
+</span><span class="n">os</span><span class="p">.</span><span class="nf">system</span><span class="p">(</span><span class="s">"dir"</span><span class="p">)</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h5 id="datetime-모듈"><strong>datetime 모듈</strong></h5>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">datetime</span>
+
+<span class="n">now</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">.</span><span class="n">datetime</span><span class="p">.</span><span class="nf">now</span><span class="p">()</span>
+
+<span class="n">now</span><span class="p">.</span><span class="n">year</span>    <span class="c1"># 년
+</span><span class="n">now</span><span class="p">.</span><span class="n">month</span>   <span class="c1"># 월
+</span><span class="n">now</span><span class="p">.</span><span class="n">day</span>     <span class="c1"># 일
+</span><span class="n">now</span><span class="p">.</span><span class="n">hour</span>    <span class="c1"># 시
+</span><span class="n">now</span><span class="p">.</span><span class="n">minute</span>  <span class="c1"># 분
+</span><span class="n">now</span><span class="p">.</span><span class="n">second</span>  <span class="c1"># 초
+</span>
+<span class="c1"># 시간 출력방법
+</span><span class="n">output_a</span> <span class="o">=</span> <span class="n">now</span><span class="p">.</span><span class="nf">strftime</span><span class="p">(</span><span class="s">"%Y.%m.%d %H:%M:%S"</span><span class="p">)</span>
+<span class="n">output_b</span> <span class="o">=</span> <span class="s">"{}년 {}월 {}일 {}시 {}분 {}초"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span> \
+    <span class="n">now</span><span class="p">.</span><span class="n">year</span><span class="p">,</span> \
+    <span class="n">now</span><span class="p">.</span><span class="n">month</span><span class="p">,</span> \
+    <span class="n">now</span><span class="p">.</span><span class="n">day</span><span class="p">,</span> \
+    <span class="n">now</span><span class="p">.</span><span class="n">hour</span><span class="p">,</span> \
+    <span class="n">now</span><span class="p">.</span><span class="n">minute</span><span class="p">,</span> \
+    <span class="n">now</span><span class="p">.</span><span class="n">minute</span><span class="p">)</span>
+<span class="n">output_c</span> <span class="o">=</span> <span class="n">now</span><span class="p">.</span><span class="nf">strftime</span><span class="p">(</span><span class="s">"%Y{} %m{} %d{} %H{} %M{} %S{}"</span><span class="p">).</span><span class="nf">format</span><span class="p">(</span><span class="o">*</span><span class="s">"년월일시분초"</span><span class="p">)</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="n">output_a</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">output_b</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">output_c</span><span class="p">)</span>
+
+<span class="n">after</span> <span class="o">=</span> <span class="n">now</span> <span class="o">+</span> <span class="n">datetime</span><span class="p">.</span><span class="nf">timedelta</span><span class="p">(</span>\
+    <span class="n">weeks</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>\
+    <span class="n">days</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>\
+    <span class="n">hours</span><span class="o">=</span> <span class="mi">1</span><span class="p">,</span>\
+    <span class="n">minutes</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>\
+    <span class="n">seconds</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># 특정 시간 이후의 시간
+</span><span class="nf">print</span><span class="p">(</span><span class="n">after</span><span class="p">.</span><span class="nf">strftime</span><span class="p">(</span><span class="s">"%Y{} %m{} %d{} %H{} %M{} %S{}"</span><span class="p">).</span><span class="nf">format</span><span class="p">(</span><span class="o">*</span><span class="s">"년월일시분초"</span><span class="p">))</span>
+
+<span class="c1"># 연수 1회
+</span><span class="n">output</span> <span class="o">=</span> <span class="n">now</span><span class="p">.</span><span class="nf">replace</span><span class="p">(</span><span class="n">year</span><span class="o">=</span><span class="p">(</span><span class="n">now</span><span class="p">.</span><span class="n">year</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">output</span><span class="p">.</span><span class="nf">strftime</span><span class="p">(</span><span class="s">"%Y{} %m{} %d{} %H{} %M{} %S{}"</span><span class="p">).</span><span class="nf">format</span><span class="p">(</span><span class="o">*</span><span class="s">"년월일시분초"</span><span class="p">))</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h5 id="time-모듈"><strong>time 모듈</strong></h5>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">time</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="s">"지금부터 5초 동안 정지합니다"</span><span class="p">)</span>
+
+<span class="n">time</span><span class="p">.</span><span class="nf">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"프로그램을 종료합니다."</span><span class="p">)</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h5 id="urllib-모듈"><strong>urllib 모듈</strong></h5>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#urllib = URL을 다루는 라이브러리
+</span>
+<span class="kn">from</span> <span class="n">urllib</span> <span class="kn">import</span> <span class="n">request</span>
+<span class="n">target</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="nf">urlopen</span><span class="p">(</span><span class="s">"https://google.com"</span><span class="p">)</span>
+<span class="n">output</span> <span class="o">=</span> <span class="n">target</span><span class="p">.</span><span class="nf">read</span><span class="p">()</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h4 id="2-외부-모듈"><strong>2. 외부 모듈</strong></h4>
+
+<p>[<strong>사이킷런(scikit-learn)</strong>] <br />
+[<strong>텐서플로(Tenserflow)</strong>] <br />
+[<strong>장고(Django)</strong>] <br />
+[<strong>플라스크(Flask)</strong>] <br />
+[<strong>넘파이(NumPy)</strong>]</p>
+
+<p>다른 사람들이 만들어서 제공해 주는 모듈</p>
+
+<p>pip : 파이썬 패키지 관리 시스템</p>
+
+<ul>
+  <li>웹서버 개발 모듈</li>
+  <li>인공지능 개발 모듈</li>
+  <li>데이터 분석 모듈</li>
+  <li>크롤러 개발 모듈</li>
+</ul>
+
+<p><br /></p>
+
+<h5 id="beautiful-soup-모듈"><strong>Beautiful Soup 모듈</strong></h5>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">urllib</span> <span class="kn">import</span> <span class="n">request</span>
+<span class="kn">from</span> <span class="n">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+
+<span class="n">target</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="nf">urlopen</span><span class="p">(</span><span class="s">"http://www.kma.go.kr/weather/forecast/mid-term-rss3.jsp?stnId=108"</span><span class="p">)</span>
+
+<span class="n">soup</span> <span class="o">=</span> <span class="nc">BeautifulSoup</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="s">"html.parser"</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">location</span> <span class="ow">in</span> <span class="n">soup</span><span class="p">.</span><span class="nf">select</span><span class="p">(</span><span class="s">"location"</span><span class="p">):</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"도시 : "</span><span class="p">,</span><span class="n">location</span><span class="p">.</span><span class="nf">select_one</span><span class="p">(</span><span class="s">"city"</span><span class="p">).</span><span class="n">string</span><span class="p">)</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"날씨 : "</span><span class="p">,</span><span class="n">location</span><span class="p">.</span><span class="nf">select_one</span><span class="p">(</span><span class="s">"wf"</span><span class="p">).</span><span class="n">string</span><span class="p">)</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"최저기온 : "</span><span class="p">,</span> <span class="n">location</span><span class="p">.</span><span class="nf">select_one</span><span class="p">(</span><span class="s">"tmn"</span><span class="p">).</span><span class="n">string</span><span class="p">)</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"최고기원 : "</span><span class="p">,</span> <span class="n">location</span><span class="p">.</span><span class="nf">select_one</span><span class="p">(</span><span class="s">"tmx"</span><span class="p">).</span><span class="n">string</span><span class="p">)</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h5 id="flask-모듈"><strong>Flask 모듈</strong></h5>
+
+<p>실행방법 <br />
+[- $env:FLASK_APP = “파일 이름”]   <br />
+[- flask run]</p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+<span class="n">app</span> <span class="o">=</span> <span class="nc">Flask</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
+
+<span class="c1"># 데코레이터
+</span><span class="nd">@app.route</span><span class="p">(</span><span class="s">"/"</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">hello</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s">"&lt;h1&gt;Hello World&lt;/h1&gt;"</span>
+</code></pre></div></div>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">urllib</span> <span class="kn">import</span> <span class="n">request</span>
+<span class="kn">from</span> <span class="n">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+
+<span class="kn">from</span> <span class="n">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="nc">Flask</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
+<span class="c1"># 데코레이터
+</span><span class="nd">@app.route</span><span class="p">(</span><span class="s">"/"</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">hello</span><span class="p">():</span>
+    <span class="n">target</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="nf">urlopen</span><span class="p">(</span><span class="s">"http://www.kma.go.kr/weather/forecast/mid-term-rss3.jsp?stnId=108"</span><span class="p">)</span>
+
+    <span class="n">soup</span> <span class="o">=</span> <span class="nc">BeautifulSoup</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="s">"html.parser"</span><span class="p">)</span>
+
+    <span class="n">output</span> <span class="o">=</span> <span class="s">""</span>
+
+
+    <span class="k">for</span> <span class="n">location</span> <span class="ow">in</span> <span class="n">soup</span><span class="p">.</span><span class="nf">select</span><span class="p">(</span><span class="s">"location"</span><span class="p">):</span>
+        <span class="n">output</span> <span class="o">+=</span> <span class="s">"&lt;h3&gt;{}&lt;/h3&gt;"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="n">location</span><span class="p">.</span><span class="nf">select_one</span><span class="p">(</span><span class="s">"city"</span><span class="p">).</span><span class="n">string</span><span class="p">)</span>
+        <span class="n">output</span> <span class="o">+=</span> <span class="s">"날씨 : {}&lt;br/&gt;"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="n">location</span><span class="p">.</span><span class="nf">select_one</span><span class="p">(</span><span class="s">"wf"</span><span class="p">).</span><span class="n">string</span><span class="p">)</span>
+        <span class="n">output</span> <span class="o">+=</span> <span class="s">"최저 / 최고 기온 : {}/{}"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="n">location</span><span class="p">.</span><span class="nf">select_one</span><span class="p">(</span><span class="s">"tmn"</span><span class="p">).</span><span class="n">string</span><span class="p">,</span> <span class="n">location</span><span class="p">.</span><span class="nf">select_one</span><span class="p">(</span><span class="s">"tmx"</span><span class="p">).</span><span class="n">string</span><span class="p">)</span>
+        <span class="n">output</span> <span class="o">+=</span> <span class="s">"&lt;hr/&gt;"</span>
+    
+    <span class="k">return</span> <span class="n">output</span>    
+</code></pre></div></div>
+
+<p>라이브러리 : 정상적인 제어를 하는 모듈 <br />
+프레임워크 : 제어 역전이 발생하는 모듈 <br />
+<br /></p>
+
+<h5 id="데코레이터"><strong>데코레이터</strong></h5>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">test</span><span class="p">(</span><span class="n">function</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">wrapper</span><span class="p">():</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"인사가 시작되었습니다"</span><span class="p">)</span>
+        <span class="nf">function</span><span class="p">()</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"인사가 종료되었습니다"</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">wrapper</span>
+
+<span class="nd">@test</span>
+<span class="k">def</span> <span class="nf">hello</span><span class="p">():</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"Hello"</span><span class="p">)</span>
+
+<span class="nf">hello</span><span class="p">()</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h4 id="3-모듈-만들기"><strong>3. 모듈 만들기</strong></h4>
+<p><br /></p>
+<h5 id="간단한-모듈-만들기"><strong>간단한 모듈 만들기</strong></h5>
+
+<h6 id="test_modulepy"><strong>test_module.py</strong></h6>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">PI</span> <span class="o">=</span> <span class="mf">3.141592</span>
+
+<span class="k">def</span> <span class="nf">number_input</span><span class="p">():</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="nf">input</span><span class="p">(</span><span class="s">"숫자 입력&gt;"</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nf">float</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">get_circumference</span><span class="p">(</span><span class="n">radius</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">PI</span> <span class="o">*</span> <span class="n">radius</span>
+
+<span class="k">def</span> <span class="nf">get_circle_area</span><span class="p">(</span><span class="n">radius</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">PI</span> <span class="o">*</span> <span class="n">radius</span> <span class="o">*</span> <span class="n">radius</span>
+</code></pre></div></div>
+<h6 id="mainpy"><strong>main.py</strong></h6>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">test_module</span> <span class="k">as</span> <span class="n">test</span>
+
+<span class="n">radius</span> <span class="o">=</span> <span class="n">test</span><span class="p">.</span><span class="nf">number_input</span><span class="p">()</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="n">test</span><span class="p">.</span><span class="nf">get_circle_area</span><span class="p">(</span><span class="n">radius</span><span class="p">))</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">test</span><span class="p">.</span><span class="nf">get_circumference</span><span class="p">(</span><span class="n">radius</span><span class="p">))</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h5 id="모듈에-사용되는-코드-및-형태-구성"><strong>모듈에 사용되는 코드 및 형태 구성</strong></h5>
+
+<h6 id="mainpy-1"><strong>main.py</strong></h6>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">test_module</span>
+
+<span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span> <span class="c1">#main에 사용되는내용
+</span>    <span class="nf">print</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
+</code></pre></div></div>
+<h6 id="test_modulepy-1"><strong>test_module.py</strong></h6>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">print</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h5 id="패키지"><strong>패키지</strong></h5>
+
+<p>엔트리 포인트 : python 명령어를 사용해서 첫 진입 파일을 엔트리 포인트라고 부른다.</p>
+
+<h6 id="mainpy-2"><strong>main.py</strong></h6>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">test_package</span> <span class="kn">import</span> <span class="o">*</span>      <span class="c1"># __init__
+#import test_package.module_a as a
+#import test_package.module_b as b
+</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">variable_a</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">b</span><span class="p">.</span><span class="n">variable_b</span><span class="p">)</span>
+</code></pre></div></div>
+<h6 id="test_package__init__py"><strong>test_package.__init__.py</strong></h6>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s">"module_a"</span><span class="p">,</span> <span class="s">"module_b"</span><span class="p">]</span> <span class="c1"># __all__ : 리스트에 지정한 모듈들이 from &lt;패키지 이름&gt; import * 를 할 때 전부 읽어 들여지는 리스트
+</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"test_package를 읽어 들였습니다."</span><span class="p">)</span>
+</code></pre></div></div>
+<h6 id="test_packagemodule_apy"><strong>test_package.module_a.py</strong></h6>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">variable_a</span> <span class="o">=</span> <span class="s">"a 변수"</span>
+</code></pre></div></div>
+<h6 id="test_packagemodule_bpy"><strong>test_package.module_b.py</strong></h6>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">variable_b</span> <span class="o">=</span> <span class="s">"b 변수"</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h5 id="텍스트-데이터"><strong>텍스트 데이터</strong></h5>
+<p>이진 숫자 -&gt; 바이너리 데이터 -&gt; 텍스트 데이터</p>
+
+<p>숫자와 알파벳을 대응하는 방법 = 인코딩 <br />
+[01001000 [이진숫자]로 이루어진 바이너리 데이터 - 72] =&gt; “H” : 인코딩 <br />
+“H” =&gt;  [01001000 - 72] : 디코딩</p>
+
+<h5 id="인터넷-상의-이미지-가져오기"><strong>인터넷 상의 이미지 가져오기</strong></h5>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">urllib</span> <span class="kn">import</span> <span class="n">request</span>
+
+<span class="n">target</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="nf">urlopen</span><span class="p">(</span><span class="s">"https://www.hanbit.co.kr/images/common/logo_hanbit.png"</span><span class="p">)</span>
+
+<span class="n">output</span> <span class="o">=</span> <span class="n">target</span><span class="p">.</span><span class="nf">read</span><span class="p">()</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
+
+<span class="nb">file</span> <span class="o">=</span> <span class="nf">open</span><span class="p">(</span><span class="s">"output.png"</span><span class="p">,</span> <span class="s">"wb"</span><span class="p">)</span>
+<span class="nb">file</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
+<span class="nb">file</span><span class="p">.</span><span class="nf">close</span><span class="p">()</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h3 id="클래스"><strong>클래스</strong></h3>
+<hr />
+
+<p>객체 지향 프로그래밍 : 객체를 우선으로 프로그래밍한다는 의미</p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">students</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span> <span class="s">"name"</span> <span class="p">:</span> <span class="s">"유인성"</span><span class="p">,</span> <span class="s">"korean"</span> <span class="p">:</span> <span class="mi">87</span><span class="p">,</span> <span class="s">"math"</span> <span class="p">:</span> <span class="mi">98</span><span class="p">,</span> <span class="s">"english"</span> <span class="p">:</span> <span class="mi">88</span><span class="p">,</span> <span class="s">"science"</span> <span class="p">:</span> <span class="mi">95</span><span class="p">},</span>
+    <span class="p">{</span> <span class="s">"name"</span> <span class="p">:</span> <span class="s">"연하진"</span><span class="p">,</span> <span class="s">"korean"</span> <span class="p">:</span> <span class="mi">92</span><span class="p">,</span> <span class="s">"math"</span> <span class="p">:</span> <span class="mi">98</span><span class="p">,</span> <span class="s">"english"</span> <span class="p">:</span> <span class="mi">96</span><span class="p">,</span> <span class="s">"science"</span> <span class="p">:</span> <span class="mi">98</span><span class="p">},</span>
+    <span class="p">{</span> <span class="s">"name"</span> <span class="p">:</span> <span class="s">"구지연"</span><span class="p">,</span> <span class="s">"korean"</span> <span class="p">:</span> <span class="mi">76</span><span class="p">,</span> <span class="s">"math"</span> <span class="p">:</span> <span class="mi">96</span><span class="p">,</span> <span class="s">"english"</span> <span class="p">:</span> <span class="mi">94</span><span class="p">,</span> <span class="s">"science"</span> <span class="p">:</span> <span class="mi">90</span><span class="p">},</span>
+    <span class="p">{</span> <span class="s">"name"</span> <span class="p">:</span> <span class="s">"나선주"</span><span class="p">,</span> <span class="s">"korean"</span> <span class="p">:</span> <span class="mi">98</span><span class="p">,</span> <span class="s">"math"</span> <span class="p">:</span> <span class="mi">92</span><span class="p">,</span> <span class="s">"english"</span> <span class="p">:</span> <span class="mi">96</span><span class="p">,</span> <span class="s">"science"</span> <span class="p">:</span> <span class="mi">92</span><span class="p">},</span>
+    <span class="p">{</span> <span class="s">"name"</span> <span class="p">:</span> <span class="s">"윤아린"</span><span class="p">,</span> <span class="s">"korean"</span> <span class="p">:</span> <span class="mi">95</span><span class="p">,</span> <span class="s">"math"</span> <span class="p">:</span> <span class="mi">98</span><span class="p">,</span> <span class="s">"english"</span> <span class="p">:</span> <span class="mi">98</span><span class="p">,</span> <span class="s">"science"</span> <span class="p">:</span> <span class="mi">98</span><span class="p">},</span>
+    <span class="p">{</span> <span class="s">"name"</span> <span class="p">:</span> <span class="s">"윤명월"</span><span class="p">,</span> <span class="s">"korean"</span> <span class="p">:</span> <span class="mi">64</span><span class="p">,</span> <span class="s">"math"</span> <span class="p">:</span> <span class="mi">88</span><span class="p">,</span> <span class="s">"english"</span> <span class="p">:</span> <span class="mi">92</span><span class="p">,</span> <span class="s">"science"</span> <span class="p">:</span> <span class="mi">92</span><span class="p">},</span>
+<span class="p">]</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="s">"이름"</span><span class="p">,</span> <span class="s">"총점"</span><span class="p">,</span> <span class="s">"평균"</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">"</span><span class="se">\t</span><span class="s">"</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">student</span> <span class="ow">in</span> <span class="n">students</span><span class="p">:</span>
+    <span class="n">score_sum</span> <span class="o">=</span> <span class="n">student</span><span class="p">[</span><span class="s">"korean"</span><span class="p">]</span> <span class="o">+</span> <span class="n">student</span><span class="p">[</span><span class="s">"math"</span><span class="p">]</span> <span class="o">+</span> <span class="n">student</span><span class="p">[</span><span class="s">"english"</span><span class="p">]</span> <span class="o">+</span> <span class="n">student</span><span class="p">[</span><span class="s">"science"</span><span class="p">]</span>
+    <span class="n">score_average</span> <span class="o">=</span> <span class="n">score_sum</span> <span class="o">/</span><span class="mi">4</span>
+
+    <span class="nf">print</span><span class="p">(</span><span class="n">student</span><span class="p">[</span><span class="s">"name"</span><span class="p">],</span> <span class="n">score_sum</span><span class="p">,</span> <span class="n">score_average</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">"</span><span class="se">\t</span><span class="s">"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h5 id="객체를-만드는-함수-1"><strong>객체를 만드는 함수 1</strong></h5>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">create_student</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">korean</span><span class="p">,</span> <span class="n">math</span><span class="p">,</span> <span class="n">english</span><span class="p">,</span> <span class="n">science</span><span class="p">):</span>
+    <span class="k">return</span><span class="p">{</span>
+        <span class="s">"name"</span> <span class="p">:</span> <span class="n">name</span><span class="p">,</span>
+        <span class="s">"korean"</span> <span class="p">:</span> <span class="n">korean</span><span class="p">,</span>
+        <span class="s">"math"</span> <span class="p">:</span> <span class="n">math</span><span class="p">,</span>
+        <span class="s">"english"</span> <span class="p">:</span> <span class="n">english</span><span class="p">,</span>
+        <span class="s">"science"</span> <span class="p">:</span> <span class="n">science</span>
+    <span class="p">}</span>
+
+<span class="n">students</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="nf">create_student</span><span class="p">(</span><span class="s">"윤인성"</span><span class="p">,</span> <span class="mi">87</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">88</span><span class="p">,</span> <span class="mi">95</span><span class="p">),</span>
+    <span class="nf">create_student</span><span class="p">(</span><span class="s">"연하진"</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">96</span><span class="p">,</span> <span class="mi">98</span><span class="p">),</span>
+    <span class="nf">create_student</span><span class="p">(</span><span class="s">"구자연"</span><span class="p">,</span> <span class="mi">76</span><span class="p">,</span> <span class="mi">96</span><span class="p">,</span> <span class="mi">94</span><span class="p">,</span> <span class="mi">90</span><span class="p">),</span>
+    <span class="nf">create_student</span><span class="p">(</span><span class="s">"나선주"</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">96</span><span class="p">,</span> <span class="mi">92</span><span class="p">),</span>
+    <span class="nf">create_student</span><span class="p">(</span><span class="s">"윤아린"</span><span class="p">,</span> <span class="mi">95</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">98</span><span class="p">),</span>
+    <span class="nf">create_student</span><span class="p">(</span><span class="s">"윤명월"</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">88</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">92</span><span class="p">),</span>
+<span class="p">]</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="s">"이름"</span><span class="p">,</span> <span class="s">"총점"</span><span class="p">,</span> <span class="s">"평균"</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">"</span><span class="se">\t</span><span class="s">"</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">student</span> <span class="ow">in</span> <span class="n">students</span><span class="p">:</span>
+    <span class="n">score_sum</span> <span class="o">=</span> <span class="n">student</span><span class="p">[</span><span class="s">"korean"</span><span class="p">]</span> <span class="o">+</span> <span class="n">student</span><span class="p">[</span><span class="s">"math"</span><span class="p">]</span> <span class="o">+</span> <span class="n">student</span><span class="p">[</span><span class="s">"english"</span><span class="p">]</span> <span class="o">+</span> <span class="n">student</span><span class="p">[</span><span class="s">"science"</span><span class="p">]</span>
+    <span class="n">score_average</span> <span class="o">=</span> <span class="n">score_sum</span> <span class="o">/</span><span class="mi">4</span>
+
+    <span class="nf">print</span><span class="p">(</span><span class="n">student</span><span class="p">[</span><span class="s">"name"</span><span class="p">],</span> <span class="n">score_sum</span><span class="p">,</span> <span class="n">score_average</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">"</span><span class="se">\t</span><span class="s">"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h5 id="객체를-만드는-함수-2"><strong>객체를 만드는 함수 2</strong></h5>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">create_student</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">korean</span><span class="p">,</span> <span class="n">math</span><span class="p">,</span> <span class="n">english</span><span class="p">,</span> <span class="n">science</span><span class="p">):</span>
+    <span class="k">return</span><span class="p">{</span>
+        <span class="s">"name"</span> <span class="p">:</span> <span class="n">name</span><span class="p">,</span>
+        <span class="s">"korean"</span> <span class="p">:</span> <span class="n">korean</span><span class="p">,</span>
+        <span class="s">"math"</span> <span class="p">:</span> <span class="n">math</span><span class="p">,</span>
+        <span class="s">"english"</span> <span class="p">:</span> <span class="n">english</span><span class="p">,</span>
+        <span class="s">"science"</span> <span class="p">:</span> <span class="n">science</span>
+    <span class="p">}</span>
+
+<span class="c1"># 학생을 처리하는 함수를 선언
+</span><span class="k">def</span> <span class="nf">student_get_sum</span><span class="p">(</span><span class="n">student</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">student</span><span class="p">[</span><span class="s">"korean"</span><span class="p">]</span> <span class="o">+</span> <span class="n">student</span><span class="p">[</span><span class="s">"math"</span><span class="p">]</span> <span class="o">+</span> <span class="n">student</span><span class="p">[</span><span class="s">"english"</span><span class="p">]</span> <span class="o">+</span> <span class="n">student</span><span class="p">[</span><span class="s">"science"</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">student_get_average</span><span class="p">(</span><span class="n">student</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nf">student_get_sum</span><span class="p">(</span><span class="n">student</span><span class="p">)</span> <span class="o">/</span> <span class="mi">4</span>
+
+<span class="k">def</span> <span class="nf">student_to_string</span><span class="p">(</span><span class="n">student</span><span class="p">):</span>
+    <span class="k">return</span> <span class="s">"{}</span><span class="se">\t</span><span class="s">{}</span><span class="se">\t</span><span class="s">{}"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span>
+        <span class="n">student</span><span class="p">[</span><span class="s">"name"</span><span class="p">],</span>
+        <span class="nf">student_get_sum</span><span class="p">(</span><span class="n">student</span><span class="p">),</span>
+        <span class="nf">student_get_average</span><span class="p">(</span><span class="n">student</span><span class="p">)</span>
+        <span class="p">)</span>
+
+<span class="n">students</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="nf">create_student</span><span class="p">(</span><span class="s">"윤인성"</span><span class="p">,</span> <span class="mi">87</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">88</span><span class="p">,</span> <span class="mi">95</span><span class="p">),</span>
+    <span class="nf">create_student</span><span class="p">(</span><span class="s">"연하진"</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">96</span><span class="p">,</span> <span class="mi">98</span><span class="p">),</span>
+    <span class="nf">create_student</span><span class="p">(</span><span class="s">"구자연"</span><span class="p">,</span> <span class="mi">76</span><span class="p">,</span> <span class="mi">96</span><span class="p">,</span> <span class="mi">94</span><span class="p">,</span> <span class="mi">90</span><span class="p">),</span>
+    <span class="nf">create_student</span><span class="p">(</span><span class="s">"나선주"</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">96</span><span class="p">,</span> <span class="mi">92</span><span class="p">),</span>
+    <span class="nf">create_student</span><span class="p">(</span><span class="s">"윤아린"</span><span class="p">,</span> <span class="mi">95</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">98</span><span class="p">),</span>
+    <span class="nf">create_student</span><span class="p">(</span><span class="s">"윤명월"</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">88</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">92</span><span class="p">),</span>
+<span class="p">]</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="s">"이름"</span><span class="p">,</span> <span class="s">"총점"</span><span class="p">,</span> <span class="s">"평균"</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">"</span><span class="se">\t</span><span class="s">"</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">student</span> <span class="ow">in</span> <span class="n">students</span><span class="p">:</span>
+    <span class="nf">print</span><span class="p">(</span><span class="nf">student_to_string</span><span class="p">(</span><span class="n">student</span><span class="p">))</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h4 id="1-클래스의-기본"><strong>1. 클래스의 기본</strong></h4>
+<p><br /></p>
+
+<h5 id="클래스-선언하기"><strong>클래스 선언하기</strong></h5>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">클래스</span> <span class="n">이름</span><span class="p">:</span>
+    <span class="c1"># 생성자
+</span>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">추가적인</span> <span class="n">매개변수</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+    <span class="c1"># 소멸자
+</span>    <span class="k">def</span> <span class="nf">__del__</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+    <span class="n">클래스</span> <span class="n">내용</span>
+
+    <span class="k">def</span> <span class="nf">메소드</span> <span class="n">이름</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">추가적인</span> <span class="n">매개변수</span><span class="p">)</span>
+        <span class="k">pass</span>
+
+<span class="n">인스턴스</span> <span class="n">이름</span><span class="p">(</span><span class="n">변수</span> <span class="n">이름</span><span class="p">)</span> <span class="o">=</span> <span class="n">클래스</span> <span class="n">이름</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h5 id="클래스-내부에-함수-선언하기"><strong>클래스 내부에 함수 선언하기</strong></h5>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Student</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">korean</span><span class="p">,</span> <span class="n">math</span><span class="p">,</span> <span class="n">english</span><span class="p">,</span> <span class="n">science</span><span class="p">):</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">korean</span> <span class="o">=</span> <span class="n">korean</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">math</span> <span class="o">=</span> <span class="n">math</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">english</span> <span class="o">=</span> <span class="n">english</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">science</span> <span class="o">=</span> <span class="n">science</span>
+
+    <span class="k">def</span> <span class="nf">get_sum</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">self</span><span class="p">.</span><span class="n">korean</span> <span class="o">+</span> <span class="n">self</span><span class="p">.</span><span class="n">math</span> <span class="o">+</span> <span class="n">self</span><span class="p">.</span><span class="n">english</span> <span class="o">+</span> <span class="n">self</span><span class="p">.</span><span class="n">science</span>
+
+    <span class="k">def</span> <span class="nf">get_average</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">self</span><span class="p">.</span><span class="nf">get_sum</span><span class="p">()</span> <span class="o">/</span> <span class="mi">4</span>
+
+    <span class="k">def</span> <span class="nf">to_string</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s">"{}</span><span class="se">\t</span><span class="s">{}</span><span class="se">\t</span><span class="s">{}"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span>
+            <span class="n">self</span><span class="p">.</span><span class="n">name</span><span class="p">,</span>
+            <span class="n">self</span><span class="p">.</span><span class="nf">get_sum</span><span class="p">(),</span>
+            <span class="n">self</span><span class="p">.</span><span class="nf">get_average</span><span class="p">()</span>
+            <span class="p">)</span>
+
+<span class="n">students</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="nc">Student</span><span class="p">(</span><span class="s">"윤인성"</span><span class="p">,</span> <span class="mi">87</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">88</span><span class="p">,</span> <span class="mi">95</span><span class="p">),</span>
+    <span class="nc">Student</span><span class="p">(</span><span class="s">"연하진"</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">96</span><span class="p">,</span> <span class="mi">98</span><span class="p">),</span>
+    <span class="nc">Student</span><span class="p">(</span><span class="s">"구자연"</span><span class="p">,</span> <span class="mi">76</span><span class="p">,</span> <span class="mi">96</span><span class="p">,</span> <span class="mi">94</span><span class="p">,</span> <span class="mi">90</span><span class="p">),</span>
+    <span class="nc">Student</span><span class="p">(</span><span class="s">"나선주"</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">96</span><span class="p">,</span> <span class="mi">92</span><span class="p">),</span>
+    <span class="nc">Student</span><span class="p">(</span><span class="s">"윤아린"</span><span class="p">,</span> <span class="mi">95</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">98</span><span class="p">),</span>
+    <span class="nc">Student</span><span class="p">(</span><span class="s">"윤명월"</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">88</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">92</span><span class="p">),</span>
+<span class="p">]</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="s">"이름"</span><span class="p">,</span> <span class="s">"총점"</span><span class="p">,</span> <span class="s">"평균"</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">"</span><span class="se">\t</span><span class="s">"</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">student</span> <span class="ow">in</span> <span class="n">students</span><span class="p">:</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">student</span><span class="p">.</span><span class="nf">to_string</span><span class="p">())</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h4 id="2-클래스의-추가적인-구문"><strong>2. 클래스의 추가적인 구문</strong></h4>
+<p><br /></p>
+
+<p>상속 관계에 따라서 객체가 어떤 클래스를 기반으로 만들었는지 확인할 수 있게 해주는 isinstance() 함수</p>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Student</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+<span class="n">student</span> <span class="o">=</span> <span class="nc">Student</span><span class="p">()</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="s">"isinstance(student,Student) : "</span><span class="p">,</span> <span class="nf">isInstance</span><span class="p">(</span><span class="n">student</span><span class="p">,</span><span class="n">Student</span><span class="p">))</span>
+<span class="c1"># type(인스턴스) == 클래스
+</span></code></pre></div></div>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Human</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+<span class="k">class</span> <span class="nc">Student</span><span class="p">(</span><span class="n">Human</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+<span class="n">student</span> <span class="o">=</span> <span class="nc">Student</span><span class="p">()</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="s">"isinstance(student, Human) : "</span><span class="p">,</span> <span class="nf">isinstance</span><span class="p">(</span><span class="n">student</span><span class="p">,</span> <span class="n">Human</span><span class="p">))</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"type(student) == Human : "</span><span class="p">,</span> <span class="nf">type</span><span class="p">(</span><span class="n">student</span><span class="p">)</span> <span class="o">==</span> <span class="n">Human</span><span class="p">)</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h5 id="isinstance-함수-활용"><strong>isinstance() 함수 활용</strong></h5>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Student</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">study</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"공부를 합니다."</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">Teacher</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">teach</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"학생을 가르칩니다."</span><span class="p">)</span>
+
+<span class="n">classroom</span> <span class="o">=</span> <span class="p">[</span><span class="nc">Student</span><span class="p">(),</span> <span class="nc">Student</span><span class="p">(),</span> <span class="nc">Teacher</span><span class="p">(),</span> <span class="nc">Student</span><span class="p">(),</span> <span class="nc">Student</span><span class="p">()]</span>
+
+<span class="k">for</span> <span class="n">person</span> <span class="ow">in</span> <span class="n">classroom</span><span class="p">:</span>
+    <span class="k">if</span> <span class="nf">isinstance</span><span class="p">(</span><span class="n">person</span><span class="p">,</span> <span class="n">Student</span><span class="p">):</span>
+        <span class="n">person</span><span class="p">.</span><span class="nf">study</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="nf">isinstance</span><span class="p">(</span><span class="n">person</span><span class="p">,</span> <span class="n">Teacher</span><span class="p">):</span>
+        <span class="n">person</span><span class="p">.</span><span class="nf">teach</span><span class="p">()</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h5 id="__str__-함수-활용"><strong>__str__() 함수 활용</strong></h5>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Student</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">korean</span><span class="p">,</span> <span class="n">math</span><span class="p">,</span> <span class="n">english</span><span class="p">,</span> <span class="n">science</span><span class="p">):</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">korean</span> <span class="o">=</span> <span class="n">korean</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">math</span> <span class="o">=</span> <span class="n">math</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">english</span> <span class="o">=</span> <span class="n">english</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">science</span> <span class="o">=</span> <span class="n">science</span>
+
+    <span class="k">def</span> <span class="nf">get_sum</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">self</span><span class="p">.</span><span class="n">korean</span> <span class="o">+</span> <span class="n">self</span><span class="p">.</span><span class="n">math</span> <span class="o">+</span> <span class="n">self</span><span class="p">.</span><span class="n">english</span> <span class="o">+</span> <span class="n">self</span><span class="p">.</span><span class="n">science</span>
+    
+    <span class="k">def</span> <span class="nf">get_average</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">self</span><span class="p">.</span><span class="nf">get_sum</span><span class="p">()</span> <span class="o">/</span> <span class="mi">4</span>
+    
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s">"{}</span><span class="se">\t</span><span class="s">{}</span><span class="se">\t</span><span class="s">{}"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="n">self</span><span class="p">.</span><span class="nf">get_sum</span><span class="p">(),</span> <span class="n">self</span><span class="p">.</span> <span class="nf">get_average</span><span class="p">())</span>
+    
+<span class="n">students</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="nc">Student</span><span class="p">(</span><span class="s">"윤인성"</span><span class="p">,</span> <span class="mi">87</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">88</span><span class="p">,</span> <span class="mi">95</span><span class="p">),</span>
+    <span class="nc">Student</span><span class="p">(</span><span class="s">"연하진"</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">96</span><span class="p">,</span> <span class="mi">98</span><span class="p">),</span>
+    <span class="nc">Student</span><span class="p">(</span><span class="s">"구자연"</span><span class="p">,</span> <span class="mi">76</span><span class="p">,</span> <span class="mi">96</span><span class="p">,</span> <span class="mi">94</span><span class="p">,</span> <span class="mi">90</span><span class="p">),</span>
+    <span class="nc">Student</span><span class="p">(</span><span class="s">"나선주"</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">96</span><span class="p">,</span> <span class="mi">92</span><span class="p">),</span>
+    <span class="nc">Student</span><span class="p">(</span><span class="s">"윤아린"</span><span class="p">,</span> <span class="mi">95</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">98</span><span class="p">),</span>
+    <span class="nc">Student</span><span class="p">(</span><span class="s">"윤명월"</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">88</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">92</span><span class="p">),</span>
+<span class="p">]</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="s">"이름"</span><span class="p">,</span> <span class="s">"총점"</span><span class="p">,</span> <span class="s">"평균"</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">"</span><span class="se">\t</span><span class="s">"</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">student</span> <span class="ow">in</span> <span class="n">students</span><span class="p">:</span>
+    <span class="nf">print</span><span class="p">(</span><span class="nf">str</span><span class="p">(</span><span class="n">student</span><span class="p">))</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h5 id="크기-비교-함수-활용"><strong>크기 비교 함수 활용</strong></h5>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="k">class</span> <span class="nc">Student</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">korean</span><span class="p">,</span> <span class="n">math</span><span class="p">,</span> <span class="n">english</span><span class="p">,</span> <span class="n">science</span><span class="p">):</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">korean</span> <span class="o">=</span> <span class="n">korean</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">math</span> <span class="o">=</span> <span class="n">math</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">english</span> <span class="o">=</span> <span class="n">english</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">science</span> <span class="o">=</span> <span class="n">science</span>
+
+    <span class="k">def</span> <span class="nf">get_sum</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">self</span><span class="p">.</span><span class="n">korean</span> <span class="o">+</span> <span class="n">self</span><span class="p">.</span><span class="n">math</span> <span class="o">+</span> <span class="n">self</span><span class="p">.</span><span class="n">english</span> <span class="o">+</span> <span class="n">self</span><span class="p">.</span><span class="n">science</span>
+    
+    <span class="k">def</span> <span class="nf">get_average</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">self</span><span class="p">.</span><span class="nf">get_sum</span><span class="p">()</span> <span class="o">/</span> <span class="mi">4</span>
+    
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s">"{}</span><span class="se">\t</span><span class="s">{}</span><span class="se">\t</span><span class="s">{}"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="n">self</span><span class="p">.</span><span class="nf">get_sum</span><span class="p">(),</span> <span class="n">self</span><span class="p">.</span> <span class="nf">get_average</span><span class="p">())</span>
+    
+    <span class="k">def</span> <span class="nf">__eq__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">self</span><span class="p">.</span><span class="nf">get_sum</span><span class="p">()</span> <span class="o">==</span> <span class="n">value</span><span class="p">.</span><span class="nf">get_sum</span><span class="p">()</span>
+    <span class="k">def</span> <span class="nf">__ne__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">self</span><span class="p">.</span><span class="nf">get_sum</span><span class="p">()</span> <span class="o">!=</span> <span class="n">value</span><span class="p">.</span><span class="nf">get_sum</span><span class="p">()</span>
+    <span class="k">def</span> <span class="nf">__gt__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">self</span><span class="p">.</span><span class="nf">get_sum</span><span class="p">()</span> <span class="o">&gt;</span> <span class="n">value</span><span class="p">.</span><span class="nf">get_sum</span><span class="p">()</span>
+    <span class="k">def</span> <span class="nf">__ge__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">self</span><span class="p">.</span><span class="nf">get_sum</span><span class="p">()</span> <span class="o">&gt;=</span> <span class="n">value</span><span class="p">.</span><span class="nf">get_sum</span><span class="p">()</span>
+    <span class="k">def</span> <span class="nf">__lt__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">self</span><span class="p">.</span><span class="nf">get_sum</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">value</span><span class="p">.</span><span class="nf">get_sum</span><span class="p">()</span>
+    <span class="k">def</span> <span class="nf">__le__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">self</span><span class="p">.</span><span class="nf">get_sum</span><span class="p">()</span> <span class="o">&lt;=</span> <span class="n">value</span><span class="p">.</span><span class="nf">get_sum</span><span class="p">()</span>
+    
+<span class="n">students</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="nc">Student</span><span class="p">(</span><span class="s">"윤인성"</span><span class="p">,</span> <span class="mi">87</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">88</span><span class="p">,</span> <span class="mi">95</span><span class="p">),</span>
+    <span class="nc">Student</span><span class="p">(</span><span class="s">"연하진"</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">96</span><span class="p">,</span> <span class="mi">98</span><span class="p">),</span>
+    <span class="nc">Student</span><span class="p">(</span><span class="s">"구자연"</span><span class="p">,</span> <span class="mi">76</span><span class="p">,</span> <span class="mi">96</span><span class="p">,</span> <span class="mi">94</span><span class="p">,</span> <span class="mi">90</span><span class="p">),</span>
+    <span class="nc">Student</span><span class="p">(</span><span class="s">"나선주"</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">96</span><span class="p">,</span> <span class="mi">92</span><span class="p">),</span>
+    <span class="nc">Student</span><span class="p">(</span><span class="s">"윤아린"</span><span class="p">,</span> <span class="mi">95</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">98</span><span class="p">),</span>
+    <span class="nc">Student</span><span class="p">(</span><span class="s">"윤명월"</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">88</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">92</span><span class="p">),</span>
+<span class="p">]</span>
+
+<span class="n">student_a</span> <span class="o">=</span> <span class="nc">Student</span><span class="p">(</span><span class="s">"윤인성"</span><span class="p">,</span> <span class="mi">87</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">88</span><span class="p">,</span> <span class="mi">95</span><span class="p">)</span>
+<span class="n">student_b</span> <span class="o">=</span> <span class="nc">Student</span><span class="p">(</span><span class="s">"연하진"</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">96</span><span class="p">,</span> <span class="mi">98</span><span class="p">)</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="s">"student_a == student_b : "</span><span class="p">,</span> <span class="n">student_a</span> <span class="o">==</span> <span class="n">student_b</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"student_a != student_b : "</span><span class="p">,</span> <span class="n">student_a</span> <span class="o">!=</span> <span class="n">student_b</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"student_a &gt; student_b : "</span><span class="p">,</span> <span class="n">student_a</span> <span class="o">&gt;</span> <span class="n">student_b</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"student_a &gt;= student_b : "</span><span class="p">,</span> <span class="n">student_a</span> <span class="o">&gt;=</span> <span class="n">student_b</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"student_a &lt; student_b : "</span><span class="p">,</span> <span class="n">student_a</span> <span class="o">&lt;</span> <span class="n">student_b</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"student_a &lt;= student_b : "</span><span class="p">,</span> <span class="n">student_a</span> <span class="o">&lt;=</span> <span class="n">student_b</span><span class="p">)</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h5 id="클래스-변수"><strong>클래스 변수</strong></h5>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">클래스</span> <span class="n">이름</span><span class="p">:</span>
+    <span class="n">클래스</span> <span class="n">변수</span> <span class="o">=</span> <span class="n">값</span>
+
+<span class="n">클래스</span> <span class="n">이름</span><span class="p">.</span><span class="n">변수</span> <span class="n">이름</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h5 id="클래스-함수"><strong>클래스 함수</strong></h5>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">클래스</span> <span class="n">이름</span><span class="p">:</span>
+    <span class="c1"># 데코레이터
+</span>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">클래스</span> <span class="n">함수</span><span class="p">(</span><span class="n">cls</span><span class="p">,</span> <span class="n">매개변수</span><span class="p">)</span>
+        <span class="k">pass</span>
+
+<span class="n">클래스</span> <span class="n">이름</span><span class="p">.</span><span class="n">함수</span> <span class="n">이름</span><span class="p">(</span><span class="n">매개변수</span><span class="p">)</span>
+</code></pre></div></div>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Student</span><span class="p">:</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">students</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">print</span><span class="p">(</span><span class="n">cls</span><span class="p">):</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"------- 학생 목록 -------"</span><span class="p">)</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"이름</span><span class="se">\t</span><span class="s">총점</span><span class="se">\t</span><span class="s">평균"</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">student</span> <span class="ow">in</span> <span class="n">cls</span><span class="p">.</span><span class="n">students</span><span class="p">:</span>
+            <span class="nf">print</span><span class="p">(</span><span class="nf">str</span><span class="p">(</span><span class="n">student</span><span class="p">))</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"---------------------"</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">korean</span><span class="p">,</span> <span class="n">math</span><span class="p">,</span> <span class="n">english</span><span class="p">,</span> <span class="n">science</span><span class="p">):</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">korean</span> <span class="o">=</span> <span class="n">korean</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">math</span> <span class="o">=</span> <span class="n">math</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">english</span> <span class="o">=</span> <span class="n">english</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">science</span> <span class="o">=</span> <span class="n">science</span>
+        <span class="n">Student</span><span class="p">.</span><span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">Student</span><span class="p">.</span><span class="n">students</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">self</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">get_sum</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">self</span><span class="p">.</span><span class="n">korean</span> <span class="o">+</span> <span class="n">self</span><span class="p">.</span><span class="n">math</span> <span class="o">+</span> <span class="n">self</span><span class="p">.</span><span class="n">english</span> <span class="o">+</span> <span class="n">self</span><span class="p">.</span><span class="n">science</span>
+    
+    <span class="k">def</span> <span class="nf">get_average</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">self</span><span class="p">.</span><span class="nf">get_sum</span><span class="p">()</span> <span class="o">/</span> <span class="mi">4</span>
+    
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s">"{}</span><span class="se">\t</span><span class="s">{}</span><span class="se">\t</span><span class="s">{}"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="n">self</span><span class="p">.</span><span class="nf">get_sum</span><span class="p">(),</span> <span class="n">self</span><span class="p">.</span> <span class="nf">get_average</span><span class="p">())</span>
+
+    
+<span class="n">students</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="nc">Student</span><span class="p">(</span><span class="s">"윤인성"</span><span class="p">,</span> <span class="mi">87</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">88</span><span class="p">,</span> <span class="mi">95</span><span class="p">),</span>
+    <span class="nc">Student</span><span class="p">(</span><span class="s">"연하진"</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">96</span><span class="p">,</span> <span class="mi">98</span><span class="p">),</span>
+    <span class="nc">Student</span><span class="p">(</span><span class="s">"구자연"</span><span class="p">,</span> <span class="mi">76</span><span class="p">,</span> <span class="mi">96</span><span class="p">,</span> <span class="mi">94</span><span class="p">,</span> <span class="mi">90</span><span class="p">),</span>
+    <span class="nc">Student</span><span class="p">(</span><span class="s">"나선주"</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">96</span><span class="p">,</span> <span class="mi">92</span><span class="p">),</span>
+    <span class="nc">Student</span><span class="p">(</span><span class="s">"윤아린"</span><span class="p">,</span> <span class="mi">95</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">98</span><span class="p">),</span>
+    <span class="nc">Student</span><span class="p">(</span><span class="s">"윤명월"</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">88</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">92</span><span class="p">),</span>
+<span class="p">]</span>
+
+<span class="n">Student</span><span class="p">.</span><span class="nf">print</span><span class="p">()</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h5 id="가비지-컬렉터"><strong>가비지 컬렉터</strong></h5>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Test</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="n">name</span><span class="p">):</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"{} - 생성되었습니다."</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">name</span><span class="p">))</span>
+    <span class="k">def</span> <span class="nf">__del__</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"{} - 파괴되었습니다."</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">name</span><span class="p">))</span>
+
+<span class="c1"># 변수에 저장하지 않은 이유
+</span><span class="nc">Test</span><span class="p">(</span><span class="s">"A"</span><span class="p">)</span>
+<span class="nc">Test</span><span class="p">(</span><span class="s">"B"</span><span class="p">)</span>
+<span class="nc">Test</span><span class="p">(</span><span class="s">"C"</span><span class="p">)</span>
+<span class="c1"># A - 생성되었습니다.
+# A - 파괴되었습니다.
+# B - 생성되었습니다.
+# B - 파괴되었습니다.
+# C - 생성되었습니다.
+# C - 파괴되었습니다.
+</span>
+<span class="c1"># 변수에 저장하는 경우
+</span><span class="n">a</span> <span class="o">=</span> <span class="nc">Test</span><span class="p">(</span><span class="s">"A"</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="nc">Test</span><span class="p">(</span><span class="s">"B"</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="nc">Test</span><span class="p">(</span><span class="s">"C"</span><span class="p">)</span>
+<span class="c1"># A - 생성되었습니다.
+# B - 생성되었습니다.
+# C - 생성되었습니다.
+# A - 파괴되었습니다.
+# B - 파괴되었습니다.
+# C - 파괴되었습니다.
+</span></code></pre></div></div>
+<p><br /></p>
+
+<h5 id="프라이빗-변수-getset"><strong>프라이빗 변수 get/set</strong></h5>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">math</span>
+
+<span class="k">class</span> <span class="nc">Circle</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">Self</span><span class="p">,</span> <span class="n">radius</span><span class="p">):</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">__raduis</span> <span class="o">=</span> <span class="n">radius</span>
+
+    <span class="k">def</span> <span class="nf">get_circumference</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">math</span><span class="p">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">self</span><span class="p">.</span><span class="n">__radius</span>
+    
+    <span class="k">def</span> <span class="nf">get_area</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">math</span><span class="p">.</span><span class="n">pi</span> <span class="o">*</span> <span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">__radius</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+    
+    <span class="c1"># 게터와 세터
+</span>    <span class="k">def</span> <span class="nf">get_radius</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">self</span><span class="p">.</span><span class="n">__radius</span>
+    <span class="k">def</span> <span class="nf">set_radius</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">__radius</span> <span class="o">=</span> <span class="n">value</span>
+    
+<span class="n">circle</span> <span class="o">=</span> <span class="nc">Circle</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="s">"원의 반지름 : "</span><span class="p">,</span><span class="n">circle</span><span class="p">.</span><span class="nf">get_radius</span><span class="p">())</span>
+<span class="n">circle</span><span class="p">.</span><span class="nf">set_radius</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"변경된 원의 반지름 : "</span><span class="p">,</span><span class="n">circle</span><span class="p">.</span><span class="nf">get_radius</span><span class="p">())</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"원의 둘레 : "</span><span class="p">,</span> <span class="n">circle</span><span class="p">.</span><span class="n">get_circumference</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"원의 넓이 : "</span><span class="p">,</span> <span class="n">circle</span><span class="p">.</span><span class="nf">get_area</span><span class="p">())</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h5 id="데코레이터-getset"><strong>데코레이터 get/set</strong></h5>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">math</span>
+
+<span class="k">class</span> <span class="nc">Circle</span><span class="p">:</span>
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">radius</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">self</span><span class="p">.</span><span class="n">__radius</span>
+    <span class="nd">@radius.setter</span>
+    <span class="k">def</span> <span class="nf">radius</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="nc">TypeError</span><span class="p">(</span><span class="s">"길이는 양의 숫자여야 합니다."</span><span class="p">)</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">__radius</span> <span class="o">=</span> <span class="n">value</span>
+
+<span class="n">circle</span> <span class="o">=</span> <span class="nc">Circle</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">circle</span><span class="p">.</span><span class="n">radius</span> <span class="o">=</span> <span class="mi">2</span>
+
+</code></pre></div></div>
+<p><br /></p>
+
+<p>상속 : 다른 누군가가 만들어 놓은 기본 형태를 원하는 형태로 추가하거나 교체하는것
+다중 상속 : 다른 누군가가 만들어 놓은 형태들을 조립해서 내가 원하는 것을 만드는 것</p>
 
                     </div>
-                </main>
-                <footer class="py-4 bg-light mt-auto">
-                    <div class="container-fluid px-4">
-                        <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; Your Website 2023</div>
-                            <div>
-                                <a href="#">Privacy Policy</a>
-                                &middot;
-                                <a href="#">Terms &amp; Conditions</a>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
+                </main><footer class="py-4 bg-light mt-auto">
+    <div class="container-fluid px-4">
+        <div class="d-flex align-items-center justify-content-between small">
+            <div class="text-muted">Copyright &copy; Your Website 2023</div>
+            <div>
+                <a href="#">Privacy Policy</a>
+                &middot;
+                <a href="#">Terms &amp; Conditions</a>
             </div>
+        </div>
+    </div>
+</footer></div>
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>

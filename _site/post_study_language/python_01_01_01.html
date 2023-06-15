@@ -45,26 +45,28 @@
 							<div class="sb-sidenav-menu-heading">프로그래밍 언어</div>
 
 							<!-- 1. -->
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#Info_01_01" aria-expanded="false" aria-controls="collapseLayouts">
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#python_01_01" aria-expanded="false" aria-controls="collapseLayouts">
 								<div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
 								혼자 공부하는 파이썬
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
-                            <div class="collapse" id="Info_01_01" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <div class="collapse" id="python_01_01" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="/post_study_language/python_01_01_01">파이썬의 개요</a>
-                                    <a class="nav-link" href="/post_study_language/python_01_01_02">조건문과 반복문</a>
+                                    <a class="nav-link" href="/post_study_language/python_01_01_02">자료형,조건문,반복문</a>
 									<a class="nav-link" href="/post_study_language/python_01_01_03">함수와 예외처리</a>
 									<a class="nav-link" href="/post_study_language/python_01_01_04">모듈과 클래스</a>
+                                    <a class="nav-link" href="/post_study_language/python_01_01_05">부록</a>
                                 </nav>
                             </div>
+                            
 							<!-- 2. -->
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#Info_01_02" aria-expanded="false" aria-controls="collapseLayouts">
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#cprogramming_01_01" aria-expanded="false" aria-controls="collapseLayouts">
 								<div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
 								윤성우의 열혈 C언어 프로그래밍
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
-                            <div class="collapse" id="Info_01_02" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <div class="collapse" id="cprogramming_01_01" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="/post_study_language/Info_01_02_01">자료 구조</a>
                                     <a class="nav-link" href="/post_study_language/Info_01_02_02">통합 구현</a>
@@ -72,7 +74,22 @@
 									<a class="nav-link" href="/post_study_language/Info_01_02_04">애플리케이션 테스트</a>
                                 </nav>
                             </div>
-
+                            <!-- 3. -->
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#processing_01_01" aria-expanded="false" aria-controls="collapseLayouts">
+								<div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+								손에 잡히는 프로세싱
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="processing_01_01" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="/post_study_language/processing_01_01_01">프로세싱 개요</a>
+                                    <a class="nav-link" href="/post_study_language/processing_01_01_02">프로세싱 그리기</a>
+                                    <a class="nav-link" href="/post_study_language/processing_01_01_03">프로세싱 프로그래밍</a>
+                                    <a class="nav-link" href="/post_study_language/processing_01_01_04">프로세싱 상호작용</a>
+                                    <a class="nav-link" href="/post_study_language/processing_01_01_05">프로세싱 미디어</a>
+                                    <a class="nav-link" href="/post_study_language/processing_01_01_06">프로세싱 움직임</a>
+                                </nav>
+                            </div>
                         </div>
                     </div>
                 </nav>
@@ -83,23 +100,106 @@
 					<div class="container-fluid px-4">
 						<h1>파이썬 개요</h1>
 						<hr/>
-                        
+                        <h3 id="파이썬"><strong>파이썬</strong></h3>
+<hr />
+
+<h4 id="1-파이썬을-추천하는-경우"><strong>1. 파이썬을 추천하는 경우</strong></h4>
+
+<ol>
+  <li>개발자로서 스타트업에서 웹 서비스 개발을 하고 싶은 경우</li>
+  <li>개발자로서 서비스에 활용할 인공지능을 개발하고 싶은 경우</li>
+  <li>개발자로서 데이터 수집 프로그램을 개발하고 싶은 경우</li>
+  <li>비개발자로서 엑셀 이상의 데이터 분석을 하고 싶은 경우</li>
+  <li>비개발자로서 업무 자동화를 위한 간단한 프로그램을 만들고 싶은 경우</li>
+  <li>비개발자로서 프로그래밍을 접해 보고 싶은 경우</li>
+</ol>
+
+<h4 id="2-파이썬에-대하여"><strong>2. 파이썬에 대하여</strong></h4>
+<h6 id="프로그램--미리-작성된-것을-의미"><strong>프로그램</strong> : 미리 작성된 것을 의미</h6>
+<h6 id="컴퓨터-프로그램--컴퓨터가-무엇을-해야-할지-미리-작성한-진행-계획"><strong>컴퓨터 프로그램</strong> : 컴퓨터가 무엇을 해야 할지 미리 작성한 진행 계획</h6>
+<h6 id="이진-코드--이진-숫자로-이루어진-코드"><strong>이진 코드</strong> : 이진 숫자로 이루어진 코드</h6>
+<h6 id="프로그래밍-언어--사람이-이해하기-쉬운-언어로-프로그램을-작성하기-위한-언어"><strong>프로그래밍 언어</strong> : 사람이 이해하기 쉬운 언어로 프로그램을 작성하기 위한 언어</h6>
+<h6 id="소스-코드--프로그래밍-언어로-작성한-프로그램"><strong>소스 코드</strong> : 프로그래밍 언어로 작성한 프로그램</h6>
+<h6 id="파이썬이-인기-있는-이유">파이썬이 인기 있는 이유</h6>
+<ul>
+  <li>비전공자도 쉽게 배울수 있다</li>
+  <li>다양한 분야에서 활용할 수 있다</li>
+  <li>대부분의 운영체제에서 동일하게 사용한다.</li>
+  <li>느리다</li>
+</ul>
+
+<h6 id="파이썬--python"><strong>파이썬</strong> : <a href="https://www.python.org/"><strong>python</strong></a></h6>
+
+<p><br /></p>
+
+<h4 id="3-용어-정리"><strong>3. 용어 정리</strong></h4>
+
+<h6 id="문장--실행할-수-있는-코드의-최소-단위-한-줄이-하나의-문장"><strong>문장</strong> : 실행할 수 있는 코드의 최소 단위 [한 줄이 하나의 문장]</h6>
+<h6 id="프로그램--문장들의-모임"><strong>프로그램</strong> : 문장들의 모임</h6>
+
+<h6 id="표현식--파이썬에서-어떠한-값을-만들어-내는-코드--"><strong>표현식</strong> : 파이썬에서 어떠한 값을 만들어 내는 코드 [+,-]</h6>
+<h6 id="키워드--특별한-의미가-부여된-단어로-파이썬이-만들어질때-이미-사용하겠다고-예약해-놓은-것"><strong>키워드</strong> : 특별한 의미가 부여된 단어로 파이썬이 만들어질때 이미 사용하겠다고 예약해 놓은 것</h6>
+<ul>
+  <li>[False], [None], [True], [and], [as] , [assert], [async], [await], [break], [class], [continue], [def], [del], [elif], [else], [except], [finally], [for], [from], [global], [if], [import], [in], [is], [lambda], [nonlocal], [not], [or], [pass], [raise], [return], [try], [while], [with], [yield]</li>
+</ul>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">keyword</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">keyword</span><span class="p">.</span><span class="n">kwlist</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h6 id="식별자--프로그래밍-언어에서-이름을-붙일-때-사용하는-단어"><strong>식별자</strong> : 프로그래밍 언어에서 이름을 붙일 때 사용하는 단어</h6>
+<ul>
+  <li>키워드를 사용하면 안 된다.</li>
+  <li>특수 문자는 언더바(_)만 허용된다.</li>
+  <li>숫자로 시작하면 안된다.</li>
+  <li>
+    <p>공백을 포함할 수 없다</p>
+  </li>
+  <li>스네이크 케이스 : 단어 사이에 언더 바 기호를 붙여 식별자를 만든다 (item_list)</li>
+  <li>캐멀 케이스 : 단어들의 첫 글자를 대문자로 만들어 식별자를 만든다 (ItemList) , 파이썬에서는 첫 번째 글자를 소문자로 적는다는 캐멀 케이스는 적용하지 않는다.
+  <br />
+  <br />
+캐멀 케이스 : 클래스
+스네이크 케이스 : 뒤에 괄호가 있다[함수] 뒤에 괄호가 없다[변수]
+  <br />
+  <br /></li>
+</ul>
+
+<h6 id="주석--주석은-프로그램의-진행에-전혀-영향을-주지-않는-코드로-프로그램을-설명하기-위해-사용한다-대체로-을-써서-주석-처리를-사용한다"><strong>주석</strong> : 주석은 프로그램의 진행에 전혀 영향을 주지 않는 코드로, 프로그램을 설명하기 위해 사용한다. 대체로 #을 써서 주석 처리를 사용한다.</h6>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">print</span><span class="p">(</span><span class="s">"Hello World"</span><span class="p">)</span> <span class="c1"># 여긴 주석이랍니다?
+</span></code></pre></div></div>
+
+<h6 id="연산자와-자료"><strong>연산자와 자료</strong></h6>
+
+<ul>
+  <li>연산자 : 스스로 값이 되는 것이 아니고 값과 값 사이에 무언가 기능을 적용할 때 사용하는 것을 말한다.
+    <ul>
+      <li>자료를 리터럴이라고도 표현한다. 자료란 숫자이든지 문자이든지 어떠한 값 자체를 의미한다.</li>
+    </ul>
+  </li>
+</ul>
+
+<h6 id="출력--print"><strong>출력</strong> : print()</h6>
+
+<h6 id="파이썬-튜터로-코드-분석하기--pythontutor"><strong>파이썬 튜터로 코드 분석하기</strong> : <a href="https://pythontutor.com/visualize.html"><strong>pythontutor</strong></a></h6>
+
+<p><br /></p>
+
 
                     </div>
-                </main>
-                <footer class="py-4 bg-light mt-auto">
-                    <div class="container-fluid px-4">
-                        <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; Your Website 2023</div>
-                            <div>
-                                <a href="#">Privacy Policy</a>
-                                &middot;
-                                <a href="#">Terms &amp; Conditions</a>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
+                </main><footer class="py-4 bg-light mt-auto">
+    <div class="container-fluid px-4">
+        <div class="d-flex align-items-center justify-content-between small">
+            <div class="text-muted">Copyright &copy; Your Website 2023</div>
+            <div>
+                <a href="#">Privacy Policy</a>
+                &middot;
+                <a href="#">Terms &amp; Conditions</a>
             </div>
+        </div>
+    </div>
+</footer></div>
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>

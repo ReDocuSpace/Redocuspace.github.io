@@ -45,26 +45,28 @@
 							<div class="sb-sidenav-menu-heading">프로그래밍 언어</div>
 
 							<!-- 1. -->
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#Info_01_01" aria-expanded="false" aria-controls="collapseLayouts">
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#python_01_01" aria-expanded="false" aria-controls="collapseLayouts">
 								<div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
 								혼자 공부하는 파이썬
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
-                            <div class="collapse" id="Info_01_01" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <div class="collapse" id="python_01_01" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="/post_study_language/python_01_01_01">파이썬의 개요</a>
-                                    <a class="nav-link" href="/post_study_language/python_01_01_02">조건문과 반복문</a>
+                                    <a class="nav-link" href="/post_study_language/python_01_01_02">자료형,조건문,반복문</a>
 									<a class="nav-link" href="/post_study_language/python_01_01_03">함수와 예외처리</a>
 									<a class="nav-link" href="/post_study_language/python_01_01_04">모듈과 클래스</a>
+                                    <a class="nav-link" href="/post_study_language/python_01_01_05">부록</a>
                                 </nav>
                             </div>
+                            
 							<!-- 2. -->
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#Info_01_02" aria-expanded="false" aria-controls="collapseLayouts">
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#cprogramming_01_01" aria-expanded="false" aria-controls="collapseLayouts">
 								<div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
 								윤성우의 열혈 C언어 프로그래밍
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
-                            <div class="collapse" id="Info_01_02" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <div class="collapse" id="cprogramming_01_01" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="/post_study_language/Info_01_02_01">자료 구조</a>
                                     <a class="nav-link" href="/post_study_language/Info_01_02_02">통합 구현</a>
@@ -72,7 +74,22 @@
 									<a class="nav-link" href="/post_study_language/Info_01_02_04">애플리케이션 테스트</a>
                                 </nav>
                             </div>
-
+                            <!-- 3. -->
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#processing_01_01" aria-expanded="false" aria-controls="collapseLayouts">
+								<div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+								손에 잡히는 프로세싱
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="processing_01_01" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="/post_study_language/processing_01_01_01">프로세싱 개요</a>
+                                    <a class="nav-link" href="/post_study_language/processing_01_01_02">프로세싱 그리기</a>
+                                    <a class="nav-link" href="/post_study_language/processing_01_01_03">프로세싱 프로그래밍</a>
+                                    <a class="nav-link" href="/post_study_language/processing_01_01_04">프로세싱 상호작용</a>
+                                    <a class="nav-link" href="/post_study_language/processing_01_01_05">프로세싱 미디어</a>
+                                    <a class="nav-link" href="/post_study_language/processing_01_01_06">프로세싱 움직임</a>
+                                </nav>
+                            </div>
                         </div>
                     </div>
                 </nav>
@@ -81,25 +98,885 @@
 				<br>
                 <main>
 					<div class="container-fluid px-4">
-						<h1>조건문과 반복문</h1>
+						<h1>자료형, 조건문, 반복문</h1>
 						<hr/>
-                        
+                        <h3 id="자료형"><strong>자료형</strong></h3>
+<hr />
+
+<h4 id="1-자료형과-문자열"><strong>1. 자료형과 문자열</strong></h4>
+
+<p>자료형이란 자료의 형식을 의미한다. [자료의 형식을 확인할 때는 type()함수를 사용한다.]</p>
+<ul>
+  <li>문자열 : 메일 제목, 메시지 내용 등</li>
+  <li>숫자 : 물건의 가격, 학생의 성적 등</li>
+  <li>불 : 친구의 로그인 상태 등</li>
+</ul>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">print</span><span class="p">(</span><span class="nf">type</span><span class="p">(</span><span class="s">"안녕하세요"</span><span class="p">))</span>
+<span class="nf">print</span><span class="p">(</span><span class="nf">type</span><span class="p">(</span><span class="mi">273</span><span class="p">))</span>
+</code></pre></div></div>
+<h5 id="문자열-만들기"><strong>문자열 만들기</strong></h5>
+
+<ul>
+  <li>작은 따옴표와 큰 따옴표 사용방식 예시</li>
+</ul>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">print</span><span class="p">(</span><span class="s">"'안녕'이라고 말하면 어떨까?"</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h5 id="이스케이프-문자"><strong>이스케이프 문자</strong></h5>
+
+<p>[" : 큰 따옴표], [' : 작은 따옴표], [\n : 줄 바꿈], [\t : 탭을 의미], [\ : 역슬래시]</p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">print</span><span class="p">(</span><span class="s">"</span><span class="se">\"\'</span><span class="s">안녕</span><span class="se">\'\"</span><span class="s"> 이라고 말하면 어떨까?</span><span class="se">\t</span><span class="s">"</span><span class="p">);</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">" </span><span class="se">\\</span><span class="s"> </span><span class="se">\"\'</span><span class="s">안녕</span><span class="se">\'\"</span><span class="s"> 이라고 말하면 어떨까?</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h5 id="줄바꿈에-관하여"><strong>줄바꿈에 관하여</strong></h5>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#위 아래 줄바꿈이 들어간다.
+</span><span class="nf">print</span><span class="p">(</span><span class="s">"""
+우연히 알게된
+파이썬을
+작업합니다
+"""</span><span class="p">)</span>
+
+<span class="c1">#줄바꿈이 안들어간다.
+</span><span class="nf">print</span><span class="p">(</span><span class="s">"""</span><span class="se">\
+</span><span class="s">우연히 알게된
+파이썬을 
+작업합니다
+</span><span class="se">\"</span><span class="s">"")
+</span></code></pre></div></div>
+
+<h5 id="문자열에-관하여"><strong>문자열에 관하여</strong></h5>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 순서대로
+</span><span class="nf">print</span><span class="p">(</span><span class="s">"문자열에 관하여"</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"우리의파이썬"</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"우리의파이썬"</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"우리의파이썬"</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"우리의파이썬"</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"우리의파이썬"</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"우리의파이썬"</span><span class="p">[</span><span class="mi">5</span><span class="p">])</span>
+
+<span class="c1"># 역순으로
+</span><span class="nf">print</span><span class="p">(</span><span class="s">"문자열에 관하여"</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"우리의파이썬"</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"우리의파이썬"</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"우리의파이썬"</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">])</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"우리의파이썬"</span><span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">])</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"우리의파이썬"</span><span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">])</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"우리의파이썬"</span><span class="p">[</span><span class="o">-</span><span class="mi">6</span><span class="p">])</span>
+
+<span class="c1"># 문자열의 범위
+</span><span class="nf">print</span><span class="p">(</span><span class="s">"우리의파이썬"</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">])</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"우리의파이썬"</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"우리의파이썬"</span><span class="p">[:</span><span class="mi">4</span><span class="p">])</span>
+
+<span class="c1"># 문자열의 길이
+</span><span class="nf">print</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="s">"안녕하세요"</span><span class="p">))</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h4 id="2-숫자"><strong>2. 숫자</strong></h4>
+
+<ul>
+  <li>정수형 : 소수점이 없는 숫자</li>
+  <li>실수형 : 소수점이 있는 숫자</li>
+  <li>부동소수점 : 소수점이 움직이는 숫자</li>
+</ul>
+
+<h5 id="숫자와-연산자"><strong>숫자와 연산자</strong></h5>
+
+<p>숫자를 계산할 때는 곱셈과 나눗셈이 덧셈과 뺄셈보다 우선한다. <br />
+연산자는 왼쪽에서 오른쪽 순서로 계산한다. <br />
+먼저 연산하고자 하는 부분은 괄호()로 감싸준다.</p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">print</span><span class="p">(</span><span class="s">"100 + 10 = "</span><span class="p">,</span> <span class="mi">100</span> <span class="o">+</span> <span class="mi">10</span><span class="p">)</span>      <span class="c1"># 더하기
+</span><span class="nf">print</span><span class="p">(</span><span class="s">"100 - 10 = "</span><span class="p">,</span> <span class="mi">100</span> <span class="o">-</span> <span class="mi">10</span><span class="p">)</span>      <span class="c1"># 뻬기
+</span><span class="nf">print</span><span class="p">(</span><span class="s">"100 * 10 = "</span><span class="p">,</span> <span class="mi">100</span> <span class="o">*</span> <span class="mi">10</span><span class="p">)</span>      <span class="c1"># 곱하기
+</span><span class="nf">print</span><span class="p">(</span><span class="s">"100 / 10 = "</span><span class="p">,</span> <span class="mi">100</span> <span class="o">/</span> <span class="mi">10</span><span class="p">)</span>      <span class="c1"># 나눗셈 소수점 추가
+</span><span class="nf">print</span><span class="p">(</span><span class="s">"100 // 10 = "</span><span class="p">,</span> <span class="mi">100</span> <span class="o">//</span> <span class="mi">10</span><span class="p">)</span>    <span class="c1"># 나눗셈 소수점 제외
+</span><span class="nf">print</span><span class="p">(</span><span class="s">"100 % 10 = "</span><span class="p">,</span> <span class="mi">100</span> <span class="o">%</span> <span class="mi">10</span><span class="p">)</span>      <span class="c1"># 나머지
+</span><span class="nf">print</span><span class="p">(</span><span class="s">"100 ** 10 = "</span><span class="p">,</span> <span class="mi">100</span> <span class="o">**</span> <span class="mi">10</span><span class="p">)</span>    <span class="c1"># 제곱
+</span><span class="nf">print</span><span class="p">(</span><span class="s">"100 ** (1/2)"</span><span class="p">,</span> <span class="mi">100</span> <span class="o">**</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span> <span class="c1"># 제곱 예시
+</span></code></pre></div></div>
+<p><br /></p>
+
+<h4 id="3-변수와-입력"><strong>3. 변수와 입력</strong></h4>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pi</span> <span class="o">=</span> <span class="mf">3.14159265</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">pi</span><span class="p">)</span>
+</code></pre></div></div>
+<p>변수를 활용하는 방법</p>
+<ol>
+  <li>변수를 선언하는 방법 : 변수를 생성</li>
+  <li>변수에 값을 할당하는 방법 : 변수에 값을 넣는 것</li>
+  <li>변수를 참조하는 방법 : 변수에서 값을 꺼내는 것</li>
+</ol>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pi</span> <span class="o">=</span> <span class="mf">3.14159265</span>
+<span class="n">r</span> <span class="o">=</span> <span class="mi">10</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="s">"원주율 ="</span><span class="p">,</span> <span class="n">pi</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"반지름 ="</span><span class="p">,</span> <span class="n">r</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"원의 둘레 ="</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">pi</span> <span class="o">*</span> <span class="n">r</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"원의 넓이 ="</span><span class="p">,</span> <span class="n">pi</span> <span class="o">*</span> <span class="n">r</span> <span class="o">*</span> <span class="n">r</span><span class="p">)</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h5 id="복합-대입-연산자"><strong>복합 대입 연산자</strong></h5>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">number</span> <span class="o">=</span> <span class="mi">10</span>
+
+<span class="n">number</span> <span class="o">+=</span> <span class="mi">10</span>
+<span class="n">number</span> <span class="o">+=</span> <span class="mi">20</span>
+<span class="n">number</span> <span class="o">+=</span> <span class="mi">30</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="s">"number : "</span><span class="p">,</span> <span class="n">number</span><span class="p">)</span>
+
+<span class="n">string</span> <span class="o">=</span> <span class="s">"안녕하세요"</span>
+<span class="n">string</span> <span class="o">+=</span> <span class="s">"!"</span>
+<span class="n">string</span> <span class="o">+=</span> <span class="s">"!"</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"string : "</span> <span class="o">+</span> <span class="n">string</span><span class="p">)</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h5 id="사용자-입력-input"><strong>사용자 입력 [input()]</strong></h5>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">string</span> <span class="o">=</span> <span class="nf">input</span><span class="p">(</span><span class="s">"입력을 해주세요&gt;&gt;"</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">string</span><span class="p">)</span>
+
+<span class="n">string</span> <span class="o">=</span> <span class="nf">input</span><span class="p">(</span><span class="s">"입력&gt;"</span><span class="p">)</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="s">"자료 : "</span><span class="p">,</span> <span class="n">string</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"자료형 : "</span><span class="p">,</span> <span class="nf">type</span><span class="p">(</span><span class="n">string</span><span class="p">))</span>
+
+<span class="n">integer</span> <span class="o">=</span> <span class="nf">input</span><span class="p">(</span><span class="s">"입력&gt;"</span><span class="p">)</span>
+<span class="c1"># 입력 자료형은 항상 문자열이기 때문에 문제가 생긴다
+</span><span class="nf">print</span><span class="p">(</span><span class="s">"입력 + 100:"</span> <span class="p">,</span> <span class="n">string</span> <span class="o">+</span> <span class="mi">100</span><span class="p">)</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h5 id="문자열을-숫자로-바꾸기"><strong>문자열을 숫자로 바꾸기</strong></h5>
+
+<p>input() 함수의 입력 자료형은 항상 문자열이기 때문에 입력받은 문자열을 숫자로 변환해야 숫자연산에 활용할 수 있다. [캐스트]
+int() 함수 : 문자열을 int 자료형으로 반환
+float() 함수 : 문자열을 float 자료형으로 반환</p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">string_a</span> <span class="o">=</span> <span class="nf">input</span><span class="p">(</span><span class="s">"입력&gt;"</span><span class="p">)</span>
+<span class="n">int_a</span> <span class="o">=</span> <span class="nf">int</span><span class="p">(</span><span class="n">string_a</span><span class="p">)</span>
+
+<span class="n">string_b</span> <span class="o">=</span> <span class="nf">input</span><span class="p">(</span><span class="s">"입력&gt;"</span><span class="p">)</span>
+<span class="n">int_b</span> <span class="o">=</span> <span class="nf">int</span><span class="p">(</span><span class="n">string_b</span><span class="p">)</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="s">"문자열 자료 : "</span><span class="p">,</span> <span class="n">string_a</span> <span class="o">+</span> <span class="n">string_b</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"숫자 자료 : "</span><span class="p">,</span> <span class="n">int_a</span> <span class="o">+</span> <span class="n">int_b</span><span class="p">)</span>
+
+<span class="n">string_c</span> <span class="o">=</span> <span class="nf">input</span><span class="p">(</span><span class="s">"입력&gt;"</span><span class="p">)</span>
+
+<span class="n">int_c</span> <span class="o">=</span> <span class="nf">int</span><span class="p">(</span><span class="n">string_c</span><span class="p">)</span>
+<span class="n">float_c</span> <span class="o">=</span> <span class="nf">float</span><span class="p">(</span><span class="n">string_c</span><span class="p">)</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="nf">type</span><span class="p">(</span><span class="n">int_c</span><span class="p">),</span> <span class="n">int_c</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="nf">type</span><span class="p">(</span><span class="n">float_c</span><span class="p">),</span> <span class="n">float_c</span><span class="p">)</span>
+
+<span class="c1"># 숫자를 문자열로 바꾸기
+</span>
+<span class="n">str_c</span> <span class="o">=</span> <span class="nf">str</span><span class="p">(</span><span class="n">string_c</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="nf">type</span><span class="p">(</span><span class="n">str_c</span><span class="p">),</span> <span class="n">str_c</span><span class="p">)</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h5 id="계산기"><strong>계산기</strong></h5>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">input_a</span> <span class="o">=</span> <span class="nf">float</span><span class="p">(</span><span class="nf">input</span><span class="p">(</span><span class="s">"첫 번째 숫자 : "</span><span class="p">))</span>
+<span class="n">input_b</span> <span class="o">=</span> <span class="nf">float</span><span class="p">(</span><span class="nf">input</span><span class="p">(</span><span class="s">"두 번째 숫자 : "</span><span class="p">))</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="s">"덧셈 결과 : "</span> <span class="p">,</span> <span class="n">input_a</span> <span class="o">+</span> <span class="n">input_b</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"뺄셈 결과 : "</span> <span class="p">,</span> <span class="n">input_a</span> <span class="o">-</span> <span class="n">input_b</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"곱셈 결과 : "</span> <span class="p">,</span> <span class="n">input_a</span> <span class="o">*</span> <span class="n">input_b</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"나눗셈 결과 : "</span><span class="p">,</span> <span class="n">input_a</span> <span class="o">/</span> <span class="n">input_b</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h5 id="inch-단위를-cm-단위로-변경하기"><strong>inch 단위를 cm 단위로 변경하기</strong></h5>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">raw_input</span> <span class="o">=</span> <span class="nf">input</span><span class="p">(</span><span class="s">"inch 단위의 숫자를 입력해주세요 : "</span><span class="p">)</span>
+
+<span class="n">inch</span> <span class="o">=</span> <span class="nf">int</span><span class="p">(</span><span class="nb">raw_input</span><span class="p">)</span>
+<span class="n">cm</span> <span class="o">=</span> <span class="n">inch</span> <span class="o">*</span> <span class="mf">2.54</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="n">inch</span><span class="p">,</span> <span class="s">"inch는 cm 단위로 "</span><span class="p">,</span><span class="n">cm</span><span class="p">,</span><span class="s">"cm입니다."</span> <span class="p">)</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h4 id="숫자와-문자열의-다양한-기능"><strong>숫자와 문자열의 다양한 기능</strong></h4>
+
+<h5 id="문자열의-format-함수"><strong>문자열의 format() 함수</strong></h5>
+
+<h6 id="문자열-내용이-너무-많을-때">문자열 내용이 너무 많을 때</h6>
+<h6 id="데이터를-리스트에-담아서-사용할-때">데이터를 리스트에 담아서 사용할 때</h6>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">string_a</span> <span class="o">=</span> <span class="s">"{}"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="n">string_a</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="nf">type</span><span class="p">(</span><span class="n">string_a</span><span class="p">))</span>
+
+<span class="n">format_a</span> <span class="o">=</span> <span class="s">"{}만 원"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="mi">5000</span><span class="p">)</span>
+<span class="n">format_b</span> <span class="o">=</span> <span class="s">"파이썬 열심히 해서 {}연봉을 높이다"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="mi">5000</span><span class="p">)</span>
+<span class="n">format_c</span> <span class="o">=</span> <span class="s">"{} {} {}"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="mi">3000</span><span class="p">,</span><span class="mi">4000</span><span class="p">,</span><span class="mi">5000</span><span class="p">)</span>
+<span class="n">format_d</span> <span class="o">=</span> <span class="s">"{} {} {}"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">"문자열"</span><span class="p">.</span> <span class="bp">True</span><span class="p">)</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="n">format_a</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">format_b</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">format_c</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">format_d</span><span class="p">)</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h5 id="format의-다양한-기능-1--정수-표현방법"><strong>format()의 다양한 기능 1 : 정수 표현방법</strong></h5>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">output_a</span> <span class="o">=</span> <span class="s">"{:d}"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="mi">52</span><span class="p">)</span>
+<span class="c1"># 특정 칸에 출력하기
+</span><span class="n">output_b</span> <span class="o">=</span> <span class="s">"{:5d}"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="mi">52</span><span class="p">)</span>       <span class="c1"># 5칸
+</span><span class="n">output_c</span> <span class="o">=</span> <span class="s">"{:10d}"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="mi">52</span><span class="p">)</span>      <span class="c1"># 10칸
+# 빈칸을 0으로 채우기
+</span><span class="n">output_d</span> <span class="o">=</span> <span class="s">"{:05d}"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="mi">52</span><span class="p">)</span>      <span class="c1">#양수
+</span><span class="n">output_e</span> <span class="o">=</span> <span class="s">"{:05d}"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="o">-</span><span class="mi">52</span><span class="p">)</span>     <span class="c1"># 음수
+# 기호와 함께 출력하기
+</span><span class="n">output_f</span> <span class="o">=</span> <span class="s">"{:+d}"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="mi">52</span><span class="p">)</span>       <span class="c1"># 양수
+</span><span class="n">output_g</span> <span class="o">=</span> <span class="s">"{:+d}"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="o">-</span><span class="mi">52</span><span class="p">)</span>      <span class="c1"># 음수
+</span><span class="n">output_h</span> <span class="o">=</span> <span class="s">"{: d}"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="mi">52</span><span class="p">)</span>       <span class="c1"># 양수 : 기호 부분 공백
+</span><span class="n">output_i</span> <span class="o">=</span> <span class="s">"{: d}"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="o">-</span><span class="mi">52</span><span class="p">)</span>      <span class="c1"># 음수 : 기호 부분 공백
+# 조합해보기
+</span><span class="n">output_j</span> <span class="o">=</span> <span class="s">"{:+5d}"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="mi">52</span><span class="p">)</span>      <span class="c1"># 기호를 뒤로 밀기 양수
+</span><span class="n">output_k</span> <span class="o">=</span> <span class="s">"{:+5d}"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="o">-</span><span class="mi">52</span><span class="p">)</span>     <span class="c1"># 기호를 뒤로 밀기 음수
+</span><span class="n">output_l</span> <span class="o">=</span> <span class="s">"{:=+d}"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="mi">52</span><span class="p">)</span>      <span class="c1"># 기호를 앞으로 밀기 양수
+</span><span class="n">output_m</span> <span class="o">=</span> <span class="s">"{:=+d}"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="o">-</span><span class="mi">52</span><span class="p">)</span>     <span class="c1"># 기호를 앞으로 밀기 음수
+</span><span class="n">output_n</span> <span class="o">=</span> <span class="s">"{:+05d}"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="mi">52</span><span class="p">)</span>     <span class="c1"># 0으로 채우기 양수
+</span><span class="n">output_o</span> <span class="o">=</span> <span class="s">"{:+05d}"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="o">-</span><span class="mi">52</span><span class="p">)</span>    <span class="c1"># 0으로 채우기 음수
+</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">output_a</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">output_b</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">output_c</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">output_d</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">output_e</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">output_f</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">output_g</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">output_h</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">output_i</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">output_j</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">output_k</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">output_l</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">output_m</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">output_n</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">output_o</span><span class="p">)</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h5 id="format의-다양한-기능-2--소숫점-표현방법"><strong>format()의 다양한 기능 2 : 소숫점 표현방법</strong></h5>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 다양한 형태의 소수점 출력하기
+</span><span class="n">output_a</span> <span class="o">=</span> <span class="s">"{:f}"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="mf">52.273</span><span class="p">)</span>
+<span class="n">output_b</span> <span class="o">=</span> <span class="s">"{:15f}"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="mf">52.273</span><span class="p">)</span>
+<span class="n">output_c</span> <span class="o">=</span> <span class="s">"{:+15f}"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="mf">52.273</span><span class="p">)</span>
+<span class="n">output_d</span> <span class="o">=</span> <span class="s">"{:+015f}"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="mf">52.273</span><span class="p">)</span>
+<span class="c1"># 소숫점 아래 자릿수 지정하기
+</span><span class="n">output_e</span> <span class="o">=</span> <span class="s">"{:15.3f}"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="mf">52.273</span><span class="p">)</span>
+<span class="n">output_f</span> <span class="o">=</span> <span class="s">"{:15.2f}"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="mf">52.273</span><span class="p">)</span>
+<span class="n">output_g</span> <span class="o">=</span> <span class="s">"{:15.1f}"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="mf">52.273</span><span class="p">)</span>
+<span class="c1"># 의미 없는 소수점 제거하기
+</span><span class="n">output_h</span> <span class="o">=</span> <span class="mf">52.0</span>
+<span class="n">output_i</span> <span class="o">=</span> <span class="s">"{:g}"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="n">output_h</span><span class="p">)</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="n">output_a</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">output_b</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">output_c</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">output_d</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">output_e</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">output_f</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">output_g</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">output_h</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">output_i</span><span class="p">)</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h5 id="다양한-함수들"><strong>다양한 함수들</strong></h5>
+
+<h6 id="파괴적-함수--원본이-변하는-함수">파괴적 함수 : 원본이 변하는 함수</h6>
+<h6 id="비-파괴적-함수--원본이-변하지-않는-함수">비 파괴적 함수 : 원본이 변하지 않는 함수</h6>
+
+<p><strong>문자열의 구성</strong></p>
+<ul>
+  <li>isalnum() : 문자열이 알파벳 또는 숫자로만 구성되어 있는지 확인한다.</li>
+  <li>isalpha() : 문자열이 알파벳으로만 구성되어 있는지 확인한다.</li>
+  <li>isidentifier() : 문자열이 식별자로 사용할 수 있는 것인지 확인한다.</li>
+  <li>isdecimal() : 문자열이 정수 형태인지 확인한다.</li>
+  <li>isdigit() : 문자열이 숫자로 인식될 수 있는 것인지 확인한다.</li>
+  <li>isspace() : 문자열이 공백으로만 구성되어 있는지 확인한다.</li>
+  <li>islower() : 문자열이 소문자로만 구성되어 있는지 확인환다.</li>
+  <li>isupper() : 문자열이 대문자로만 구성되어 있는지 확인한다.</li>
+</ul>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 대소문자 바꾸기 upper() / lower()
+</span><span class="n">a</span> <span class="o">=</span> <span class="s">"Hello Python Programming...!"</span>
+<span class="n">a</span><span class="p">.</span><span class="nf">upper</span><span class="p">()</span>
+<span class="n">a</span><span class="p">.</span><span class="nf">lower</span><span class="p">()</span>
+
+<span class="c1"># 공백 제거하기
+</span><span class="n">b</span> <span class="o">=</span> <span class="s">"안녕하세요 문자열의 함수를 알아봅시다"</span>
+<span class="n">b</span><span class="p">.</span><span class="nf">strip</span><span class="p">()</span>
+
+<span class="c1"># 문자열의 구성 파악하기 isOO()
+</span><span class="n">a</span><span class="p">.</span><span class="nf">isspace</span><span class="p">()</span> <span class="c1"># 사용 예시/ 공백으로 구성되어 있는지 확인
+</span>
+<span class="c1"># 문자열 찾기
+</span><span class="n">output_a</span> <span class="o">=</span> <span class="s">"안녕안녕안녕아아아아아안녀엉"</span><span class="p">.</span><span class="nf">find</span><span class="p">(</span><span class="s">"안녕"</span><span class="p">)</span>
+<span class="n">output_b</span> <span class="o">=</span> <span class="s">"안녕안녕안녕아아아아아안녀엉"</span><span class="p">.</span><span class="nf">rfind</span><span class="p">(</span><span class="s">"안녕"</span><span class="p">)</span>
+
+<span class="c1"># 문자열과 in 연산자
+</span><span class="nf">print</span><span class="p">(</span><span class="s">"안녕"</span> <span class="ow">in</span> <span class="s">"안녕하세요"</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"잘자"</span> <span class="ow">in</span> <span class="s">"안녕하세요"</span><span class="p">)</span>
+
+<span class="c1"># 문자열 자르기 split()
+</span><span class="n">splitstring</span> <span class="o">=</span> <span class="s">"10 20 30 40 50"</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="s">" "</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">splitstring</span><span class="p">)</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h3 id="조건문"><strong>조건문</strong></h3>
+<hr />
+
+<h4 id="1-불-자료형과-if-조건문"><strong>1. 불 자료형과 if 조건문</strong></h4>
+<p><br /></p>
+
+<h5 id="bool-형-자료형과-연산자"><strong>bool 형 자료형과 연산자</strong></h5>
+
+<ul>
+  <li>== : 같다</li>
+  <li>!= : 다르다</li>
+  <li>
+    <blockquote>
+      <p>: 작다</p>
+    </blockquote>
+  </li>
+  <li>&lt; : 크다</li>
+  <li>&lt;= : 작거나 같다</li>
+  <li>
+    <blockquote>
+      <p>= : 크거나 같다</p>
+    </blockquote>
+  </li>
+  <li>not : 참과 거짓을 바꿀때 쓰는 연산자</li>
+  <li>and 연산자 : 양쪽 변의 값이 모두 참일 때 True</li>
+  <li>or : 둘 중 하나만 참이여도 True</li>
+</ul>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">print</span><span class="p">(</span><span class="mi">10</span> <span class="o">==</span> <span class="mi">100</span><span class="p">)</span>    <span class="c1"># False
+</span><span class="nf">print</span><span class="p">(</span><span class="mi">10</span> <span class="o">!=</span> <span class="mi">100</span><span class="p">)</span>    <span class="c1"># True
+</span><span class="nf">print</span><span class="p">(</span><span class="mi">10</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">)</span>     <span class="c1"># True
+</span><span class="nf">print</span><span class="p">(</span><span class="mi">10</span> <span class="o">&gt;</span> <span class="mi">100</span><span class="p">)</span>     <span class="c1"># False
+</span><span class="nf">print</span><span class="p">(</span><span class="mi">10</span> <span class="o">&lt;=</span> <span class="mi">100</span><span class="p">)</span>    <span class="c1"># True
+</span><span class="nf">print</span><span class="p">(</span><span class="mi">10</span> <span class="o">&gt;=</span> <span class="mi">100</span><span class="p">)</span>    <span class="c1"># False
+</span><span class="nf">print</span><span class="p">(</span><span class="s">"가방"</span> <span class="o">==</span> <span class="s">"가방"</span><span class="p">)</span>     <span class="c1"># True
+</span><span class="nf">print</span><span class="p">(</span><span class="s">"가방"</span> <span class="o">!=</span> <span class="s">"하마"</span><span class="p">)</span>     <span class="c1"># True
+</span><span class="nf">print</span><span class="p">(</span><span class="s">"가방"</span> <span class="o">&lt;</span> <span class="s">"하마"</span><span class="p">)</span>      <span class="c1"># True
+</span><span class="nf">print</span><span class="p">(</span><span class="s">"가방"</span> <span class="o">&gt;</span> <span class="s">"하마"</span><span class="p">)</span>      <span class="c1"># False
+</span><span class="nf">print</span><span class="p">(</span><span class="mi">10</span> <span class="o">&lt;</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">30</span><span class="p">)</span>  <span class="c1"># True
+</span><span class="nf">print</span><span class="p">(</span><span class="mi">40</span> <span class="o">&lt;</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">60</span><span class="p">)</span>  <span class="c1"># False
+</span>
+<span class="c1"># Not 연산자
+</span><span class="nf">print</span><span class="p">(</span><span class="ow">not</span> <span class="bp">True</span><span class="p">)</span>     <span class="c1"># False
+</span><span class="nf">print</span><span class="p">(</span><span class="ow">not</span> <span class="bp">False</span><span class="p">)</span>    <span class="c1"># True
+</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">under_20</span> <span class="o">=</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">20</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"under_20 : "</span><span class="p">,</span> <span class="n">under_20</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"not under_20 : "</span><span class="p">,</span> <span class="ow">not</span> <span class="n">under_20</span><span class="p">)</span>
+
+<span class="c1"># and or 연산자
+</span><span class="nf">print</span><span class="p">(</span><span class="bp">True</span> <span class="ow">and</span> <span class="bp">True</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="bp">True</span> <span class="ow">and</span> <span class="bp">False</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="bp">False</span> <span class="ow">and</span> <span class="bp">True</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="bp">False</span> <span class="ow">and</span> <span class="bp">False</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="bp">True</span> <span class="ow">or</span> <span class="bp">True</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="bp">True</span> <span class="ow">or</span> <span class="bp">False</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="bp">False</span> <span class="ow">or</span> <span class="bp">True</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="bp">False</span> <span class="ow">or</span> <span class="bp">False</span><span class="p">)</span>
+
+</code></pre></div></div>
+<p><br /></p>
+
+<h5 id="if-문을-사용한-조건-분기"><strong>if 문을 사용한 조건 분기</strong></h5>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#실행
+</span><span class="k">if</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"True 입니다"</span><span class="p">)</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"정말 True입니다"</span><span class="p">)</span>
+
+<span class="c1"># 실행되지 않음
+</span><span class="k">if</span> <span class="bp">False</span><span class="p">:</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"False 입니다"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">number</span> <span class="o">=</span> <span class="nf">input</span><span class="p">(</span><span class="s">"정수 입력&gt; "</span><span class="p">)</span>
+<span class="n">number</span> <span class="o">=</span> <span class="nf">int</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">number</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"양수입니다."</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">number</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"음수입니다."</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">number</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"0 입니다."</span><span class="p">)</span>
+
+</code></pre></div></div>
+<p><br /></p>
+
+<h5 id="다양한-활용-방법"><strong>다양한 활용 방법</strong></h5>
+<p><br /></p>
+
+<h6 id="1-날짜-시간-활용하기"><strong>1. 날짜 시간 활용하기</strong></h6>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 날짜 / 시간 활용하기
+</span><span class="kn">import</span> <span class="n">datetime</span>
+
+<span class="n">now</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">.</span><span class="n">datetime</span><span class="p">.</span><span class="nf">now</span><span class="p">()</span>
+
+<span class="c1"># 출력
+</span><span class="nf">print</span><span class="p">(</span><span class="n">now</span><span class="p">.</span><span class="n">year</span><span class="p">,</span> <span class="s">"년"</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">now</span><span class="p">.</span><span class="n">month</span><span class="p">,</span> <span class="s">"월"</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">now</span><span class="p">.</span><span class="n">day</span><span class="p">,</span> <span class="s">"일"</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">now</span><span class="p">.</span><span class="n">hour</span><span class="p">,</span> <span class="s">"시"</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">now</span><span class="p">.</span><span class="n">minute</span><span class="p">,</span> <span class="s">"분"</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">now</span><span class="p">.</span><span class="n">second</span><span class="p">,</span> <span class="s">"초"</span><span class="p">)</span>
+
+<span class="c1"># 한줄로 출력하기
+</span><span class="nf">print</span><span class="p">(</span><span class="s">"{} 년 {}월 {}일 {}시 {}분 {}초"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span>
+    <span class="n">now</span><span class="p">.</span><span class="n">year</span><span class="p">,</span>
+    <span class="n">now</span><span class="p">.</span><span class="n">month</span><span class="p">,</span>
+    <span class="n">now</span><span class="p">.</span><span class="n">day</span><span class="p">,</span>
+    <span class="n">now</span><span class="p">.</span><span class="n">hour</span><span class="p">,</span>
+    <span class="n">now</span><span class="p">.</span><span class="n">minute</span><span class="p">,</span>
+    <span class="n">now</span><span class="p">.</span><span class="n">second</span>
+<span class="p">))</span>
+</code></pre></div></div>
+
+<h6 id="1-짝수-홀수-구분하기"><strong>1. 짝수 홀수 구분하기</strong></h6>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">number</span> <span class="o">=</span> <span class="nf">input</span><span class="p">(</span><span class="s">"정수 입력&gt; "</span><span class="p">)</span>
+
+<span class="n">last_character</span> <span class="o">=</span> <span class="n">number</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="n">last_number</span> <span class="o">=</span> <span class="nf">int</span><span class="p">(</span><span class="n">last_character</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">last_number</span> <span class="o">==</span> <span class="mi">0</span> \
+    <span class="ow">or</span> <span class="n">last_number</span> <span class="o">==</span> <span class="mi">2</span> \
+    <span class="ow">or</span> <span class="n">last_number</span> <span class="o">==</span> <span class="mi">4</span> \
+    <span class="ow">or</span> <span class="n">last_number</span> <span class="o">==</span> <span class="mi">6</span> \
+    <span class="ow">or</span> <span class="n">last_number</span> <span class="o">==</span> <span class="mi">8</span><span class="p">:</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"짝수 입니다."</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">last_number</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"홀수 입니다."</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">last_character</span> <span class="ow">in</span> <span class="s">"02468"</span><span class="p">:</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"짝수입니다"</span><span class="p">)</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h4 id="2-ifelse와-elif-구문"><strong>2. if~else와 elif 구문</strong></h4>
+<p><br /></p>
+
+<h6 id="1-계절-구하기"><strong>1. 계절 구하기</strong></h6>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">datetime</span>
+
+<span class="n">now</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">.</span><span class="n">datetime</span><span class="p">.</span><span class="nf">now</span><span class="p">()</span>
+<span class="n">month</span> <span class="o">=</span> <span class="n">now</span><span class="p">.</span><span class="n">month</span>
+
+<span class="k">if</span> <span class="mi">3</span> <span class="o">&lt;=</span> <span class="n">month</span> <span class="o">&lt;=</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"봄 입니다"</span><span class="p">)</span>
+<span class="k">elif</span> <span class="mi">6</span> <span class="o">&lt;=</span> <span class="n">month</span> <span class="o">&lt;=</span> <span class="mi">8</span><span class="p">:</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"여름 입니다"</span><span class="p">)</span>
+<span class="k">elif</span> <span class="mi">9</span> <span class="o">&lt;=</span> <span class="n">month</span> <span class="o">&lt;=</span> <span class="mi">11</span><span class="p">:</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"가을 입니다"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"겨울 입니다."</span><span class="p">)</span>
+</code></pre></div></div>
+<h6 id="2-pass-와-notimplementederror"><strong>2. pass 와 NotImplementedError</strong></h6>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">number</span> <span class="o">=</span> <span class="nf">input</span><span class="p">(</span><span class="s">"정수 입력&gt;"</span><span class="p">)</span>
+<span class="n">number</span> <span class="o">=</span> <span class="nf">int</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">number</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="k">pass</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">pass</span>
+    
+<span class="k">if</span> <span class="n">number</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="c1"># 양수일때 아직 미구현 상태입니다
+</span>    <span class="k">raise</span> <span class="nb">NotImplementedError</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="c1"># 음수일때 아직 미구현 상태입니다.
+</span>    <span class="k">raise</span> <span class="nb">NotImplementedError</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h3 id="반복문"><strong>반복문</strong></h3>
+<hr />
+
+<h4 id="1-리스트와-반복문"><strong>1. 리스트와 반복문</strong></h4>
+<p><br /></p>
+
+<h5 id="리스트"><strong>리스트</strong></h5>
+<p>리스트 선언 : [요소, 요소, 요소, 요소…] - 대괄호 안에 들어간 숫자를 인덱스라고 부른다.</p>
+<ul>
+  <li>대괄호 안에 음수를 넣어 뒤에서부터 요소를 선택할 수 있다.
+    <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">list_a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">273</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">103</span><span class="p">,</span> <span class="s">"문자열"</span><span class="p">,</span> <span class="bp">True</span><span class="p">,</span> <span class="bp">False</span><span class="p">]</span>
+<span class="n">list_a</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">list_a</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">list_a</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">]</span>
+</code></pre></div>    </div>
+  </li>
+  <li>리스트 접근 연산자를 다음과 같이 이중으로 사용할 수 있다
+    <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">list_a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">273</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">103</span><span class="p">,</span> <span class="s">"문자열"</span><span class="p">,</span> <span class="bp">True</span><span class="p">,</span> <span class="bp">False</span><span class="p">]</span>
+<span class="n">list_a</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">list_a</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+</code></pre></div>    </div>
+  </li>
+  <li>리스트 안에 리스트를 사용할 수 있다
+    <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">list_a</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">],[</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]]</span>
+<span class="n">list_a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">list_a</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+</code></pre></div>    </div>
+    <p><br /></p>
+  </li>
+</ul>
+
+<h5 id="리스트의-다양한-함수"><strong>리스트의 다양한 함수</strong></h5>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 리스트 연산
+</span><span class="n">list_a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">list_b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="s">"list_a + list_b &gt; "</span><span class="p">,</span> <span class="n">list_a</span> <span class="o">+</span> <span class="n">list_b</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"list_a * 3 &gt; "</span><span class="p">,</span> <span class="n">list_a</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"list_a 의 길이 &gt; "</span><span class="p">,</span> <span class="nf">len</span><span class="p">(</span><span class="n">list_a</span><span class="p">))</span>
+
+<span class="c1"># 리스트 요소
+</span><span class="n">list_a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+
+<span class="c1">## 추가하기
+</span><span class="n">list_a</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">list_a</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">list_a</span><span class="p">)</span>
+
+<span class="c1">## 끼워넣기
+</span><span class="n">list_a</span><span class="p">.</span><span class="nf">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">list_a</span><span class="p">)</span>
+
+<span class="c1">## 지우기 1
+</span><span class="k">del</span> <span class="n">list_a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"del list_a[1] : "</span> <span class="p">,</span> <span class="n">list_a</span><span class="p">)</span>
+
+<span class="c1">## 지우기 2
+</span><span class="n">list_a</span><span class="p">.</span><span class="nf">pop</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"pop(2) : "</span><span class="p">,</span> <span class="n">list_a</span><span class="p">)</span>
+
+<span class="c1">## 슬라이싱을 이용한 지우기
+</span><span class="k">del</span> <span class="n">list_a</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span> <span class="c1"># 2: # :3
+</span><span class="nf">print</span><span class="p">(</span><span class="n">list_a</span><span class="p">)</span>
+
+<span class="c1">## 지우기 3 - 값으로 제거하기
+</span><span class="n">list_a</span><span class="p">.</span><span class="nf">remove</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+
+<span class="c1">## 모두 제거하기 clear
+</span><span class="n">list_a</span><span class="p">.</span><span class="nf">clear</span><span class="p">()</span>
+</code></pre></div></div>
+<h5 id="in--not-in-연산자"><strong>in / not in 연산자</strong></h5>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">list_a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">273</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">103</span><span class="p">,</span> <span class="mi">57</span><span class="p">,</span> <span class="mi">52</span><span class="p">]</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="mi">273</span> <span class="ow">in</span> <span class="n">list_a</span><span class="p">)</span>    <span class="c1"># True
+</span><span class="nf">print</span><span class="p">(</span><span class="mi">99</span> <span class="ow">in</span> <span class="n">list_a</span><span class="p">)</span>     <span class="c1"># False  
+</span><span class="nf">print</span><span class="p">(</span><span class="mi">100</span> <span class="ow">in</span> <span class="n">list_a</span><span class="p">)</span>    <span class="c1"># False
+</span><span class="nf">print</span><span class="p">(</span><span class="mi">52</span> <span class="ow">in</span> <span class="n">list_a</span><span class="p">)</span>     <span class="c1"># True
+</span>
+<span class="nf">print</span><span class="p">(</span><span class="mi">273</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">list_a</span><span class="p">)</span>    <span class="c1"># False
+</span><span class="nf">print</span><span class="p">(</span><span class="mi">99</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">list_a</span><span class="p">)</span>     <span class="c1"># True  
+</span><span class="nf">print</span><span class="p">(</span><span class="mi">100</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">list_a</span><span class="p">)</span>    <span class="c1"># True
+</span><span class="nf">print</span><span class="p">(</span><span class="mi">52</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">list_a</span><span class="p">)</span>     <span class="c1"># False
+</span></code></pre></div></div>
+
+<h5 id="list-와-for문"><strong>List 와 For문</strong></h5>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">list_a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">273</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">103</span><span class="p">,</span> <span class="mi">57</span><span class="p">,</span> <span class="mi">52</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">list_a</span><span class="p">:</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
+
+<span class="n">list_of_list</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]</span>
+<span class="p">]</span>
+
+<span class="c1"># 1중 for문
+</span><span class="k">for</span> <span class="n">items</span> <span class="ow">in</span> <span class="n">list_of_list</span><span class="p">:</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">items</span><span class="p">)</span>
+
+<span class="c1"># 2중 for문
+</span><span class="k">for</span> <span class="n">items</span> <span class="ow">in</span> <span class="n">list_of_list</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
+        <span class="nf">print</span><span class="p">(</span><span class="n">items</span><span class="p">)</span>
+
+<span class="c1"># 전개 연산자
+</span><span class="n">list_b</span> <span class="o">=</span> <span class="p">[</span><span class="o">*</span><span class="n">list_a</span><span class="p">,</span> <span class="o">*</span><span class="n">list_a</span><span class="p">]</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">list_b</span><span class="p">)</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h4 id="2-딕셔너리와-반복문"><strong>2. 딕셔너리와 반복문</strong></h4>
+<p><br /></p>
+
+<h5 id="딕셔너리"><strong>딕셔너리</strong></h5>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">dict_a</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">"name"</span> <span class="p">:</span> <span class="s">"7D 건조 망고"</span><span class="p">,</span>
+    <span class="s">"type"</span> <span class="p">:</span> <span class="s">"당절임"</span><span class="p">,</span>
+    <span class="s">"ingredient"</span> <span class="p">:</span> <span class="p">[</span><span class="s">"망고"</span><span class="p">,</span><span class="s">"설탕"</span><span class="p">,</span><span class="s">"메타중아황산나트륨"</span><span class="p">,</span><span class="s">"치자황색소"</span><span class="p">],</span>
+    <span class="s">"origin"</span> <span class="p">:</span> <span class="s">"필리핀"</span>
+<span class="p">}</span>
+
+<span class="c1"># 값 출력
+</span><span class="nf">print</span><span class="p">(</span><span class="s">"name :"</span><span class="p">,</span> <span class="n">dict_a</span><span class="p">[</span><span class="s">"name"</span><span class="p">])</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"type :"</span><span class="p">,</span> <span class="n">dict_a</span><span class="p">[</span><span class="s">"type"</span><span class="p">])</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"ingredient :"</span><span class="p">,</span> <span class="n">dict_a</span><span class="p">[</span><span class="s">"ingredient"</span><span class="p">])</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"origin :"</span><span class="p">,</span> <span class="n">dict_a</span><span class="p">[</span><span class="s">"origin"</span><span class="p">])</span>
+
+<span class="c1"># 값 변경
+</span><span class="n">dict_a</span><span class="p">[</span><span class="s">"name"</span><span class="p">]</span> <span class="o">=</span> <span class="s">"8D 건조 망고"</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"name :"</span><span class="p">,</span> <span class="n">dict_a</span><span class="p">[</span><span class="s">"name"</span><span class="p">])</span>
+
+<span class="c1"># 속성 추가
+</span><span class="n">dict_a</span><span class="p">[</span><span class="s">"price"</span><span class="p">]</span> <span class="o">=</span> <span class="mi">5000</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">dict_a</span><span class="p">)</span>
+
+<span class="c1"># 속성 삭제
+</span><span class="k">del</span> <span class="n">dict_a</span><span class="p">[</span><span class="s">"ingredient"</span><span class="p">]</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">dict_a</span><span class="p">)</span>
+</code></pre></div></div>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">dict_a</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">"name"</span> <span class="p">:</span> <span class="s">"7D 건조 망고"</span><span class="p">,</span>
+    <span class="s">"type"</span> <span class="p">:</span> <span class="s">"당절임"</span><span class="p">,</span>
+    <span class="s">"ingredient"</span> <span class="p">:</span> <span class="p">[</span><span class="s">"망고"</span><span class="p">,</span><span class="s">"설탕"</span><span class="p">,</span><span class="s">"메타중아황산나트륨"</span><span class="p">,</span><span class="s">"치자황색소"</span><span class="p">],</span>
+    <span class="s">"origin"</span> <span class="p">:</span> <span class="s">"필리핀"</span>
+<span class="p">}</span>
+
+<span class="n">key</span> <span class="o">=</span> <span class="nf">input</span><span class="p">(</span><span class="s">"접근 하고자 하는 키 &gt; "</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">dict_a</span><span class="p">:</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">dict_a</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"존재하지 않는 키에 접근하고 있습니다"</span><span class="p">)</span>
+<span class="c1"># get을 활용한 값 확인
+</span><span class="n">value</span> <span class="o">=</span> <span class="n">dict_a</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="s">"존재하지 않는 키"</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"값 : "</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">value</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"존재하지 않는 키에 접근했었습니다."</span><span class="p">)</span>
+
+<span class="n">value</span> <span class="o">=</span> <span class="n">dict_a</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"값 : "</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+
+<span class="c1"># 반복문
+</span><span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">dict_a</span><span class="p">:</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="s">":"</span> <span class="p">,</span> <span class="n">dict_a</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h4 id="3-범위-자료형과-while-반복문"><strong>3. 범위 자료형과 while 반복문</strong></h4>
+<p><br /></p>
+
+<h5 id="범위-자료형"><strong>범위 자료형</strong></h5>
+<ul>
+  <li>range(A) : 매개변수에 숫자를 한 개 넣는 방법 -&gt; 0부터 A-1 까지의 정수</li>
+  <li>range(A,B) : 매개변수에 숫자를 두 개 넣는 방법 -&gt; A부터 B-1까지의 정수</li>
+  <li>range(A,B,C) : 매개변수에 숫자를 세 개 넣는 방법 -&gt; A부터 B-1까지의 정수 , 앞 뒤의 숫자가 C 만큼의 차이를 가짐</li>
+</ul>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="nf">print</span><span class="p">(</span><span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="s">" = 반복 변수"</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
+    <span class="nf">print</span><span class="p">(</span><span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="s">" = 반복 변수"</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">3</span><span class="p">):</span>
+    <span class="nf">print</span><span class="p">(</span><span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="s">" = 반복 변수"</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">()</span>
+</code></pre></div></div>
+<h6 id="리스트-범위-반복"><strong>리스트 범위 반복</strong></h6>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">array</span> <span class="o">=</span> <span class="p">[</span><span class="mi">273</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">103</span><span class="p">,</span> <span class="mi">57</span><span class="p">,</span> <span class="mi">52</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="n">array</span><span class="p">)):</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"{}번째 반복 : {}"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">array</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">0</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"{}번째 반복 : {}"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">array</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">reversed</span><span class="p">(</span><span class="nf">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)):</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"현재번째 반복 : {}"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h5 id="while-반복문"><strong>While 반복문</strong></h5>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 반복문의 형태
+</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"{}번째 반복입니다."</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+
+
+<span class="c1"># 값 모두 제거하기
+</span><span class="n">list_test</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">value</span> <span class="o">=</span> <span class="mi">2</span>
+
+<span class="k">while</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">list_test</span><span class="p">:</span>
+    <span class="n">list_test</span><span class="p">.</span><span class="nf">remove</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="n">list_test</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h6 id="5초-동안-반복된-횟수"><strong>5초 동안 반복된 횟수</strong></h6>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">time</span>
+<span class="n">number</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="n">target_tick</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="nf">time</span><span class="p">()</span> <span class="o">+</span> <span class="mi">5</span>
+<span class="k">while</span> <span class="n">time</span><span class="p">.</span><span class="nf">time</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">target_tick</span><span class="p">:</span>
+    <span class="n">number</span><span class="o">+=</span><span class="mi">1</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="s">"5초 동안 {}번 반복했습니다"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="n">number</span><span class="p">))</span>
+</code></pre></div></div>
+
+<h6 id="break-와-continue-예시"><strong>break 와 continue 예시</strong></h6>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"{}번째 반복문입니다"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="n">input_text</span> <span class="o">=</span> <span class="nf">input</span><span class="p">(</span><span class="s">"종료하시겠습니까?(y/n)&gt;"</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">input_text</span> <span class="ow">in</span> <span class="p">[</span><span class="s">"y"</span><span class="p">,</span> <span class="s">"Y"</span><span class="p">]:</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"반복을 종료합니다"</span><span class="p">)</span>
+        <span class="k">break</span>
+
+<span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">25</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">number</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+        <span class="k">continue</span>
+
+    <span class="nf">print</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h4 id="4-문자열-리스트-딕셔너리와-관련된-기본함수"><strong>4. 문자열, 리스트, 딕셔너리와 관련된 기본함수</strong></h4>
+<p><br /></p>
+
+<ul>
+  <li>리스트에 적용할 수 있는 기본 함수 : min(), max(), sum()</li>
+  <li>리스트 뒤집기 : reversed()</li>
+  <li>현재 인덱스가 몇 번째인지 확인하기 : enumerate()</li>
+  <li>딕셔너리로 쉽게 반복문 작성하기 : items()</li>
+  <li>리스트 안에 for문 사용하기 : 리스트 내포</li>
+</ul>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># min, max, sum
+</span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">103</span><span class="p">,</span><span class="mi">52</span><span class="p">,</span><span class="mi">273</span><span class="p">,</span><span class="mi">32</span><span class="p">,</span><span class="mi">77</span><span class="p">]</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="nf">min</span><span class="p">(</span><span class="n">numbers</span><span class="p">))</span>
+<span class="nf">print</span><span class="p">(</span><span class="nf">max</span><span class="p">(</span><span class="n">numbers</span><span class="p">))</span>
+<span class="nf">print</span><span class="p">(</span><span class="nf">sum</span><span class="p">(</span><span class="n">numbers</span><span class="p">))</span>
+
+<span class="c1"># reversed
+</span><span class="n">numbers_reversed</span> <span class="o">=</span> <span class="nf">reversed</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="nf">list</span><span class="p">(</span><span class="n">numbers_reversed</span><span class="p">))</span>
+
+<span class="c1"># enumerate
+</span><span class="nf">print</span><span class="p">(</span><span class="nf">list</span><span class="p">(</span><span class="nf">enumerate</span><span class="p">(</span><span class="n">numbers</span><span class="p">)))</span>
+
+<span class="c1"># 딕셔너리 items() 함수
+</span><span class="n">dictionary</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">"키A"</span> <span class="p">:</span> <span class="s">"값A"</span><span class="p">,</span>
+    <span class="s">"키B"</span> <span class="p">:</span> <span class="s">"값B"</span><span class="p">,</span>
+    <span class="s">"키C"</span> <span class="p">:</span> <span class="s">"값C"</span><span class="p">,</span>
+<span class="p">}</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"items() : "</span> <span class="p">,</span> <span class="n">dictionary</span><span class="p">.</span><span class="nf">items</span><span class="p">())</span>
+
+<span class="c1"># 리스트 내포
+</span><span class="n">array</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
+    <span class="n">array</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">i</span> <span class="o">*</span> <span class="n">i</span><span class="p">)</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="n">array</span><span class="p">)</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h6 id="리스트-안에-for문-사용하기"><strong>리스트 안에 for문 사용하기</strong></h6>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">array</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="o">*</span> <span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">2</span><span class="p">)]</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">array</span><span class="p">)</span>
+</code></pre></div></div>
+<h6 id="조건을-활용한-리스트-내포"><strong>조건을 활용한 리스트 내포</strong></h6>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">array</span> <span class="o">=</span> <span class="p">[</span><span class="s">"사과"</span><span class="p">,</span> <span class="s">"자두"</span><span class="p">,</span> <span class="s">"초콜릿"</span><span class="p">,</span> <span class="s">"바나나"</span><span class="p">,</span><span class="s">"제리"</span><span class="p">]</span>
+<span class="n">output</span> <span class="o">=</span> <span class="p">[</span><span class="n">fruit</span> <span class="k">for</span> <span class="n">fruit</span> <span class="ow">in</span> <span class="n">array</span> <span class="k">if</span> <span class="n">fruit</span> <span class="o">!=</span> <span class="s">"초콜릿"</span><span class="p">]</span>
+<span class="c1"># 리스트 이름 = [ 표현식 for 반복자 in 반복할 수 있는 것 if 조건문]
+</span></code></pre></div></div>
+<h6 id="문자열의-join"><strong>문자열의 join</strong></h6>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">print</span><span class="p">(</span><span class="s">"::"</span><span class="p">.</span><span class="n">join</span><span class="p">[</span><span class="s">"1"</span><span class="p">,</span><span class="s">"2"</span><span class="p">,</span><span class="s">"3"</span><span class="p">,</span><span class="s">"4"</span><span class="p">,</span><span class="s">"5"</span><span class="p">])</span>
+</code></pre></div></div>
+<h6 id="이터레이터"><strong>이터레이터</strong></h6>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
+<span class="n">r_num</span> <span class="o">=</span> <span class="nf">reversed</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="s">"reversed_nuimbers : "</span><span class="p">,</span> <span class="n">r_num</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="nf">next</span><span class="p">(</span><span class="n">r_num</span><span class="p">))</span>
+<span class="nf">print</span><span class="p">(</span><span class="nf">next</span><span class="p">(</span><span class="n">r_num</span><span class="p">))</span>
+<span class="nf">print</span><span class="p">(</span><span class="nf">next</span><span class="p">(</span><span class="n">r_num</span><span class="p">))</span>
+<span class="nf">print</span><span class="p">(</span><span class="nf">next</span><span class="p">(</span><span class="n">r_num</span><span class="p">))</span>
+<span class="nf">print</span><span class="p">(</span><span class="nf">next</span><span class="p">(</span><span class="n">r_num</span><span class="p">))</span>
+</code></pre></div></div>
+
+<h6 id="2차원-리스트-평탄화"><strong>2차원 리스트 평탄화</strong></h6>
+
+<p><a href="https://m.blog.naver.com/hankrah/221929249131"><strong>참고사이트</strong></a></p>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">array</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span><span class="mi">5</span><span class="p">,[</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">],[</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]]</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">array</span><span class="p">:</span>
+    <span class="k">if</span> <span class="nf">type</span><span class="p">(</span><span class="n">item</span><span class="p">)</span> <span class="o">==</span> <span class="n">array</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">+=</span> <span class="nf">flatten</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">+=</span> <span class="p">[</span><span class="n">item</span><span class="p">]</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</code></pre></div></div>
 
                     </div>
-                </main>
-                <footer class="py-4 bg-light mt-auto">
-                    <div class="container-fluid px-4">
-                        <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; Your Website 2023</div>
-                            <div>
-                                <a href="#">Privacy Policy</a>
-                                &middot;
-                                <a href="#">Terms &amp; Conditions</a>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
+                </main><footer class="py-4 bg-light mt-auto">
+    <div class="container-fluid px-4">
+        <div class="d-flex align-items-center justify-content-between small">
+            <div class="text-muted">Copyright &copy; Your Website 2023</div>
+            <div>
+                <a href="#">Privacy Policy</a>
+                &middot;
+                <a href="#">Terms &amp; Conditions</a>
             </div>
+        </div>
+    </div>
+</footer></div>
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
