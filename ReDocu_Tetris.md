@@ -1,3 +1,0 @@
----
-layout: ReDocu_Tetris
----

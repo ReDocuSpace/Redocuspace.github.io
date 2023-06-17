@@ -1,0 +1,4 @@
+---
+layout: document
+title: Document
+---

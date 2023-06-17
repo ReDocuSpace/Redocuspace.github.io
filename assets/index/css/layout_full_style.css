@@ -1,0 +1,20 @@
+@media screen and (min-width:1200px) {
+  .wide_area{
+    width:100%;
+  }
+
+  .local_area{
+    width:1280px;
+    margin: auto;
+  }
+
+
+  nav ul{
+    display: flex;
+    flex-direction: row;
+  }
+  nav li{
+    text-align: center;
+    width:25%;
+  }
+}

@@ -1,0 +1,168 @@
+@keyframes intro_introduce_slide_anim {
+  0%{left:-100%;}
+  100%{left:0%;}
+}
+
+@keyframes intro_portfolio_slide_anim {
+  0%{left:-200%;}
+  20%{left:-100%;}
+  40%{left:0%;}
+}
+
+
+@keyframes intro_project_slide_anim {
+  0%{left:-200%;}
+  40%{left:-100%;}
+  60%{left:0%;}
+}
+
+
+@keyframes intro_document_slide_anim {
+  0%{left:-200%;}
+  60%{left:-100%;}
+  80%{left:0%;}
+}
+
+
+.main_introduce{
+  display: flex;
+  max-width: 1280px;
+  margin: auto;
+
+}
+
+@media screen and (max-width:999px) {
+  .main_introduce{
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width:1000px) {
+  .main_introduce{
+    flex-direction: row;
+  }
+}
+
+
+.main_introduce .profile_img{
+  flex:none;
+  width:400px;
+  height:360px;
+
+  margin: auto;
+
+  padding-top: 20px;
+  text-align: center;
+}
+
+.main_introduce .profile_img img{
+  width:80%;
+}
+
+.main_introduce .profile_txt{
+  flex:auto;
+
+  padding-top: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.main_introduce .profile_txt h2{
+
+  font-size: 25px;
+  padding-bottom: 10px;
+}
+
+.main_introduce .profile_txt p{
+  width:100%;
+
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+
+.intro_introduce{
+  width:100%;
+  background-color: #555;
+  position: relative;
+  animation: intro_introduce_slide_anim 5s;
+}
+
+.intro_portfolio{
+  width:100%;
+  background-color: #555;
+  position: relative;
+  animation: intro_portfolio_slide_anim 5s;
+}
+
+.intro_project{
+  width:100%;
+  background-color: #555;
+  position: relative;
+  animation: intro_project_slide_anim 5s;
+}
+
+.intro_document{
+
+  width:100%;
+  background-color: #555;
+  position: relative;
+  animation: intro_document_slide_anim 5s;
+}
+
+/*메뉴 애니메이션*/
+
+@keyframes intro_document_01_anim {
+  0%{left:-200%;}
+  20%{left:-100%;}
+  40%{left:0%;}
+}
+
+@keyframes intro_document_02_anim {
+  0%{left:-200%;}
+  40%{left:-100%;}
+  60%{left:0%;}
+}
+
+@keyframes intro_document_03_anim {
+  0%{left:-200%;}
+  60%{left:-100%;}
+  80%{left:0%;}
+}
+
+@keyframes intro_document_04_anim {
+  0%{left:-200%;}
+  80%{left:-100%;}
+  100%{left:0%;}
+}
+
+.intro_document_main_01{
+
+  width:100%;
+  background-color: #555;
+  position: relative;
+  animation: intro_document_01_anim 4s;
+}
+
+.intro_document_main_02{
+
+  width:100%;
+  background-color: #555;
+  position: relative;
+  animation: intro_document_02_anim 4s;
+}
+
+.intro_document_main_03{
+
+  width:100%;
+  background-color: #555;
+  position: relative;
+  animation: intro_document_03_anim 4s;
+}
+
+.intro_document_main_04{
+
+  width:100%;
+  background-color: #555;
+  position: relative;
+  animation: intro_document_04_anim 4s;
+}

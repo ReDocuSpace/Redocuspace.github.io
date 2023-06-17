@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
-	{%- include main_head.html -%}
+	{%- include index_head.html -%}
 	<body id = "blog-body">
-		<main class="page-content" aria-label="Content">
-			{{ content }}	
-		</main>
-		<div id="wrapper">
-			{%- include footer.html -%}
-		</div>
+        {%- include index_nav.html -%}
 
+		<main class="page-content" aria-label="Content">
+			<div class="base_size">
+				{{ content }}	
+			</div>
+		</main>
+
+		<div id="wrapper">
+			{%- include index_footer.html -%}
 		</div>
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

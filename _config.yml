@@ -13,86 +13,59 @@ theme: minima
 plugins:
   - jekyll-feed
 
-# Navigation
-navigation:
-    - title : About
-      url : about
-    - title : Portfolio
-      url : portfolio
-    - title : Hobby
-      url : hobby
-    - title : Contact
-      url : contact
-# About
-
-# Post
-post_layout_list:
-    - title : Default
-      url : one
-    - title : two
-      url : two
-    - title : three
-      url : three
-    - title : four
-      url : four
-    - title : five
-      url : five
-
-
-# Study
-studylist:
-    - title : lauguage
-      url : /study_language
-      img : /assets/images/pic01.jpg
-      description : 프로그래밍 언어
-    - title : algorithm
-      url : /study_algorithm
-      img : /assets/images/pic01.jpg
-      description : 자료구조 및 알고리즘
-    - title : booklist
-      url : /study_booklist
-      img : /assets/images/pic01.jpg
-      description : 기획 및 기타
-    - title : study_license
-      url : /study_license
-      img : /assets/images/pic01.jpg
-      description : 자격증 공부
-    - title : gamelist
-      url : /study_gamelist
-      img : /assets/images/pic01.jpg
-      description : 모작게임
-
-# Project
-projectlist:
-    - title : single
-      url : /project_single
-      img : /assets/images/pic01.jpg
-      description : 싱글 프로젝트
-
-
-# Hobby
-hobbylist:
-    - title : novel
-      url : /hobby_novel
-      img : /assets/images/pic01.jpg
-      description : Novel
-
-# Contact
-
-
-# imitation GameList
-imitationlist:
-    - title : tetris
-      url : Hello World
-      img : /assets/images/pic01.jpg
-      description : Hello World
-    
-# Study_language List Manager
-
-python_01_01:
+# 문서 학습
+programming_basic_list:
     - title : 혼자 공부하는 파이썬
-    - number : python_01_01
-    - path : /post_study_language/
-    - lecture:
-      - number : python_01_01_01
-      - name : 파이썬의 개요
+      img : /asset/document/image/Book01_language_python.jpg
+      url : /post/programming_basic/python_01_01_01
+      category : python01
+    - title : 열혈 C 언어 
+      img : /asset/document/image/Book02_language_cprogramming.jpg
+      url : /post/programming_basic/cprogramming_01_01_01
+      category : cprogramming01
+    - title : 열혈 C++ 
+      img : /asset/document/image/Book03_language_cprogramming.jpg
+      url : /post/programming_basic/cprogramming_02_01_01
+      category : cprogramming02
+    - title : C# 교과서
+      img : /asset/document/image/Book04_language_csharpprogramming.jpg
+      url : /post/programming_basic/cprogramming_03_01_01
+      category : cprogramming03
+    - title : 손에 잡히는 프로세싱 
+      img : /asset/document/image/Book10_language_Processing.jpg
+      url : /post/programming_basic/processing_01_01_01
+      category : processing01
+
+programming_unity_list:
+    - title : 게임 개발 기본
+      img : /asset/document/image/Book_Unity_01.jpg
+      url : /post/programming_intensify/unity_01_01_01
+    - title : 모바일 게임 개발
+      img : /asset/document/image/Book_Unity_02.jpg
+      url : /post/programming_intensify/unity_02_01_01
+    - title : 2d 게임 개발
+      img : /asset/document/image/Book_Unity_03.jpg
+      url : /post/programming_intensify/unity_03_01_01
+    - title : 게임 프로그래밍 바이블
+      img : /asset/document/image/Book_Unity_04.jpg
+      url : /post/programming_intensify/unity_04_01_01
+    - title : 3D 액션 게임
+      img : /asset/document/image/Book_Unity_05.jpg
+      url : /post/programming_intensify/unity_05_01_01
+
+etc_book_list:
+    - title : Art Of Game Design
+      img : /asset/document/image/Planner_Book_01.jpg
+      url : /post/etc_book/planner_01_01_01
+    - title : 기획과 시나리오
+      img : /asset/document/image/Planner_Book_02.jpg
+      url : /post/etc_book/planner_02_01_01
+    - title : 게임 기획 멘토링
+      img : /asset/document/image/Planner_Book_03.jpg
+      url : /post/etc_book/planner_03_01_01
+    - title : 모바일 게임 기획
+      img : /asset/document/image/Planner_Book_04.jpg
+      url : /post/etc_book/planner_04_01_01
+    - title : 게임 기획 스쿨
+      img : /asset/document/image/Planner_Book_05.jpg
+      url : /post/etc_book/planner_05_01_01

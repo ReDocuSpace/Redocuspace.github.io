@@ -1,0 +1,39 @@
+@keyframes project_slide_anim_first {
+  0%{left:-200%;}
+  20%{left:-100%;}
+  40%{left:0%;}
+}
+
+
+@keyframes project1_slide_anim_second {
+  0%{left:-200%;}
+  40%{left:-100%;}
+  60%{left:0%;}
+}
+
+@keyframes project1_slide_anim_third {
+  0%{left:-200%;}
+  60%{left:-100%;}
+  80%{left:0%;}
+}
+
+.intro_first{
+  width:100%;
+  background-color: #555;
+  position: relative;
+  animation: project_slide_anim_first 5s;
+}
+
+.intro_second{
+  width:100%;
+  background-color: #555;
+  position: relative;
+  animation: project1_slide_anim_second 5s;
+}
+
+.intro_third{
+  width:100%;
+  background-color: #555;
+  position: relative;
+  animation: project1_slide_anim_third 5s;
+}

@@ -1,0 +1,110 @@
+
+			<!-- Sidebar -->
+			<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+				<!-- Sidebar - Brand -->
+				<a class="sidebar-brand d-flex align-items-center justify-content-center" href="/document">
+
+					<div class="sidebar-brand-text mx-3">ReDocu Document </div>
+				</a>
+	
+				<!-- Divider -->
+				<hr class="sidebar-divider my-0">
+	
+				<!-- Nav Item - Dashboard -->
+				<li class="nav-item active">
+					<a class="nav-link" href="/document">
+						<i class="fas fa-fw fa-tachometer-alt"></i>
+						<span>학습 리스트</span></a>
+				</li>
+	
+				<!-- Divider -->
+				<hr class="sidebar-divider">
+	
+				<!-- Heading -->
+				<div class="sidebar-heading">
+					Interface
+				</div>
+	
+				<!-- Nav Item - Pages Collapse Menu -->
+				<li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#programming_basic" aria-expanded="true" aria-controls="programming_basic">
+                      <i class="fas fa-fw fa-wrench"></i>
+                      <span>프로그래밍 기본</span>
+                    </a>
+                    <div id="programming_basic" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <h6 class="collapse-header">프로그래밍 기본</h6>
+            
+                            {%- for list in site.programming_basic_list -%}
+                            <a class="collapse-item" href="{{list.url}}">{{list.title}}</a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </li>
+            
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#programming_unity_list" aria-expanded="true" aria-controls="programming_unity_list">
+                      <i class="fas fa-fw fa-wrench"></i>
+                      <span>프로그래밍 심화</span>
+                    </a>
+                    <div id="programming_unity_list" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <h6 class="collapse-header">Unity</h6>
+            
+                            {%- for list in site.programming_unity_list -%}
+                            <a class="collapse-item" href="{{list.url}}">{{list.title}}</a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </li>
+            
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#etc_book_list" aria-expanded="true" aria-controls="etc_book_list">
+                      <i class="fas fa-fw fa-wrench"></i>
+                      <span>기획 및 기타</span>
+                    </a>
+                    <div id="etc_book_list" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <h6 class="collapse-header">기획</h6>
+            
+                            {%- for list in site.etc_book_list -%}
+                            <a class="collapse-item" href="{{list.url}}">{{list.title}}</a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Divider -->
+				<hr class="sidebar-divider">
+
+                <!-- Nav Item - Charts -->
+				<li class="nav-item">
+					<a class="nav-link" href="{{site.url}}">
+						<i class="fas fa-fw fa-chart-area"></i>
+						<span>모작게임</span></a>
+				</li>
+
+				<!-- Divider -->
+				<hr class="sidebar-divider">
+
+	
+				<!-- Nav Item - Charts -->
+				<li class="nav-item">
+					<a class="nav-link" href="{{site.url}}">
+						<i class="fas fa-fw fa-chart-area"></i>
+						<span>Return Home</span></a>
+				</li>
+                
+	
+	
+				<!-- Divider -->
+				<hr class="sidebar-divider d-none d-md-block">
+	
+				<!-- Sidebar Toggler (Sidebar) -->
+				<div class="text-center d-none d-md-inline">
+					<button class="rounded-circle border-0" id="sidebarToggle"></button>
+				</div>
+	
+			</ul>
+			<!-- End of Sidebar -->

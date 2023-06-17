@@ -2,155 +2,67 @@
 layout: default
 ---
 
-<section id="header">
-	<header>
-		<span class="image avatar"><a href="{{site.url}}"><img src="/assets/images/avatar.jpg" alt="" /></a></span>
-		<h1 id="logo"><a href="{{site.url}}">{{ site.title }}</a></h1>
-		<p>{{ site.description }}</p>
-	</header>
-	{% include main_nav.html %}
-</section>
-
-<div id="wrapper">
-	<!-- Main -->
-		<div id="main">
-			<!-- One -->
-			<section id="about">
-				<div class="container">
-						<!-- Content -->
-						<!-- -->
-						<h4> Re_Docu </h4>
-                        <hr/>
-						<p> 
-						게임 클라이언트 프로그래머 [ Game Client Programmer ]<br>
-						『최고보다는 최선이 되고자 하는 마음으로』
-						</p>
-						<!-- -->
-						
-						<h4> 학습 </h4>
-                        <hr />
-						<p> 
-						[ 2012.03 - 2017.02 ] SM(System Management) - BSc <br>
-						[ 2017.03 - 2019.08 ] ICT Convergence - MS <br>
-						[ 2019.09 - 2020.03 ] Game Programming School - Course of Study <br>
-                        
-                        <h4> 경력 </h4>
-                        <hr/>
-						[ 2020.07 - 2021.12 ] AR Programming - Client <br>
-						[ 2022.06 - 2023.05 ] Autonomous Driving Simulation Programming - UI <br>
-						</p>
-						<hr />
-						<!-- -->
-						<h4>Post</h4>
-                        <hr/>
-						<div class="table-wrapper">
-							<table>
-								<thead>
-									<tr>
-										
-										<th>Title</th>
-										<th>Category</th>
-										<th>Date</th>
-									</tr>
-								</thead>
-								<tbody>
-									{%- for post in site.posts -%}
-									<tr>
-										<td><a class="post-link" href="{{ post.url }}">{{ post.title }}</a></td>
-										<td>{{post.categories}} </td>
-										<td>{{ post.date | date : '%B %d, %Y' }}</td>
-									</tr>
-									{%- endfor -%}
-								<!--
-									<tfoot>
-									<tr>
-										<td colspan="2"></td>
-										<td>100.00</td>
-									</tr>
-								</tfoot>
-								-->
-							</table>
-						</div>
-				</div>
-			</section>
-
-			<!-- Portfolio Section -->
-			
-			<section id="portfolio">
-				<div class="container">
-					<h3>Portfolio</h3>
-					<hr/>
-					<h4>Study Part</h4>
-					<!---->
-					<div class="box alt">
-						<div class="row gtr-50 gtr-uniform">
-							{%- for list in site.studylist -%}
-							<div class="col-4"><span class="image fit"><a href="{{ list.url }}"><img src="{{ list.img }}" alt="" /></a><h5>{{ list.description }}</h5></span></div>
-							{% endfor %}
-						</div>
-					</div>
-					<!---->
-					<h4>Project Part</h4>
-					<!---->
-					<div class="box alt">
-						<div class="row gtr-50 gtr-uniform">
-							{%- for list in site.projectlist -%}
-							<div class="col-4"><span class="image fit"><a href="{{ list.url }}"><img src="{{ list.img }}" alt="" /></a><h5>{{ list.description }}</h5></span></div>
-							{% endfor %}
-						</div>
-					</div>
-					<!---->
-				</div>
-			</section>
-			
-			<!-- Hobby Me Section -->
-
-			<section id = "hobby">
-				<div class="container">
-					<h3>Hobby</h3>
-					<hr/>
-
-					<!---->
-					<h4>취미 영역</h4>
-					<div class="box alt">
-						<div class="row gtr-50 gtr-uniform">
-							{%- for list in site.hobbylist -%}
-							<div class="col-4"><span class="image fit"><a href="{{ list.url }}"><img src="{{ list.img }}" alt="" /></a><h5>{{ list.description }}</h5></span></div>
-							{% endfor %}
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<!-- Contact Me Section -->
-			<section id = "contact">
-				<div class="container">
-					<h3>Contact Me</h3>
-					<hr/>
-					<form method="post" action="mailto:dlehrb103@gmail.com">
-						<div class="row gtr-uniform">
-							<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
-							<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
-							<div class="col-12"><input type="text" name="subject" id="subject" placeholder="Subject" /></div>
-							<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="6"></textarea></div>
-						<div class="col-12">
-							<ul class="actions">
-								<li><input type="submit" class="primary" value="Send" /></li>
-								<li><input type="reset" value="Reset" /></li>
-							</ul>
-							</div>
-						</div>
-					</form>
-				</div>
-			</section>
-		</div>
+ <!-- 포트폴리오 -->
+ <div>
+	<div class="wide_area">
+	    <div class="local_area">
+            <a href="/assets/index/post/post_index_page/index_introduce">
+                <div class = "intro_contents">
+                    
+	                <div class="image_setup">
+                        <img src="/assets/images/avatar.jpg">
+                        <div class="txt">INTRODUCE</div>
+                    </div>
+                </div>    
+            </a>
+        </div>
+    </div>
 </div>
 
-    <!-- Scripts -->
-    <script src="/assets/main/js/jquery.min.js"></script>
-    <script src="/assets/main/js/jquery.scrollex.min.js"></script>
-    <script src="/assets/main/js/jquery.scrolly.min.js"></script>
-    <script src="/assets/main/js/browser.min.js"></script>
-    <script src="/assets/main/js/breakpoints.min.js"></script>
-    <script src="/assets/main/js/util.js"></script>
-    <script src="/assets/main/js/main.js"></script>
+ <!-- 포트폴리오 -->
+ <div>
+	<div class="wide_area">
+	    <div class="local_area">
+            <a href="/assets/index/post/post_index_page/index_portfolio">
+                <div class = "intro_contents">
+	                <div class="image_setup">
+                        <img src="/assets/images/avatar.jpg">
+                        <div class="txt">PORTFOLIO</div>
+                    </div>
+                </div>    
+            </a>
+        </div>
+    </div>
+</div>
+
+ <!-- 프로젝트-->
+ <div>
+	<div class="wide_area">
+	    <div class="local_area">
+            <a href="/assets/index/post/post_index_page/index_project">
+                <div class = "intro_contents">
+	                <div class="image_setup">
+                        <img src="/assets/images/avatar.jpg">
+                        <div class="txt">PROJECT</div>
+                    </div>
+                </div>    
+            </a>
+        </div>
+    </div>
+</div>
+ <!-- 문서-->
+ <div>
+	<div class="wide_area">
+	    <div class="local_area">
+            <a href="/assets/index/post/post_index_page/index_document">
+                <div class = "intro_contents">
+	                <div class="image_setup">
+                        <img src="/assets/images/avatar.jpg">
+                        <div class="txt">DOCUMENT</div>
+                    </div>
+                </div>    
+            </a>
+        </div>
+    </div>
+</div>
+<!-- 완료 -->

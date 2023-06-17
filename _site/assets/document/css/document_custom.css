@@ -1,0 +1,10 @@
+code {
+    font-size: map-get($base, font-size-xs);
+    line-height : map-get($base, line-height-sm);
+    font-weight : map-get($base, font-weight-bold);
+    color : #ff006a;
+}
+
+  pre code {
+    color: #eaeaea; 
+  }
