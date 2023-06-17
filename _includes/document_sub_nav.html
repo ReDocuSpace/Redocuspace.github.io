@@ -1,4 +1,8 @@
 <!-- Topbar -->
+{% if page.index == 0 %}
+<br/>
+<br/>
+{% else %}
 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 	
     {% for i in (1 .. page.index) %}
@@ -8,4 +12,6 @@
     {% endfor %}
 
 </nav>
+{% endif %}
+
 <!-- End of Topbar -->

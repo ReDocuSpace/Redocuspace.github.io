@@ -16,56 +16,56 @@ plugins:
 # 문서 학습
 programming_basic_list:
     - title : 혼자 공부하는 파이썬
-      img : /asset/document/image/Book01_language_python.jpg
+      img : /assets/document/image/Book01_language_python.jpg
       url : /post/programming_basic/python_01_01_01
       category : python01
     - title : 열혈 C 언어 
-      img : /asset/document/image/Book02_language_cprogramming.jpg
+      img : /assets/document/image/Book02_language_cprogramming.jpg
       url : /post/programming_basic/cprogramming_01_01_01
       category : cprogramming01
     - title : 열혈 C++ 
-      img : /asset/document/image/Book03_language_cprogramming.jpg
+      img : /assets/document/image/Book03_language_cprogramming.jpg
       url : /post/programming_basic/cprogramming_02_01_01
       category : cprogramming02
     - title : C# 교과서
-      img : /asset/document/image/Book04_language_csharpprogramming.jpg
+      img : /assets/document/image/Book04_language_csharpprogramming.jpg
       url : /post/programming_basic/cprogramming_03_01_01
       category : cprogramming03
     - title : 손에 잡히는 프로세싱 
-      img : /asset/document/image/Book10_language_Processing.jpg
+      img : /assets/document/image/Book10_language_Processing.jpg
       url : /post/programming_basic/processing_01_01_01
       category : processing01
 
 programming_unity_list:
     - title : 게임 개발 기본
-      img : /asset/document/image/Book_Unity_01.jpg
+      img : /assets/document/image/Book_Unity_01.jpg
       url : /post/programming_intensify/unity_01_01_01
     - title : 모바일 게임 개발
-      img : /asset/document/image/Book_Unity_02.jpg
+      img : /assets/document/image/Book_Unity_02.jpg
       url : /post/programming_intensify/unity_02_01_01
     - title : 2d 게임 개발
-      img : /asset/document/image/Book_Unity_03.jpg
+      img : /assets/document/image/Book_Unity_03.jpg
       url : /post/programming_intensify/unity_03_01_01
     - title : 게임 프로그래밍 바이블
-      img : /asset/document/image/Book_Unity_04.jpg
+      img : /assets/document/image/Book_Unity_04.jpg
       url : /post/programming_intensify/unity_04_01_01
     - title : 3D 액션 게임
-      img : /asset/document/image/Book_Unity_05.jpg
+      img : /assets/document/image/Book_Unity_05.jpg
       url : /post/programming_intensify/unity_05_01_01
 
 etc_book_list:
     - title : Art Of Game Design
-      img : /asset/document/image/Planner_Book_01.jpg
+      img : /assets/document/image/Planner_Book_01.jpg
       url : /post/etc_book/planner_01_01_01
     - title : 기획과 시나리오
-      img : /asset/document/image/Planner_Book_02.jpg
+      img : /assets/document/image/Planner_Book_02.jpg
       url : /post/etc_book/planner_02_01_01
     - title : 게임 기획 멘토링
-      img : /asset/document/image/Planner_Book_03.jpg
+      img : /assets/document/image/Planner_Book_03.jpg
       url : /post/etc_book/planner_03_01_01
     - title : 모바일 게임 기획
-      img : /asset/document/image/Planner_Book_04.jpg
+      img : /assets/document/image/Planner_Book_04.jpg
       url : /post/etc_book/planner_04_01_01
     - title : 게임 기획 스쿨
-      img : /asset/document/image/Planner_Book_05.jpg
+      img : /assets/document/image/Planner_Book_05.jpg
       url : /post/etc_book/planner_05_01_01

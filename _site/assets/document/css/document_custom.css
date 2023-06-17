@@ -1,10 +1,24 @@
-code {
-    font-size: map-get($base, font-size-xs);
-    line-height : map-get($base, line-height-sm);
-    font-weight : map-get($base, font-weight-bold);
-    color : #ff006a;
+.swiper-container {
+	height:420px;
+	border:5px solid rgb(255, 255, 255);
+	border-radius:7px;
+	box-shadow:0 0 20px #ccc inset;
+}
+.swiper-slide {
+	text-align:center;
+	display:flex; /* 내용을 중앙정렬 하기위해 flex 사용 */
+	align-items:center; /* 위아래 기준 중앙정렬 */
+	justify-content:center; /* 좌우 기준 중앙정렬 */
+}
+.swiper-slide img {
+	box-shadow:0 0 5px #ffffff;
+	max-width:80%; /* 이미지 최대너비를 제한, 슬라이드에 이미지가 여러개가 보여질때 필요 */
 }
 
-  pre code {
-    color: #eaeaea; 
-  }
+.slider_item img{
+  opacity: 0.3;
+}
+
+.slider_item img:hover{
+  opacity: 1;
+}
