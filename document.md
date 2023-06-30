@@ -4,7 +4,23 @@ title: Document
 index : 0
 ---
 
-<!-- 클래스명은 변경하면 안 됨 -->
+### **본 내용은 책을 참고하여 개인학습한 내용을 담고 있습니다. 더욱 자세한 내용을 보시고 싶으신 분은 직접 구매하는 것을 추천드립니다.**
+
+<div class="swiper-container">
+	<div class="swiper-wrapper">
+        {%- for list in site.programming_conception_list -%}
+            <div class="swiper-slide"><a class="collapse-item" class="slider_item" href="{{list.url}}"><img src="{{list.img}}"></a></div>
+        {% endfor %}
+	</div>
+	<div class="swiper-button-next"></div><!-- 다음 버튼 -->
+	<div class="swiper-button-prev"></div><!-- 이전 버튼 -->
+</div>
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h4 class="m-0 font-weight-bold text-primary">이론서</h4>
+    </div>
+</div>
 
 <div class="swiper-container">
 	<div class="swiper-wrapper">

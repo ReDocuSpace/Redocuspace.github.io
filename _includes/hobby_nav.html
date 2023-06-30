@@ -1,0 +1,78 @@
+
+			<!-- Sidebar -->
+			<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+				<!-- Sidebar - Brand -->
+				<a class="sidebar-brand d-flex align-items-center justify-content-center" href="/document">
+
+					<div class="sidebar-brand-text mx-3">ReDocu Document </div>
+				</a>
+	
+				<!-- Divider -->
+				<hr class="sidebar-divider my-0">
+	
+				<!-- Nav Item - Dashboard -->
+				<li class="nav-item active">
+					<a class="nav-link" href="/document">
+						<i class="fas fa-fw fa-tachometer-alt"></i>
+						<span>취미 리스트</span></a>
+				</li>
+	
+				<!-- Divider -->
+				<hr class="sidebar-divider">
+	
+				<!-- Heading -->
+				<div class="sidebar-heading">
+					Interface
+				</div>
+	
+				<!-- Nav Item - Pages Collapse Menu -->
+				<li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#programming_basic" aria-expanded="true" aria-controls="programming_basic">
+                      <i class="fas fa-fw fa-wrench"></i>
+                      <span>취미</span>
+                    </a>
+                    <div id="programming_basic" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <h6 class="collapse-header">프로그래밍 기본</h6>
+            
+                            {%- for list in site.hobby_novel_list -%}
+                            <a class="collapse-item" href="{{list.url}}">{{list.title}}</a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Divider -->
+				<hr class="sidebar-divider">
+
+                <!-- Nav Item - Charts -->
+				<li class="nav-item">
+					<a class="nav-link" href="/post/game_copy/game_copy_main">
+						<i class="fas fa-fw fa-chart-area"></i>
+						<span>모작게임</span></a>
+				</li>
+
+				<!-- Divider -->
+				<hr class="sidebar-divider">
+
+	
+				<!-- Nav Item - Charts -->
+				<li class="nav-item">
+					<a class="nav-link" href="{{site.url}}">
+						<i class="fas fa-fw fa-chart-area"></i>
+						<span>Return Home</span></a>
+				</li>
+                
+	
+	
+				<!-- Divider -->
+				<hr class="sidebar-divider d-none d-md-block">
+	
+				<!-- Sidebar Toggler (Sidebar) -->
+				<div class="text-center d-none d-md-inline">
+					<button class="rounded-circle border-0" id="sidebarToggle"></button>
+				</div>
+	
+			</ul>
+			<!-- End of Sidebar -->

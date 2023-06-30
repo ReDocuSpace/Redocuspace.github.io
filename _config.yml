@@ -13,8 +13,52 @@ theme: minima
 plugins:
   - jekyll-feed
 
+# 포트폴리오
+
+# 프로젝트
+project_management_list:
+    - title : Unity 책 관리 프로젝트
+      url : /post/project/project_01_01
+      img : /assets/images/avatar.jpg
+      category : BookProject
+      project_name : project_book
+      index : "01"
+    - title : Project Dictionary
+      url : /post/project/project_01_02
+      img : /assets/images/avatar.jpg
+      category : Project_Dictionary
+      project_name : project_dictionary
+      index : "02"
+
+# 문서
+docoument_management_list:
+    - title : 문서 정리 사이트
+      url : /document
+      img : /assets/images/avatar.jpg
+      category : document
+      project_name : document
+      index : "01"
+    - title : 취미 블로그 사이트
+      url : /hobby
+      img : /assets/images/avatar.jpg
+      category : hobby
+      project_name : hobby
+      index : "02"
+
+
 # 문서 학습
+
+programming_conception_list:
+    - title : 세상을 만드는 글자, 코딩
+      img : /assets/document/image/Book_algorithm_01.jpg
+      url : /post/programming_basic/algorithm_01_01_01
+      category : algorithm01
+
 programming_basic_list:
+    - title : 자료구조와 알고리즘
+      img : /assets/document/image/Book_algorithm_01.jpg
+      url : /post/programming_basic/algorithm_01_01_01
+      category : algorithm01
     - title : 혼자 공부하는 파이썬
       img : /assets/document/image/Book01_language_python.jpg
       url : /post/programming_basic/python_01_01_01
@@ -36,22 +80,28 @@ programming_basic_list:
       url : /post/programming_basic/processing_01_01_01
       category : processing01
 
+
 programming_unity_list:
     - title : 게임 개발 기본
       img : /assets/document/image/Book_Unity_01.jpg
       url : /post/programming_intensify/unity_01_01_01
+      category : unity01
     - title : 모바일 게임 개발
       img : /assets/document/image/Book_Unity_02.jpg
       url : /post/programming_intensify/unity_02_01_01
+      category : unity02
     - title : 2d 게임 개발
       img : /assets/document/image/Book_Unity_03.jpg
       url : /post/programming_intensify/unity_03_01_01
+      category : unity03
     - title : 게임 프로그래밍 바이블
       img : /assets/document/image/Book_Unity_04.jpg
       url : /post/programming_intensify/unity_04_01_01
+      category : unity04
     - title : 3D 액션 게임
       img : /assets/document/image/Book_Unity_05.jpg
       url : /post/programming_intensify/unity_05_01_01
+      category : unity05
 
 etc_book_list:
     - title : Art Of Game Design
@@ -69,3 +119,11 @@ etc_book_list:
     - title : 게임 기획 스쿨
       img : /assets/document/image/Planner_Book_05.jpg
       url : /post/etc_book/planner_05_01_01
+
+
+
+# Hobby List
+hobby_novel_list:
+    - title : test
+      img : /assets/document/image/Planner_Book_01.jpg
+      url : /post/etc_book/planner_01_01_01
