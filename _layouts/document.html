@@ -20,8 +20,16 @@ title: 학습한 책
 						<!-- Begin Page Content -->
 						<div class="container-fluid">
 
-							<h2>{{page.title}}</h2>
+							<h1>{{page.title}}</h1>
 							<hr/>
+							{% if page.sub_title == none %}
+
+							{% else %}
+							<h2>{{page.sub_title}}</h2>
+							<hr/>
+							{% endif %}
+
+
 							{{content}}
 						</div>
 					</div>

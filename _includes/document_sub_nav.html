@@ -1,5 +1,5 @@
 <!-- Topbar -->
-{% if page.index == 0 %}
+{% if page.index == 0 || page.index == none %}
 <br/>
 <br/>
 {% else %}
@@ -10,7 +10,6 @@
         {{ i }}
     </a>
     {% endfor %}
-
 </nav>
 {% endif %}
 

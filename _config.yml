@@ -18,12 +18,12 @@ plugins:
 # 프로젝트
 project_management_list:
     - title : Unity 책 관리 프로젝트
-      url : /post/project/project_01_01
+      url : https://github.com/ReDocuSpace/Project_Book_Management
       img : /assets/images/avatar.jpg
       category : BookProject
       project_name : project_book
       index : "01"
-    - title : Project Dictionary
+    - title : Project Custom Game List
       url : /post/project/project_01_02
       img : /assets/images/avatar.jpg
       category : Project_Dictionary
@@ -38,7 +38,7 @@ docoument_management_list:
       category : document
       project_name : document
       index : "01"
-    - title : 취미 블로그 사이트
+    - title : 취미 블로그 사이트 [현재 준비중입니다.]
       url : /hobby
       img : /assets/images/avatar.jpg
       category : hobby
@@ -47,13 +47,6 @@ docoument_management_list:
 
 
 # 문서 학습
-
-programming_conception_list:
-    - title : 세상을 만드는 글자, 코딩
-      img : /assets/document/image/Book_algorithm_01.jpg
-      url : /post/programming_basic/algorithm_01_01_01
-      category : algorithm01
-
 programming_basic_list:
     - title : 자료구조와 알고리즘
       img : /assets/document/image/Book_algorithm_01.jpg
@@ -106,21 +99,37 @@ programming_unity_list:
 etc_book_list:
     - title : Art Of Game Design
       img : /assets/document/image/Planner_Book_01.jpg
-      url : /post/etc_book/planner_01_01_01
+      url : /post/programming_etc_book/planner_01_01_01
     - title : 기획과 시나리오
       img : /assets/document/image/Planner_Book_02.jpg
-      url : /post/etc_book/planner_02_01_01
+      url : /post/programming_etc_book/planner_02_01_01
     - title : 게임 기획 멘토링
       img : /assets/document/image/Planner_Book_03.jpg
-      url : /post/etc_book/planner_03_01_01
+      url : /post/programming_etc_book/planner_03_01_01
     - title : 모바일 게임 기획
       img : /assets/document/image/Planner_Book_04.jpg
-      url : /post/etc_book/planner_04_01_01
+      url : /post/programming_etc_book/planner_04_01_01
     - title : 게임 기획 스쿨
       img : /assets/document/image/Planner_Book_05.jpg
-      url : /post/etc_book/planner_05_01_01
+      url : /post/programming_etc_book/planner_05_01_01
 
+programming_conception_list:
+    #- title : 세상을 만드는 글자, 코딩
+    #  img : /assets/document/image/Book_programming_01.jpg
+    #  url : /post/programming/programming_01_01_01
+    #  category : programming01
 
+# 정리 문서
+create_study_list:
+    - title : 제작중
+      img : /assets/document/image/non_Image.png
+      url : /post/create/create_01_01_01
+      category : create_study
+
+game_coby_list:
+    - title : 모작게임
+      img : /assets/document/image/Planner_Book_01.jpg
+      url : /post/programming_game_copy/game_copy_main
 
 # Hobby List
 hobby_novel_list:

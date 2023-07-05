@@ -1,8 +1,8 @@
 .swiper-container {
-	height:420px;
+
 	border:5px solid rgb(255, 255, 255);
 	border-radius:7px;
-	box-shadow:0 0 20px #ccc inset;
+	box-shadow:0 0 0px #ccc inset;
 }
 .swiper-slide {
 	text-align:center;
@@ -12,7 +12,7 @@
 }
 .swiper-slide img {
 	box-shadow:0 0 5px #ffffff;
-	max-width:80%; /* 이미지 최대너비를 제한, 슬라이드에 이미지가 여러개가 보여질때 필요 */
+	max-width:90%; /* 이미지 최대너비를 제한, 슬라이드에 이미지가 여러개가 보여질때 필요 */
 }
 
 .slider_item img{
@@ -21,4 +21,20 @@
 
 .slider_item img:hover{
   opacity: 1;
+}
+
+.swiper-button-next {
+	opacity: 0.0;
+}
+
+.swiper-button-next:hover {
+	opacity: 1.0;
+}
+
+.swiper-button-prev {
+	opacity: 0.0;
+}
+
+.swiper-button-prev:hover {
+	opacity: 1.0;
 }

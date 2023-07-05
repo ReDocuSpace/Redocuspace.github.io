@@ -4,7 +4,7 @@ layout: default
 
 <!-- Unity Book Project [책 관리 프로젝트] -->
 
-
+<!--
 
 
 {% for list in site.project_management_list %}
@@ -25,3 +25,5 @@ layout: default
 </div>
 
 {% endfor %}
+
+-->
