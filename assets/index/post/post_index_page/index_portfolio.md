@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<!-- 
+
 {% for list in site.project_management_list %}
 
 <div class="intro_document_main_{{list.index}}">
@@ -21,5 +21,3 @@ layout: default
 </div>
 
 {% endfor %}
-
--->
